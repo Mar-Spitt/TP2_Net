@@ -2,6 +2,13 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Business.Entities.BusinessEntity" Collapsed="true">
     <Position X="6.5" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Business.Entities.BusinessEntity.States" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BusinessEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABCAEAAA=</HashCode>
       <FileName>BusinessEntity.cs</FileName>
@@ -24,7 +31,7 @@
   <Class Name="Business.Entities.Usuario" Collapsed="true">
     <Position X="7.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABACAAAAAEAAAAgAAAIAEAABEBAAAAAAAAFAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAEAAAAgAAAICEAABEAAIAAAAAAFAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,7 +66,7 @@
   <Class Name="Business.Entities.Persona" Collapsed="true">
     <Position X="3.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAEAACgAAQCEACAAhEAEAAUAAAAAEAAAAgAABAA=</HashCode>
+      <HashCode>EAAAAAEAACgAAACEACAAhEAAAAUAAAAAEAAAAgAABAA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,10 +84,10 @@
       <FileName>Curso.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.DocenteCurso" Collapsed="true">
+  <Class Name="Business.Entities.DocenteCurso">
     <Position X="11" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAACAAACAAAAAAAAABAAAAAQAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAAQAAAIA=</HashCode>
       <FileName>DocenteCurso.cs</FileName>
     </TypeIdentifier>
   </Class>

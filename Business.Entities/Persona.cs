@@ -17,6 +17,11 @@ namespace Business.Entities
         private string _Telefono;
         //private TiposPersonas _TipoPersona;
 
+        //public Persona()
+        //{
+        //    this.TipoPersona = TiposPersonas.Alumno;
+        //}
+
         public string Apellido
         {
             get => default;
@@ -81,25 +86,18 @@ namespace Business.Entities
             }
         }
 
-        //public TiposPersonas TipoPersona
-        //{
-        //    get => default;
-        //    set
-        //    {
-        //    }
-        //}
-       /*
-        private TiposPersonas _TipoPersona;
-        public TiposPersonas State
-        {
-            get { return _State; }
-            set { _State = value; }
-        }
+    //public TiposPersonas TipoPersona
+    //{
+    //      get { return _TipoPersona; }
+    //      set { _TipoPersona = value; }
+    // }
+   
 
-        public enum TiposPersonas
-        {
-            
-        }
-       */
-    }
+    // public enum TiposPersonas
+    // {
+    //    Alumno,
+    //    Docente
+    // }
+    
+}
 }

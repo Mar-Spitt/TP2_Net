@@ -11,12 +11,15 @@ namespace Business.Entities
         private int _IDCurso;
         private int _IDDocente;
 
+        //public DocenteCurso()
+        //{
+        //    this.Cargo = TiposCargos.Profesor ;
+        //}
+
         //public TiposCargos Cargo
         //{
-        //    get => default;
-        //    set
-        //    {
-        //    }
+        //    get { return _Cargo; }
+        //    set { _Cargo = value; }
         //}
 
         public int IDCurso
@@ -34,5 +37,10 @@ namespace Business.Entities
             {
             }
         }
+
+        //public enum TiposCargos
+        //{
+        //    Profesor
+        //}
     }
 }
