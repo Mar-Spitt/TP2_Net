@@ -40,7 +40,8 @@ namespace Business.Entities
 
         //public enum TiposCargos
         //{
-        //    Profesor
+        //    Profesor,
+        //    Auxiliar
         //}
     }
 }
