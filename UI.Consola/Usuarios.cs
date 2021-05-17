@@ -35,18 +35,23 @@ namespace UI.Consola
                 {
                     case ConsoleKey.D1:
                         ListadoGeneral();
+                        Console.ReadKey();
                         break;
                     case ConsoleKey.D2:
                         Consultar();
+                        Console.ReadKey();
                         break;
                     case ConsoleKey.D3:
                         Agregar();
+                        Console.ReadKey();
                         break;
                     case ConsoleKey.D4:
                         Modificar();
+                        Console.ReadKey();
                         break;
                     case ConsoleKey.D5:
                         Eliminar();
+                        Console.ReadKey();
                         break;
                     case ConsoleKey.D6:
 
@@ -55,6 +60,7 @@ namespace UI.Consola
 
                 if (rta.Key != ConsoleKey.D6)
                     {
+                    Console.Clear();
                     Console.WriteLine("--------------------MENÚ PRINCIPAL--------------------");
                     Console.WriteLine(" Elija una opcion");
                     Console.WriteLine("  ");
