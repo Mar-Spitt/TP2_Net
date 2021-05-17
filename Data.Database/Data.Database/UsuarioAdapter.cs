@@ -99,5 +99,33 @@ namespace Data.Database
             }
             usuario.State = BusinessEntity.States.Unmodified;            
         }
+
+        public Usuario ValidarUsuario(string usuario)
+        {
+            Usuario usu = new Usuario();
+            foreach (Usuario usr in Usuarios)
+            {
+                if (usr.NombreUsuario == usuario)
+                {
+                    usu = usr;
+                }
+            }
+            return usu;
+        }
+
+        public bool ValidarContraseña(Usuario usu)
+        {
+            bool rta = false;
+
+            foreach (Usuario usr in Usuarios)
+            {
+                if (usr.NombreUsuario== usu.NombreUsuario && usr.Clave== usu.Clave)
+                {
+                    rta= true;
+                }
+            }
+            return rta;
+        }
+
     }
 }
