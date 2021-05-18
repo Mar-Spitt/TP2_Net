@@ -17,7 +17,7 @@ namespace Academia
         public frmLogin()
         {
             InitializeComponent();
-            UsuarioLogic UsuarioNegocio = new UsuarioLogic();
+            this.UsuarioNegocio = new UsuarioLogic();
         }
 
         public UsuarioLogic UsuarioNegocio
