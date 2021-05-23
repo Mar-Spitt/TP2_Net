@@ -49,9 +49,9 @@ namespace Business.Logic
         }
 
 
-        public bool ValidarContraseña(Usuario usu)
+        public bool ValidarContraseña(string usuario, string pass)
         {
-            return UsuarioData.ValidarContraseña(usu);
+            return UsuarioData.ValidarContraseña(usuario, pass);
         }
 
     }

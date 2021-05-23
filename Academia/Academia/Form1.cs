@@ -41,16 +41,19 @@ namespace Academia
             if (usu is null)
             {
                 MessageBox.Show("Usuario incorrecto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.txtUsuario.Clear();
+                this.txtPass.Clear();
             }
             else
             {
-                if (UsuarioNegocio.ValidarContraseña(usu))
+                if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text))
                 {
                     MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtPass.Clear();
                 }
             }
         }
