@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31EF81A3-6D1C-4455-8D54-3F781C71DA9D}</ProjectGuid>
+    <ProjectGuid>{315E2E79-3497-4768-906C-CB5FC85C2072}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UI.Desktop</RootNamespace>
-    <AssemblyName>UI.Desktop</AssemblyName>
+    <RootNamespace>Academia</RootNamespace>
+    <AssemblyName>Academia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,15 +80,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Academia\Academia\Academia.csproj">
-      <Project>{315e2e79-3497-4768-906c-cb5fc85c2072}</Project>
-      <Name>Academia</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Business.Entities\Business.Entities.csproj">
+    <ProjectReference Include="..\..\Business.Entities\Business.Entities.csproj">
       <Project>{298ead49-9148-4f49-9885-2f739cf074b9}</Project>
       <Name>Business.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
+    <ProjectReference Include="..\..\Business.Logic\Business.Logic.csproj">
       <Project>{990a6094-04c1-42cf-a7ba-2e29ace4c9e4}</Project>
       <Name>Business.Logic</Name>
     </ProjectReference>

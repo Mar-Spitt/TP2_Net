@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Business.Entities;
 
@@ -99,5 +100,24 @@ namespace Data.Database
             }
             usuario.State = BusinessEntity.States.Unmodified;            
         }
+
+        public Usuario ValidarUsuario(string usuario)
+        {
+            return Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario; });
+            //Cambié parecido al GetOne de arriba
+        }
+
+        public bool ValidarContraseña(string usuario,string pass)
+        {
+            bool rta = true;
+            var usu = Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario && u.Clave== pass; });
+            if(usu is null)
+            {
+                rta = false;
+            }
+            return rta;
+
+        }
+
     }
 }

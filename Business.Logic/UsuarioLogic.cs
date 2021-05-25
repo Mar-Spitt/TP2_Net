@@ -43,5 +43,16 @@ namespace Business.Logic
             UsuarioData.Delete(id);
         }
 
+        public Usuario ValidarUsuario(string usuario)
+        {
+            return UsuarioData.ValidarUsuario(usuario);
+        }
+
+
+        public bool ValidarContraseña(string usuario, string pass)
+        {
+            return UsuarioData.ValidarContraseña(usuario, pass);
+        }
+
     }
 }
