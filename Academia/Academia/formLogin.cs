@@ -49,6 +49,7 @@ namespace Academia
                 if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text))
                 {
                     MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult = DialogResult.OK;
                 }
                 else
                 {
@@ -56,6 +57,7 @@ namespace Academia
                     this.txtPass.Clear();
                 }
             }
+
         }
 
         private void lnkOlvidaPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
