@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AplicationForm.Designer.cs">
+      <DependentUpon>AplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioDesktop.Designer.cs">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AplicationForm.resx">
+      <DependentUpon>AplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioDesktop.resx">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +84,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Business.Entities.AlumnoInscripcion.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.BusinessEntity+States.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.BusinessEntity.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Comision.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Curso.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.DocenteCurso.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Especialidad.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Materia.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Modulo.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.ModuloUsuario.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Persona.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Plan.datasource" />
+    <None Include="Properties\DataSources\Business.Entities.Usuario.datasource" />
+    <None Include="Properties\DataSources\Business.Logic.BusinessLogic.datasource" />
+    <None Include="Properties\DataSources\Business.Logic.UsuarioLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
