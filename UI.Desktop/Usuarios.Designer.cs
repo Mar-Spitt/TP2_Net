@@ -1,7 +1,7 @@
 ﻿
 namespace UI.Desktop
 {
-    partial class Usuarios
+    partial class formUsuarios
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -32,7 +32,7 @@ namespace UI.Desktop
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formUsuarios));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tlUsuarios = new System.Windows.Forms.TableLayoutPanel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
@@ -123,7 +123,6 @@ namespace UI.Desktop
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(794, 390);
             this.dgvUsuarios.TabIndex = 0;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
             // id
             // 
@@ -238,7 +237,7 @@ namespace UI.Desktop
             // 
             this.usuarioLogicBindingSource.DataSource = typeof(Business.Logic.UsuarioLogic);
             // 
-            // Usuarios
+            // formUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -247,7 +246,7 @@ namespace UI.Desktop
             this.Controls.Add(this.toolStripContainer1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Usuarios";
+            this.Name = "formUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
