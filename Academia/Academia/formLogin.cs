@@ -65,5 +65,10 @@ namespace Academia
             MessageBox.Show("Es Ud. un usuario muy descuidado, haga memoria. ", "Olvidé mi contraseña",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
