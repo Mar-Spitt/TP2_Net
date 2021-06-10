@@ -56,8 +56,8 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.20513F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.79487F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 226F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel1.Controls.Add(this.txtConfirmarClave, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtClave, 1, 4);
@@ -92,10 +92,10 @@ namespace UI.Desktop
             // txtConfirmarClave
             // 
             this.txtConfirmarClave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtConfirmarClave.Location = new System.Drawing.Point(355, 159);
+            this.txtConfirmarClave.Location = new System.Drawing.Point(356, 159);
             this.txtConfirmarClave.Name = "txtConfirmarClave";
             this.txtConfirmarClave.PasswordChar = '*';
-            this.txtConfirmarClave.Size = new System.Drawing.Size(221, 20);
+            this.txtConfirmarClave.Size = new System.Drawing.Size(220, 20);
             this.txtConfirmarClave.TabIndex = 15;
             // 
             // txtClave
@@ -110,9 +110,9 @@ namespace UI.Desktop
             // txtUsuario
             // 
             this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsuario.Location = new System.Drawing.Point(355, 116);
+            this.txtUsuario.Location = new System.Drawing.Point(356, 116);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(221, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(220, 20);
             this.txtUsuario.TabIndex = 13;
             // 
             // txtEmail
@@ -126,9 +126,9 @@ namespace UI.Desktop
             // txtApellido
             // 
             this.txtApellido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtApellido.Location = new System.Drawing.Point(355, 75);
+            this.txtApellido.Location = new System.Drawing.Point(356, 75);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(221, 20);
+            this.txtApellido.Size = new System.Drawing.Size(220, 20);
             this.txtApellido.TabIndex = 11;
             // 
             // txtID
@@ -204,7 +204,7 @@ namespace UI.Desktop
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(355, 196);
+            this.btnCancelar.Location = new System.Drawing.Point(356, 196);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;
