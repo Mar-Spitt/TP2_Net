@@ -32,7 +32,6 @@ namespace Academia
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.CustomizeLabel = new System.Windows.Forms.Label();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,24 +60,13 @@ namespace Academia
             this.mnuSalir.Text = "Salir";
             this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
             // 
-            // CustomizeLabel
-            // 
-            this.CustomizeLabel.AutoSize = true;
-            this.CustomizeLabel.Location = new System.Drawing.Point(81, 61);
-            this.CustomizeLabel.Name = "CustomizeLabel";
-            this.CustomizeLabel.Size = new System.Drawing.Size(35, 13);
-            this.CustomizeLabel.TabIndex = 3;
-            this.CustomizeLabel.Text = "label1";
-            this.CustomizeLabel.MouseEnter += new System.EventHandler(this.CustomizeLabel_MouseEnter);
-            this.CustomizeLabel.MouseLeave += new System.EventHandler(this.CustomizeLabel_MouseLeave);
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.CustomizeLabel);
             this.Controls.Add(this.mnsPrincipal);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnsPrincipal;
             this.Name = "formMain";
             this.Text = "Academia";
@@ -96,6 +84,5 @@ namespace Academia
         private System.Windows.Forms.MenuStrip mnsPrincipal;
         private System.Windows.Forms.ToolStripMenuItem mnuArchivo;
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
-        private System.Windows.Forms.Label CustomizeLabel;
     }
 }
