@@ -28,35 +28,41 @@ namespace Academia
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //if (this.txtUsuario.Text == "Admin" && this.txtPass.Text == "admin")
-            //{
-            //    MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK,MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario y/o contraseña incorrectos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            Usuario usu = new Usuario();
-            usu = UsuarioNegocio.ValidarUsuario(this.txtUsuario.Text);
-            if (usu is null)
+            if (this.txtUsuario.Text == "Admin" && this.txtPass.Text == "admin")
             {
-                MessageBox.Show("Usuario incorrecto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.txtUsuario.Clear();
-                this.txtPass.Clear();
+                MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
             }
             else
             {
-                if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text))
-                {
-                    MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.txtPass.Clear();
-                }
+                MessageBox.Show("Usuario y/o contraseña incorrectos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            this.Close();
+            formMain formMain = new formMain();
+            formMain.ShowDialog();
+
+            //Usuario usu = new Usuario();
+            //usu = UsuarioNegocio.ValidarUsuario(this.txtUsuario.Text);
+            //if (usu is null)
+            //{
+            //    MessageBox.Show("Usuario incorrecto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.txtUsuario.Clear();
+            //    this.txtPass.Clear();
+            //}
+            //else
+            //{
+            //    if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text))
+            //    {
+            //        MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        DialogResult = DialogResult.OK;
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        this.txtPass.Clear();
+            //    }
+            //}
 
         }
 
@@ -64,6 +70,11 @@ namespace Academia
         {
             MessageBox.Show("Es Ud. un usuario muy descuidado, haga memoria. ", "Olvidé mi contraseña",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

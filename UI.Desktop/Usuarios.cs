@@ -12,9 +12,9 @@ using Business.Entities;
 
 namespace UI.Desktop
 {
-    public partial class Usuarios : Form
+    public partial class formUsuarios : Form
     {
-        public Usuarios()
+        public formUsuarios()
         {
             InitializeComponent();
         }
@@ -70,13 +70,6 @@ namespace UI.Desktop
                 this.Listar();
             }
         }
-
-
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
     }
 }
 

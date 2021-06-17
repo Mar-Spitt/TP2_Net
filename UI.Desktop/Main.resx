@@ -117,67 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="apellido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="habilitado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tsUsuarios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="mnsPrincipal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsbNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEeSURBVEhLxdM9SsRAHIbxVFqLCIKKYqOdpZ3V2tgq4iHU
-        ywh6hMWL+FG4uyfwBiKihVb6PMsEhjBZMhNXX/hBMpn85yOZqiWLuMQDPgKvL+CzXlnDBN8txrBPUZzd
-        rOI1BylaiduSKphyjuw8IlUs5R7ZeUeqWIp9s5MzwBuyM/ct8j/35dPpXTpnsE/RR/bX8xd0q45taOQE
-        Hjr7LNhQEg+RBZzlE66CUWjrddDqODu3wH12NboLbcUz/5NswO14xjWOsBt4fQOf2WcdWTnEC9znLuw7
-        QKdsIqd47RXbMFuwbXV618gtmi93NYRpHWAZn2i+2NUXVjBzBaVZiuzBAXaiNvVKvJI2veIHrh3AgvtR
-        m34tc/kGcf5jgKr6AfDktS8lSRw0AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tsbEditar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVEhL7dM9isJAAMXxyFqIWysIWsqeY8EzWaqVeARv
-        oIjYWK6wxfaCjQewsBP8KMRK/08SiOOMEWe288EPTUheJjOT6J1QqWGMfWyCLwSJyjc4G3SuCu9o5GZ5
-        YgTvaEps5bKDdx49YAvvaEFt5aLp8452i2uR6wgS7RYtqOZcNPJg5e8484EGephhiUNM/3/QxTd07dMp
-        oIk1zJ3jssInkrQwR/l6lEoFC9hKHhkgB6WIX+i8HnKTKcybswyRh9KBykvxr97kJkfYSlzM8uS8yvUm
-        d0nfnEUfnq1c2rDmD+kLbU7ow1Wu42B5euSv5l/LlYzyKLoAQ0SdlYxGbiEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="tsbEliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVEhL7dS5SgRBFEbhNnDBFxC3WAw08ZHM3ALBZ/BZ
-        FMF0wNgNVARjY8ENNxBM9BzoC0N1T48z1WDiDx8MVd231p7iP21lHgd4Kx1iAa3E4k/4TjzDvuw487R4
-        2Ed23JK64npFdpoGeEF2PNC64tpDdrwtHmha/BFzaCXeFg/UPZczb634n2UcmzjDR+kUGxjDrzKFbXRw
-        i1WYWVwjPZdwhRn0jDPYxSfipRuMwJk3FQ+XqF3JBI6QvuDSzRai7Qs7eCj527boX0cl3pB4oNsizDmi
-        zYJmuWRsi37PpJLoTE3CvCPa/D5WEHEQVxL9PltJdKbcOtM9wD2WEHGVd4j+of6rvJZRoN8WndgwaDzs
-        KNDvkNcwcLx63vMo0ssFRjFU/IiaBrH4NLLiSrzn7rMHr2O4LeXMi+IHWn+robsNiVgAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <metadata name="usuarioLogicBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>61</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAAoFgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgEAAAA9ntg7QAAAAFv
