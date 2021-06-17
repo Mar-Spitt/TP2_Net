@@ -53,6 +53,7 @@ namespace UI.Desktop
             // lnkOlvidaPass
             // 
             this.lnkOlvidaPass.AutoSize = true;
+            this.lnkOlvidaPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lnkOlvidaPass.Location = new System.Drawing.Point(18, 212);
             this.lnkOlvidaPass.Name = "lnkOlvidaPass";
             this.lnkOlvidaPass.Size = new System.Drawing.Size(106, 13);
@@ -63,6 +64,7 @@ namespace UI.Desktop
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Location = new System.Drawing.Point(186, 185);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
