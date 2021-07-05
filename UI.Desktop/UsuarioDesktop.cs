@@ -29,8 +29,16 @@ namespace UI.Desktop
         {
             Modo = modo;
             UsuarioLogic usr = new UsuarioLogic();
-            UsuarioActual = usr.GetOne(ID);
-            MapearDeDatos();
+            try 
+            { 
+                UsuarioActual = usr.GetOne(ID);
+                MapearDeDatos();
+            }
+            catch (Exception Ex)
+            {  
+                Notificar("Error", "Error al recuperar lista de usuarios" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         public override void MapearDeDatos()

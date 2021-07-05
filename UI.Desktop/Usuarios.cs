@@ -23,7 +23,13 @@ namespace UI.Desktop
         {
             UsuarioLogic ul = new UsuarioLogic();
             this.dgvUsuarios.AutoGenerateColumns = false;
+            try { 
             this.dgvUsuarios.DataSource = ul.GetAll();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Error", "Error al recuperar lista de usuarios" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Usuarios_Load(object sender, EventArgs e)
