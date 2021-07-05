@@ -253,19 +253,57 @@ namespace Data.Database
             usuario.State = BusinessEntity.States.Unmodified;
         }
 
-        public Usuario ValidarUsuario(string usuario)
+        private Business.Entities.Usuario GetOne(string nombreusu)
         {
-            return Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario; });
-            //Cambié parecido al GetOne de arriba
+            //return Usuarios.Find(delegate(Usuario u) { return u.ID == ID; });
+            Usuario usr = new Usuario();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario=@nombreusu", sqlConn);
+                cmdUsuarios.Parameters.Add("@nombreusu", SqlDbType.VarChar, 50).Value = nombreusu;
+                SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
+                if (drUsuarios.Read())
+                {
+                    //usr.ID = (int)drUsuarios["id_usuario"];
+                    usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
+                    usr.Clave = (string)drUsuarios["clave"];
+                    //usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    //usr.Nombre = (string)drUsuarios["nombre"];
+                    //usr.Apellido = (string)drUsuarios["apellido"];
+                    //usr.EMail = (string)drUsuarios["email"];
+
+                }
+
+                drUsuarios.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de usuarios", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return usr;
         }
 
-        public bool ValidarContraseña(string usuario,string pass)
+        public Usuario ValidarUsuario(string usuario)
         {
-            bool rta = true;
-            var usu = Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario && u.Clave== pass; });
-            if(usu is null)
+            //return Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario; });
+            
+            return GetOne(usuario);
+        }
+
+        public bool ValidarContraseña(string usuario,string pass, Usuario usu)
+        {
+            bool rta = false;
+            //var usu = Usuarios.Find(delegate (Usuario u) { return u.NombreUsuario == usuario && u.Clave== pass; });
+            
+            if (usu.NombreUsuario==usuario && usu.Clave==pass)
             {
-                rta = false;
+                rta = true;
             }
             return rta;
 

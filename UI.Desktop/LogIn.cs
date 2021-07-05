@@ -44,7 +44,7 @@ namespace UI.Desktop
             }
             else
             {
-                if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text))
+                if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text, usu))
                 {
                     MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
