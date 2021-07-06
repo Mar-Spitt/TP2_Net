@@ -73,5 +73,27 @@ namespace UI.Desktop
 
             }
         }
+
+        private void AcercaDe_Click_Click(object sender, EventArgs e)
+        {
+            ShowAcercaDe();
+        }
+
+        private void ShowAcercaDe()
+        {
+            // Crea instancia del dialogo "Acerca de"
+            frmAcercaDe ofrmAcercaDe;
+            ofrmAcercaDe = new frmAcercaDe();
+
+            // Muestro el formulario de manera modal
+            ofrmAcercaDe.ShowDialog();
+
+            // Cierro formulario
+            ofrmAcercaDe.Close();
+
+            // Elimino instancia del formulario
+            ofrmAcercaDe = null;
+
+        }
     }
 }
