@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Entities;
-using Business.Logic;
 using Data.Database;
 
 namespace Business.Logic
@@ -14,23 +13,42 @@ namespace Business.Logic
         public UsuarioLogic()
         {
             this.UsuarioData = new UsuarioAdapter();
-
         }
 
         public UsuarioAdapter UsuarioData
         {
-
             get; set;
         }
 
         public Usuario GetOne(int id)
         {
-            return UsuarioData.GetOne(id);
+            Usuario usu;
+            try
+            {
+                usu = UsuarioData.GetOne(id);
+
+            }
+            catch (Exception Ex)
+            {   
+                Exception ExcepcionManejada = new Exception("Error al recuperar el usuario", Ex);
+                throw ExcepcionManejada;
+            }
+            return usu;
         }
 
         public List<Usuario> GetAll()
-        {
-            return UsuarioData.GetAll();
+        { List<Usuario> usuarios;
+            try 
+            {
+                usuarios= UsuarioData.GetAll(); 
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
+                throw ExcepcionManejada;
+            }
+            return usuarios;
+
         }
 
         public void Save(Usuario usu)
@@ -49,9 +67,9 @@ namespace Business.Logic
         }
 
 
-        public bool ValidarContraseña(string usuario, string pass)
+        public bool ValidarContraseña(string usuario, string pass, Usuario usu)
         {
-            return UsuarioData.ValidarContraseña(usuario, pass);
+            return UsuarioData.ValidarContraseña(usuario, pass, usu);
         }
 
     }

@@ -10,20 +10,8 @@ namespace Business.Entities
         private string _Descripcion;
         private int _IDEspecialidad;
 
-        public string Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Descripcion { get; set; }
 
-        public int IDEspecialidad
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int IDEspecialidad { get; set; }
     }
 }

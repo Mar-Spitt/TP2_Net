@@ -44,14 +44,16 @@ namespace UI.Desktop
 
                     break;
                 case "nodoEspecialidad":
-
+                    frmEspecialidades formEspecialidades = new frmEspecialidades();
+                    formEspecialidades.ShowDialog();
                     break;
                 case "nodoProfesor":
 
                     break;
                 case "nodoPlanMateria":
-
-                        break;
+                    frmPlanes formplanes = new frmPlanes();
+                    formplanes.ShowDialog();
+                    break;
                 case "nodoComision":
 
                     break;
@@ -72,6 +74,28 @@ namespace UI.Desktop
                     break;
 
             }
+        }
+
+        private void AcercaDe_Click_Click(object sender, EventArgs e)
+        {
+            ShowAcercaDe();
+        }
+
+        private void ShowAcercaDe()
+        {
+            // Crea instancia del dialogo "Acerca de"
+            frmAcercaDe ofrmAcercaDe;
+            ofrmAcercaDe = new frmAcercaDe();
+
+            // Muestro el formulario de manera modal
+            ofrmAcercaDe.ShowDialog();
+
+            // Cierro formulario
+            ofrmAcercaDe.Close();
+
+            // Elimino instancia del formulario
+            ofrmAcercaDe = null;
+
         }
     }
 }
