@@ -52,10 +52,10 @@
     <Compile Include="AplicationForm.Designer.cs">
       <DependentUpon>AplicationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAcercaDe.cs">
+    <Compile Include="Main\frmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcercaDe.Designer.cs">
+    <Compile Include="Main\frmAcercaDe.Designer.cs">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </Compile>
     <Compile Include="Especialidades\frmEspecialidades.cs">
@@ -70,16 +70,16 @@
     <Compile Include="Especialidades\frmEspecialidDesktop.Designer.cs">
       <DependentUpon>frmEspecialidDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.cs">
+    <Compile Include="Main\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
+    <Compile Include="Main\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Main\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Main\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\UsuarioDesktop.cs">
@@ -105,13 +105,13 @@
     <EmbeddedResource Include="Especialidades\frmEspecialidDesktop.resx">
       <DependentUpon>frmEspecialidDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAcercaDe.resx">
+    <EmbeddedResource Include="Main\frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
+    <EmbeddedResource Include="Main\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\UsuarioDesktop.resx">
@@ -169,12 +169,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\agregar.png" />
     <Content Include="Imagenes\editar.png" />
+    <Content Include="Imagenes\eliminar.2.png" />
     <Content Include="Imagenes\eliminar.png" />
+    <Content Include="Imagenes\modificar.png" />
     <Content Include="Imagenes\nuevo.png" />
     <Content Include="Imagenes\Salir.png" />
     <Content Include="Imagenes\university_cap_icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Alumnos\" />
+    <Folder Include="Comisiones\" />
+    <Folder Include="Cursos\" />
+    <Folder Include="Planes y Materias\" />
+    <Folder Include="Profesores\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

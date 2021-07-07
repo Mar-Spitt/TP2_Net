@@ -29,6 +29,7 @@ namespace UI.Desktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("1.1 - Usuarios");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1.2 - Alumnos");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("1.3 - Especialidades");
@@ -51,7 +52,6 @@ namespace UI.Desktop
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
             treeNode11,
             treeNode12});
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe_Click = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +91,7 @@ namespace UI.Desktop
             // 
             // mnuSalir
             // 
-            this.mnuSalir.Image = global::UI.Desktop.Properties.Resources.Salir;
+            this.mnuSalir.Image = ((System.Drawing.Image)(resources.GetObject("mnuSalir.Image")));
             this.mnuSalir.Name = "mnuSalir";
             this.mnuSalir.Size = new System.Drawing.Size(182, 22);
             this.mnuSalir.Text = "Salir";

@@ -121,6 +121,27 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mnuSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAANsSURBVGhDzdpLqE1RHAbwg8grIRN5JiUlUgbkmREjMsHASDJQSCnKgCJjA1KSDDCQR4RQRCkp
+        CoWURDKgJBLl+X3XWfVv9a291v/sfWt/9cu91/p/Z+/OPftFpyIP4G/L3Ad3VFEbuKNK2sAdVdIG7qiS
+        NnBHlcTOwmIY0bUEzoFa2xR3VIm1DVLZAWqmCe6okoDvRC7nQc3W5Y4qCRZBLktBzdbljioJ+HnIZSSo
+        2brcUSUBNzKXUaBm63JHlQQ8OuWyDNRsXe6okoCH2Fwugpqtyx1VYvEQm8pOUDNNcEeVxHiI5a9QOCHy
+        6/56JwJ3VEkbuKNKcr7DIVgIo6E0Y+AIqM6YO6qkyiOYCr1mCLwG1W25o0pSbkPJuSWXjaD6LXdUiXIH
+        mtgJZhC8APU6gTuqJHYdhkFpZsEfCPO/YCbYbAD7GjF3VIl1DYaCN1fB9pwBG74rz8CusdxRJcEV6GUn
+        mOVgu37DbLBZC3aN5Y4qoQvAI4zNAFj1/8uiPATbGd/fDIQnYNcE7pQOcicOA3/3V/MHBVkPduM4Owds
+        1oBdE7hTMhh2Iqz9BFMgF34OXkGYI17u2LBbPSR0JzfIFzoK9kXoLnBDc9kOdo7vylyw2QR2DblTNTgJ
+        ToF9AWsf5MJzD99BO3cJbDaD/XtyJy7w4PmBV8K5HIR4djeMgwXwpvszy524wOsdcIOqMhG402o+xR1V
+        4nUZcsldksTcUSVe8Vk7Ds8XH0DNprijSjy+wWSoCs87araKO6rEYy9UZTy8BzVbxR1VUuotDIdUeMUc
+        TnZfun+WckeVlFoHqfBEehq47jh4n7i4o0pK3ANubCr7getuwGCY0f2+1BZwRZXk8JJ8HqTCmyZeijwF
+        PlItzVjYCny4wfNOfClTGbWhOScgFT7B/wH8gOeOZqnw32T4Osf6vitMvJE5/NDySKQyDT4C1/EOsdfw
+        KQ07XvZ9Vxi7kSV2gQqfb8W3rntgOnAHPeYD579CcewL5/DeQt368sN8E9RMXcVRwynqzpBHrpOg1jeh
+        OGpYuQUqB0Ctr8sdVRLjoTB+AsKUPDHslTuqJMYHz3FWwE9Q65vgjiqxeJsa3zjxSeJnUOub4o4qseL/
+        MDABeLGo1jbJHVUSPAceWkN4ufEY1NqmuaNKgpUQwh3iBaBa1x9EOp1/MdBp+9qRWfoAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAAoFgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgEAAAA9ntg7QAAAAFv
