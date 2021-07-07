@@ -175,7 +175,7 @@
     <Content Include="Imagenes\eliminar.png" />
     <Content Include="Imagenes\modificar.png" />
     <Content Include="Imagenes\nuevo.png" />
-    <Content Include="Imagenes\Salir.png" />
+    <Content Include="Imagenes\salir.png" />
     <Content Include="Imagenes\university_cap_icon.ico" />
   </ItemGroup>
   <ItemGroup>
