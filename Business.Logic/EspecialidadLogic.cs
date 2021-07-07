@@ -30,7 +30,7 @@ namespace Business.Logic
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de especiadades", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar la especiadad", Ex);
                 throw ExcepcionManejada;
             }
             return esp;

@@ -48,7 +48,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel1.Controls.Add(this.ldlId, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblEspecialidad, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtId, 2, 1);
@@ -80,7 +80,7 @@ namespace UI.Desktop
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEspecialidad.Location = new System.Drawing.Point(195, 32);
+            this.lblEspecialidad.Location = new System.Drawing.Point(193, 32);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(79, 13);
             this.lblEspecialidad.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace UI.Desktop
             // txtId
             // 
             this.txtId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtId.Location = new System.Drawing.Point(70, 35);
+            this.txtId.Location = new System.Drawing.Point(68, 35);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(119, 20);
@@ -98,14 +98,14 @@ namespace UI.Desktop
             // txtEspecialidad
             // 
             this.txtEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEspecialidad.Location = new System.Drawing.Point(312, 35);
+            this.txtEspecialidad.Location = new System.Drawing.Point(310, 35);
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(228, 20);
             this.txtEspecialidad.TabIndex = 4;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(195, 85);
+            this.btnAceptar.Location = new System.Drawing.Point(193, 85);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace UI.Desktop
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(312, 85);
+            this.btnCancelar.Location = new System.Drawing.Point(310, 85);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 6;

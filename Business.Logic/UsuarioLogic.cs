@@ -30,7 +30,7 @@ namespace Business.Logic
             }
             catch (Exception Ex)
             {   
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar el usuario", Ex);
                 throw ExcepcionManejada;
             }
             return usu;

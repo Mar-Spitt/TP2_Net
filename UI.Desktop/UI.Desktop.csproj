@@ -52,6 +52,18 @@
     <Compile Include="AplicationForm.Designer.cs">
       <DependentUpon>AplicationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Planes y Materias\frmPlanDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planes y Materias\frmPlanDesktop.Designer.cs">
+      <DependentUpon>frmPlanDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planes y Materias\frmPlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planes y Materias\frmPlanes.Designer.cs">
+      <DependentUpon>frmPlanes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planes y Materias\frmPlanDesktop.resx">
+      <DependentUpon>frmPlanDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planes y Materias\frmPlanes.resx">
+      <DependentUpon>frmPlanes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
@@ -178,12 +196,6 @@
     <Content Include="Imagenes\salir.png" />
     <Content Include="Imagenes\university_cap_icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Alumnos\" />
-    <Folder Include="Comisiones\" />
-    <Folder Include="Cursos\" />
-    <Folder Include="Planes y Materias\" />
-    <Folder Include="Profesores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

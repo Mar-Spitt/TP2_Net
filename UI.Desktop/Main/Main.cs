@@ -51,8 +51,9 @@ namespace UI.Desktop
 
                     break;
                 case "nodoPlanMateria":
-
-                        break;
+                    frmPlanes formplanes = new frmPlanes();
+                    formplanes.ShowDialog();
+                    break;
                 case "nodoComision":
 
                     break;
