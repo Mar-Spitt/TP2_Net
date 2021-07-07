@@ -29,6 +29,7 @@ namespace UI.Desktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("1.1 - Usuarios");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1.2 - Alumnos");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("1.3 - Especialidades");
@@ -51,9 +52,9 @@ namespace UI.Desktop
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
             treeNode11,
             treeNode12});
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.AcercaDe_Click = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.trvABM = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -74,15 +75,25 @@ namespace UI.Desktop
             // mnuArchivo
             // 
             this.mnuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AcercaDe_Click,
             this.mnuSalir});
             this.mnuArchivo.Name = "mnuArchivo";
             this.mnuArchivo.Size = new System.Drawing.Size(60, 20);
             this.mnuArchivo.Text = "Archivo";
             // 
+            // AcercaDe_Click
+            // 
+            this.AcercaDe_Click.Image = global::UI.Desktop.Properties.Resources.university_cap_icon;
+            this.AcercaDe_Click.Name = "AcercaDe_Click";
+            this.AcercaDe_Click.Size = new System.Drawing.Size(182, 22);
+            this.AcercaDe_Click.Text = "Acerca de Academia";
+            this.AcercaDe_Click.Click += new System.EventHandler(this.AcercaDe_Click_Click);
+            // 
             // mnuSalir
             // 
+            this.mnuSalir.Image = ((System.Drawing.Image)(resources.GetObject("mnuSalir.Image")));
             this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(96, 22);
+            this.mnuSalir.Size = new System.Drawing.Size(182, 22);
             this.mnuSalir.Text = "Salir";
             this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
             // 
@@ -170,5 +181,6 @@ namespace UI.Desktop
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
         private System.Windows.Forms.TreeView trvABM;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem AcercaDe_Click;
     }
 }
