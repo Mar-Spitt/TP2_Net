@@ -42,7 +42,7 @@
       <FileName>Comision.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Especialidad" Collapsed="true">
+  <Class Name="Business.Entities.Especialidad">
     <Position X="2.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAA=</HashCode>
