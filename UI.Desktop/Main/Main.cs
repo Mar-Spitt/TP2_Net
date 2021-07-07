@@ -44,7 +44,8 @@ namespace UI.Desktop
 
                     break;
                 case "nodoEspecialidad":
-
+                    frmEspecialidades formEspecialidades = new frmEspecialidades();
+                    formEspecialidades.ShowDialog();
                     break;
                 case "nodoProfesor":
 

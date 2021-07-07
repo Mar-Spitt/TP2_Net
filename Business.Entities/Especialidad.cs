@@ -9,12 +9,6 @@ namespace Business.Entities
     {
         private string _Descripcion;
 
-        public string Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Descripcion{ get; set; }
     }
 }

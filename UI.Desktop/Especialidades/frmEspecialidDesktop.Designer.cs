@@ -48,7 +48,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel1.Controls.Add(this.ldlId, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblEspecialidad, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtId, 2, 1);
@@ -69,7 +69,7 @@ namespace UI.Desktop
             this.ldlId.AutoSize = true;
             this.ldlId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldlId.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ldlId.Location = new System.Drawing.Point(30, 32);
+            this.ldlId.Location = new System.Drawing.Point(29, 32);
             this.ldlId.Name = "ldlId";
             this.ldlId.Size = new System.Drawing.Size(20, 13);
             this.ldlId.TabIndex = 1;
@@ -80,7 +80,7 @@ namespace UI.Desktop
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEspecialidad.Location = new System.Drawing.Point(197, 32);
+            this.lblEspecialidad.Location = new System.Drawing.Point(195, 32);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(79, 13);
             this.lblEspecialidad.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace UI.Desktop
             // txtId
             // 
             this.txtId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtId.Location = new System.Drawing.Point(72, 35);
+            this.txtId.Location = new System.Drawing.Point(70, 35);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(119, 20);
@@ -98,28 +98,30 @@ namespace UI.Desktop
             // txtEspecialidad
             // 
             this.txtEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEspecialidad.Location = new System.Drawing.Point(314, 35);
+            this.txtEspecialidad.Location = new System.Drawing.Point(312, 35);
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(228, 20);
             this.txtEspecialidad.TabIndex = 4;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(197, 85);
+            this.btnAceptar.Location = new System.Drawing.Point(195, 85);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(314, 85);
+            this.btnCancelar.Location = new System.Drawing.Point(312, 85);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // frmEspecialidDesktop
             // 
@@ -129,6 +131,7 @@ namespace UI.Desktop
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEspecialidDesktop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EspecialidadDesktop";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

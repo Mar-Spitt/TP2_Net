@@ -89,7 +89,7 @@ namespace Data.Database
                 drUsuarios.Close();
             }
             catch (Exception Ex)
-            {   //TODO : bloque try-catch-finally paso 17
+            {   
                 Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
                 throw ExcepcionManejada;
             }
@@ -126,7 +126,7 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {   
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de usuarios", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos del usuario", Ex);
                 throw ExcepcionManejada;
             }
             finally

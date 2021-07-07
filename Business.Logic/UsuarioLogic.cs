@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Entities;
-using Business.Logic;
 using Data.Database;
 
 namespace Business.Logic
@@ -14,12 +13,10 @@ namespace Business.Logic
         public UsuarioLogic()
         {
             this.UsuarioData = new UsuarioAdapter();
-
         }
 
         public UsuarioAdapter UsuarioData
         {
-
             get; set;
         }
 
