@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumnos\frmAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\frmAlumnos.Designer.cs">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos\frmAlumnosDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\frmAlumnosDesktop.Designer.cs">
+      <DependentUpon>frmAlumnosDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="AplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AplicationForm.Designer.cs">
       <DependentUpon>AplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planes y Materias\frmMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planes y Materias\frmMaterias.Designer.cs">
+      <DependentUpon>frmMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planes y Materias\frmMateriasDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planes y Materias\frmMateriasDesktop.Designer.cs">
+      <DependentUpon>frmMateriasDesktop.cs</DependentUpon>
     </Compile>
     <Compile Include="Planes y Materias\frmPlanDesktop.cs">
       <SubType>Form</SubType>
@@ -108,6 +132,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alumnos\frmAlumnos.resx">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\frmAlumnosDesktop.resx">
+      <DependentUpon>frmAlumnosDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AplicationForm.resx">
       <DependentUpon>AplicationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planes y Materias\frmMaterias.resx">
+      <DependentUpon>frmMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planes y Materias\frmMateriasDesktop.resx">
+      <DependentUpon>frmMateriasDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Planes y Materias\frmPlanDesktop.resx">
       <DependentUpon>frmPlanDesktop.cs</DependentUpon>
