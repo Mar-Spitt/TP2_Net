@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Desktop.Alumnos;
 
 namespace UI.Desktop
 {
@@ -41,7 +42,8 @@ namespace UI.Desktop
                     formUsuarios.ShowDialog();
                     break;
                 case "nodoAlumno":
-
+                    frmAlumnos formAlumnos = new frmAlumnos();
+                    formAlumnos.ShowDialog();
                     break;
                 case "nodoEspecialidad":
                     frmEspecialidades formEspecialidades = new frmEspecialidades();

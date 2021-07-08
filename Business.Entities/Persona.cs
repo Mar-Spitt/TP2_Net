@@ -15,89 +15,38 @@ namespace Business.Entities
         private int _Legajo;
         private string _Nombre;
         private string _Telefono;
-        //private TiposPersonas _TipoPersona;
+        private TiposPersonas _TipoPersona;
 
-        //public Persona()
-        //{
-        //    this.TipoPersona = TiposPersonas.Alumno;
-        //}
-
-        public string Apellido
+        public Persona()
         {
-            get => default;
-            set
-            {
-            }
+            this.TipoPersona = TiposPersonas.Alumno;
         }
 
-        public string Direccion
+        public string Apellido { get; set;  }
+
+        public string Direccion { get; set; }
+
+        public string Email { get; set; }
+
+        public DateTime FechaNacimiento { get; set; }
+
+        public int IDPlan { get; set; }
+
+        public string Nombre { get; set; }
+
+        public int Legajo { get; set; }
+
+        public string Telefono { get; set; }
+        public TiposPersonas TipoPersona
         {
-            get => default;
-            set
-            {
-            }
+            get { return _TipoPersona; }
+            set { _TipoPersona = value; }
+        }
+        public enum TiposPersonas
+        {
+            Alumno,
+            Docente
         }
 
-        public string Email
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public DateTime FechaNacimiento
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int IDPlan
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Nombre
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Legajo
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Telefono
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-    //public TiposPersonas TipoPersona
-    //{
-    //      get { return _TipoPersona; }
-    //      set { _TipoPersona = value; }
-    // }
-   
-
-    // public enum TiposPersonas
-    // {
-    //    Alumno,
-    //    Docente
-    // }
-    
-}
+    }
 }
