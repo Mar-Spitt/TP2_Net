@@ -17,6 +17,12 @@ namespace UI.Desktop
         public frmPlanDesktop()
         {
             InitializeComponent();
+            //cmbEspecialidad.Items.Insert(0, "Seleccionar");
+            //cmbEspecialidad.SelectedIndex = 0;
+            EspecialidadLogic el = new EspecialidadLogic();
+            cmbEspecialidad.DataSource = el.GetAll();
+            cmbEspecialidad.ValueMember = "ID";
+            cmbEspecialidad.DisplayMember = "Descripcion";
         }
         public frmPlanDesktop(ModoForm modo) : this()
         {
@@ -45,7 +51,9 @@ namespace UI.Desktop
         {
             this.txtId.Text = this.PlanActual.ID.ToString();
             this.txtPlan.Text = this.PlanActual.Descripcion;
-            this.txtIdEspecialidad.Text = this.PlanActual.IDEspecialidad.ToString();
+            this.cmbEspecialidad.SelectedValue = this.PlanActual.IDEspecialidad;
+
+
             switch (Modo)
             {
                 case ModoForm.Alta:
@@ -71,7 +79,7 @@ namespace UI.Desktop
                 if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
                 {
                     nuevoPlan.Descripcion = this.txtPlan.Text;
-                    nuevoPlan.IDEspecialidad = int.Parse(this.txtIdEspecialidad.Text);
+                    nuevoPlan.IDEspecialidad = int.Parse(this.cmbEspecialidad.SelectedValue.ToString());
 
                     if (Modo == ModoForm.Alta)
                     {
@@ -124,7 +132,7 @@ namespace UI.Desktop
         public override bool Validar()
         {
             bool rta = false;
-            if (this.txtPlan.Text != String.Empty && this.txtIdEspecialidad.Text != String.Empty)
+            if (this.txtPlan.Text != String.Empty && this.cmbEspecialidad.SelectedValue.ToString() != String.Empty)
             {
                 rta = true;
             }
@@ -136,6 +144,13 @@ namespace UI.Desktop
                           MessageBoxIcon.Error);
             }
             return rta;
+        }
+
+        private void frmPlanDesktop_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'tP2_AcademiaDataSet.especialidades' Puede moverla o quitarla según sea necesario.
+            this.especialidadesTableAdapter.Fill(this.tP2_AcademiaDataSet.especialidades);
+
         }
     }
 }
