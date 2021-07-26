@@ -130,7 +130,7 @@ namespace UI.Desktop
 
                         if (!rta)
                         {
-                            rta = validarEmail(txtEmail.Text);
+                            rta = Validaciones.EsMailValido(txtEmail.Text.Trim()); //Saca espacios de la derecha e izquierda
                             if (!rta)
                             {
                                 Notificar("Email inválido",
@@ -176,22 +176,22 @@ namespace UI.Desktop
 
         public Usuario UsuarioActual { get; set; }
 
-        public static bool validarEmail(string email)
-        {
-            String expresion;
-            bool rta2 = false;
-            expresion = @"\A(\w+.?\w*@\w+.)(com)\Z";
+        //public static bool validarEmail(string email)
+        //{
+        //    String expresion;
+        //    bool rta2 = false;
+        //    expresion = @"\A(\w+.?\w*@\w+.)(com)\Z";
 
 
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    rta2 = true;
-                }
-            }
-            return rta2;
-        }
+        //    if (Regex.IsMatch(email, expresion))
+        //    {
+        //        if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+        //        {
+        //            rta2 = true;
+        //        }
+        //    }
+        //    return rta2;
+        //}
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
