@@ -47,7 +47,7 @@ namespace UI.Desktop
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
             this.txtNombre.Text = this.UsuarioActual.Nombre;
             this.txtApellido.Text = this.UsuarioActual.Apellido;
-            this.txtEmail.Text = this.UsuarioActual.EMail;
+            this.txtEmail.Text = this.UsuarioActual.Email;
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
             this.txtClave.Text = this.UsuarioActual.Clave;
             this.txtConfirmarClave.Text = this.UsuarioActual.Clave;
@@ -76,7 +76,7 @@ namespace UI.Desktop
                 nuevoUsu.Nombre = this.txtNombre.Text;
                 nuevoUsu.Apellido = this.txtApellido.Text;
                 nuevoUsu.Clave = this.txtClave.Text;
-                nuevoUsu.EMail = this.txtEmail.Text;
+                nuevoUsu.Email = this.txtEmail.Text;
                 nuevoUsu.NombreUsuario = this.txtUsuario.Text;
                 nuevoUsu.Habilitado = this.chkHabilitado.Checked;
 
@@ -175,23 +175,6 @@ namespace UI.Desktop
         }
 
         public Usuario UsuarioActual { get; set; }
-
-        //public static bool validarEmail(string email)
-        //{
-        //    String expresion;
-        //    bool rta2 = false;
-        //    expresion = @"\A(\w+.?\w*@\w+.)(com)\Z";
-
-
-        //    if (Regex.IsMatch(email, expresion))
-        //    {
-        //        if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-        //        {
-        //            rta2 = true;
-        //        }
-        //    }
-        //    return rta2;
-        //}
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {

@@ -157,7 +157,7 @@ namespace UI.Desktop
             // 
             // email
             // 
-            this.email.DataPropertyName = "EMail";
+            this.email.DataPropertyName = "Email";
             this.email.HeaderText = "EMail";
             this.email.Name = "email";
             this.email.ReadOnly = true;
