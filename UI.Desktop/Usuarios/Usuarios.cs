@@ -28,7 +28,7 @@ namespace UI.Desktop
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Error", "Error al recuperar lista de usuarios" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al recuperar lista de usuarios" + Ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

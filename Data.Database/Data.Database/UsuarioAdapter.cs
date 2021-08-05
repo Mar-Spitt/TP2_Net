@@ -76,13 +76,13 @@ namespace Data.Database
                 {
                     Usuario usr = new Usuario();
 
-                    usr.ID = (int)drUsuarios["u.id_usuario"];
-                    usr.NombreUsuario = (string)drUsuarios["u.nombre_usuario"];
-                    usr.Clave = (string)drUsuarios["u.clave"];
-                    usr.Habilitado = (bool)drUsuarios["u.habilitado"];
-                    usr.Nombre = (string)drUsuarios["p.nombre"];
-                    usr.Apellido = (string)drUsuarios["p.apellido"];
-                    usr.Email = (string)drUsuarios["p.email"];
+                    usr.ID = (int)drUsuarios["id_usuario"];
+                    usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
+                    usr.Clave = (string)drUsuarios["clave"];
+                    usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    usr.Nombre = (string)drUsuarios["nombre"];
+                    usr.Apellido = (string)drUsuarios["apellido"];
+                    usr.Email = (string)drUsuarios["email"];
 
                     usuarios.Add(usr);
                 }
