@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI.Desktop.Alumnos;
+using UI.Desktop.Planes_y_Materias;
 
 namespace UI.Desktop
 {
     public partial class formMain : Form
     {
+        int usuario_act;
         public formMain()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace UI.Desktop
             {
                 this.Dispose();
             }
+            usuario_act = appLogin.usuario_actual;
         }
 
         private void trvABM_AfterSelect(object sender, TreeViewEventArgs e)
@@ -38,23 +41,62 @@ namespace UI.Desktop
             switch (nodo)
             {
                 case "nodoUsuario":
-                    formUsuarios formUsuarios = new formUsuarios();
-                    formUsuarios.ShowDialog();
+                    if (usuario_act == 3)
+                    {
+                        formUsuarios formUsuarios = new formUsuarios();
+                        formUsuarios.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoAlumno":
-                    frmAlumnos formAlumnos = new frmAlumnos();
-                    formAlumnos.ShowDialog();
+                    if (usuario_act == 3) // Administrador y Profesor(solo ver)
+                    {
+                        frmAlumnos formAlumnos = new frmAlumnos();
+                        formAlumnos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoEspecialidad":
-                    frmEspecialidades formEspecialidades = new frmEspecialidades();
-                    formEspecialidades.ShowDialog();
+                    if (usuario_act == 3)
+                    {
+                        frmEspecialidades formEspecialidades = new frmEspecialidades();
+                        formEspecialidades.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
-                case "nodoProfesor":
+                case "nodoProfesor": // Profesor (solo ver)
 
                     break;
-                case "nodoPlanMateria":
-                    frmPlanes formplanes = new frmPlanes();
-                    formplanes.ShowDialog();
+                case "nodoPlan":
+                    if (usuario_act == 3)
+                    {
+                        frmPlanes formplanes = new frmPlanes();
+                        formplanes.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
+                case "nodoMateria":
+                    if (usuario_act == 3)
+                    {
+                        frmMaterias formmaterias = new frmMaterias();
+                        formmaterias.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoComision":
 

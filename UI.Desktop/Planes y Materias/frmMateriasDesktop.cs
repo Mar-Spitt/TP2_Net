@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Entities;
+using Business.Logic;
 
 namespace UI.Desktop.Planes_y_Materias
 {
@@ -15,6 +17,11 @@ namespace UI.Desktop.Planes_y_Materias
         public frmMateriasDesktop()
         {
             InitializeComponent();
+
+            MateriaLogic ml = new MateriaLogic();
+            cmbPlan.DataSource = ml.GetAll();
+            cmbPlan.ValueMember = "ID";
+            cmbPlan.DisplayMember = "Descripcion";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

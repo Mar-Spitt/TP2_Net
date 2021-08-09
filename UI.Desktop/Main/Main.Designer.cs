@@ -34,24 +34,26 @@ namespace UI.Desktop
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1.2 - Alumnos");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("1.3 - Especialidades");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("1.4 - Profesores");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("1.5 - Planes y Materias");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("1.5 - Planes");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1.6 - Comisiones");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("1.7 - Cursos");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("1 - Alta, Baja, Modificaciones y Consultas", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("1.8 - Materias");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("1 - Alta, Baja, Modificaciones y Consultas", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
             treeNode5,
             treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("2 - Inscripciones de Alumnos a Cursos");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("3 - Registro de notas");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("4.1 - Cursos");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("4.2 - Planes");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12});
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("2 - Inscripciones de Alumnos a Cursos");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("3 - Registro de notas");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("4.1 - Cursos");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4.2 - Planes");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13});
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe_Click = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,29 +114,31 @@ namespace UI.Desktop
             treeNode3.Text = "1.3 - Especialidades";
             treeNode4.Name = "nodoProfesor";
             treeNode4.Text = "1.4 - Profesores";
-            treeNode5.Name = "nodoPlanMateria";
-            treeNode5.Text = "1.5 - Planes y Materias";
+            treeNode5.Name = "nodoPlan";
+            treeNode5.Text = "1.5 - Planes";
             treeNode6.Name = "nodoComision";
             treeNode6.Text = "1.6 - Comisiones";
             treeNode7.Name = "nodoCurso";
             treeNode7.Text = "1.7 - Cursos";
-            treeNode8.Name = "nodoABM";
-            treeNode8.Text = "1 - Alta, Baja, Modificaciones y Consultas";
-            treeNode9.Name = "nodoInscripcion";
-            treeNode9.Text = "2 - Inscripciones de Alumnos a Cursos";
-            treeNode10.Name = "nodoRegistro";
-            treeNode10.Text = "3 - Registro de notas";
-            treeNode11.Name = "nodoCursoR";
-            treeNode11.Text = "4.1 - Cursos";
-            treeNode12.Name = "nodoPlanR";
-            treeNode12.Text = "4.2 - Planes";
-            treeNode13.Name = "nodoReporte";
-            treeNode13.Text = "4 - Reportes";
+            treeNode8.Name = "nodoMateria";
+            treeNode8.Text = "1.8 - Materias";
+            treeNode9.Name = "nodoABM";
+            treeNode9.Text = "1 - Alta, Baja, Modificaciones y Consultas";
+            treeNode10.Name = "nodoInscripcion";
+            treeNode10.Text = "2 - Inscripciones de Alumnos a Cursos";
+            treeNode11.Name = "nodoRegistro";
+            treeNode11.Text = "3 - Registro de notas";
+            treeNode12.Name = "nodoCursoR";
+            treeNode12.Text = "4.1 - Cursos";
+            treeNode13.Name = "nodoPlanR";
+            treeNode13.Text = "4.2 - Planes";
+            treeNode14.Name = "nodoReporte";
+            treeNode14.Text = "4 - Reportes";
             this.trvABM.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
             treeNode9,
             treeNode10,
-            treeNode13});
+            treeNode11,
+            treeNode14});
             this.trvABM.Size = new System.Drawing.Size(398, 288);
             this.trvABM.TabIndex = 17;
             this.trvABM.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvABM_AfterSelect);

@@ -44,8 +44,9 @@ namespace Business.Entities
         }
         public enum TiposPersonas
         {
-            Alumno,
-            Profesor
+            Alumno = 1,
+            Profesor,
+            Administrador
         }
 
     }

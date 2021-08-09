@@ -171,7 +171,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE usuarios u inner join personas p on u.id_persona=p.id_persona SET nombre_usuario=@nombre_usuario,clave=@clave,habilitado=@habilitado,p.nombre=@nombre,p.apellido=@apellido,p.email=@email WHERE id_usuario=@id", sqlConn);
+                SqlCommand cmdSave = new SqlCommand("UPDATE usuarios u inner join personas p on u.id_persona=p.id_persona" +
+                    "SET nombre_usuario=@nombre_usuario,clave=@clave,habilitado=@habilitado,p.nombre=@nombre,p.apellido=@apellido,p.email=@email" +
+                    "WHERE id_usuario=@id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
@@ -269,18 +271,26 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario=@nombreusu", sqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand("select u.nombre_usuario, u.clave,p.tipo_persona from usuarios u " +
+                    "inner join personas p on u.id_persona=p.id_persona where u.nombre_usuario=@nombreusu", sqlConn);
                 cmdUsuarios.Parameters.Add("@nombreusu", SqlDbType.VarChar, 50).Value = nombreusu;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
                 {
-                    //usr.ID = (int)drUsuarios["id_usuario"];
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
-                    //usr.Habilitado = (bool)drUsuarios["habilitado"];
-                    //usr.Nombre = (string)drUsuarios["nombre"];
-                    //usr.Apellido = (string)drUsuarios["apellido"];
-                    //usr.EMail = (string)drUsuarios["email"];
+                    switch ((int)drUsuarios["tipo_persona"])
+                    {
+                        case 1:
+                            usr.TipoPersona = Persona.TiposPersonas.Alumno;
+                            break;
+                        case 2:
+                            usr.TipoPersona = Persona.TiposPersonas.Profesor;
+                            break;
+                        case 3:
+                            usr.TipoPersona = Persona.TiposPersonas.Administrador;
+                            break;
+                    }
 
                 }
 
