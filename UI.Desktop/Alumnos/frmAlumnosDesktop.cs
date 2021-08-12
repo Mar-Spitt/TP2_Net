@@ -79,8 +79,6 @@ namespace UI.Desktop.Alumnos
                 nuevoAlu.Email = this.txtEmail.Text;
                 nuevoAlu.FechaNacimiento = this.dtNacimiento.Value;
                 nuevoAlu.Telefono = this.txtTelefono.Text;
-                // TODO: SI ingresea un valor muy alto en legajo (manejador de exepciones
-                // TODO: Valide con el id_pan si exite (manejador de excepciones)
                 nuevoAlu.Legajo = int.Parse(this.txtLegajo.Text);
                 nuevoAlu.Direccion= this.txtDireccion.Text;
                 nuevoAlu.IDPlan = int.Parse(this.txtIDPlan.Text);

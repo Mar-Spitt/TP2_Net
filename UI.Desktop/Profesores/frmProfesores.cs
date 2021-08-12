@@ -15,6 +15,7 @@ namespace UI.Desktop
         public frmProfesores()
         {
             InitializeComponent();
+            this.dgvProfesores.AutoGenerateColumns = false;
         }
     }
 }
