@@ -53,7 +53,15 @@ namespace Business.Logic
 
         public void Save(Usuario usu)
         {
-            UsuarioData.Save(usu);
+            try
+            {
+                UsuarioData.Save(usu);
+            }
+            catch (Exception Ex)
+            {
+                Exception ExceptionManejada = new Exception("Error al modificar datos del usuario", Ex);
+                throw ExceptionManejada;
+            }
         }
 
         public void Delete(int id)

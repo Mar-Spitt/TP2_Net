@@ -118,12 +118,14 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // Descripcion
             // 
+            this.Descripcion.DataPropertyName = "Descripcion";
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
@@ -131,6 +133,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // hs_semanales
             // 
+            this.hs_semanales.DataPropertyName = "HSSemanales";
             this.hs_semanales.HeaderText = "Horas Semanales";
             this.hs_semanales.Name = "hs_semanales";
             this.hs_semanales.ReadOnly = true;
@@ -138,6 +141,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // hs_totales
             // 
+            this.hs_totales.DataPropertyName = "HSTotales";
             this.hs_totales.HeaderText = "Horas Totales";
             this.hs_totales.Name = "hs_totales";
             this.hs_totales.ReadOnly = true;
@@ -146,6 +150,7 @@ namespace UI.Desktop.Planes_y_Materias
             // id_plan
             // 
             this.id_plan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_plan.DataPropertyName = "IDPlan";
             this.id_plan.HeaderText = "ID Plan";
             this.id_plan.Name = "id_plan";
             this.id_plan.ReadOnly = true;
@@ -221,7 +226,9 @@ namespace UI.Desktop.Planes_y_Materias
             this.Controls.Add(this.tcMaterias);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMaterias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Materias";
+            this.Load += new System.EventHandler(this.Materias_Load);
             this.tcMaterias.ContentPanel.ResumeLayout(false);
             this.tcMaterias.TopToolStripPanel.ResumeLayout(false);
             this.tcMaterias.TopToolStripPanel.PerformLayout();
