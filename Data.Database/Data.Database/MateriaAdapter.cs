@@ -17,8 +17,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("select id_materia,desc_materia, hs_semanales, hs_totales, id_plan "+
-                    "from materias", sqlConn);
+                SqlCommand cmdMaterias = new SqlCommand("select * from materias", sqlConn);
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
                 while (drMaterias.Read())
                 {
