@@ -41,7 +41,6 @@ namespace UI.Desktop.Alumnos
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtIDPlan = new System.Windows.Forms.TextBox();
             this.txtLegajo = new System.Windows.Forms.TextBox();
             this.lblLegajo = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace UI.Desktop.Alumnos
             this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +75,6 @@ namespace UI.Desktop.Alumnos
             this.tableLayoutPanel1.Controls.Add(this.lblDireccion, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtIDPlan, 6, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtLegajo, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblLegajo, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblFechaNacimiento, 3, 3);
@@ -85,6 +84,7 @@ namespace UI.Desktop.Alumnos
             this.tableLayoutPanel1.Controls.Add(this.dtNacimiento, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTelefono, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtTelefono, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cmbPlan, 6, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -188,13 +188,6 @@ namespace UI.Desktop.Alumnos
             this.txtEmail.Size = new System.Drawing.Size(122, 20);
             this.txtEmail.TabIndex = 9;
             // 
-            // txtIDPlan
-            // 
-            this.txtIDPlan.Location = new System.Drawing.Point(533, 95);
-            this.txtIDPlan.Name = "txtIDPlan";
-            this.txtIDPlan.Size = new System.Drawing.Size(100, 20);
-            this.txtIDPlan.TabIndex = 11;
-            // 
             // txtLegajo
             // 
             this.txtLegajo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -229,9 +222,9 @@ namespace UI.Desktop.Alumnos
             this.lblIDPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblIDPlan.Location = new System.Drawing.Point(465, 92);
             this.lblIDPlan.Name = "lblIDPlan";
-            this.lblIDPlan.Size = new System.Drawing.Size(49, 13);
+            this.lblIDPlan.Size = new System.Drawing.Size(32, 13);
             this.lblIDPlan.TabIndex = 18;
-            this.lblIDPlan.Text = "ID Plan";
+            this.lblIDPlan.Text = "Plan";
             // 
             // btnAceptar
             // 
@@ -280,6 +273,14 @@ namespace UI.Desktop.Alumnos
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 24;
             // 
+            // cmbPlan
+            // 
+            this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Location = new System.Drawing.Point(533, 95);
+            this.cmbPlan.Name = "cmbPlan";
+            this.cmbPlan.Size = new System.Drawing.Size(121, 21);
+            this.cmbPlan.TabIndex = 25;
+            // 
             // frmAlumnosDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +310,6 @@ namespace UI.Desktop.Alumnos
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtIDPlan;
         private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Label lblLegajo;
         private System.Windows.Forms.Label lblFechaNacimiento;
@@ -319,5 +319,6 @@ namespace UI.Desktop.Alumnos
         private System.Windows.Forms.DateTimePicker dtNacimiento;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.ComboBox cmbPlan;
     }
 }

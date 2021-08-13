@@ -19,6 +19,11 @@ namespace UI.Desktop.Alumnos
         public frmAlumnosDesktop()
         {
             InitializeComponent();
+            PlanLogic ml = new PlanLogic();
+            cmbPlan.DataSource = ml.GetAll();
+            cmbPlan.ValueMember = "ID";
+            cmbPlan.DisplayMember = "Descripcion";
+
         }
         public frmAlumnosDesktop(ModoForm modo) : this()
         {
@@ -51,7 +56,7 @@ namespace UI.Desktop.Alumnos
             this.dtNacimiento.Value = this.AlumnoActual.FechaNacimiento;
             this.txtLegajo.Text = this.AlumnoActual.Legajo.ToString();
             this.txtDireccion.Text = this.AlumnoActual.Direccion;
-            this.txtIDPlan.Text = this.AlumnoActual.IDPlan.ToString();
+            this.cmbPlan.SelectedValue = this.AlumnoActual.IDPlan;
             switch (Modo)
             {
                 case ModoForm.Alta:
@@ -81,7 +86,7 @@ namespace UI.Desktop.Alumnos
                 nuevoAlu.Telefono = this.txtTelefono.Text;
                 nuevoAlu.Legajo = int.Parse(this.txtLegajo.Text);
                 nuevoAlu.Direccion= this.txtDireccion.Text;
-                nuevoAlu.IDPlan = int.Parse(this.txtIDPlan.Text);
+                nuevoAlu.IDPlan = int.Parse(this.cmbPlan.SelectedValue.ToString());
 
                 if (Modo == ModoForm.Alta)
                 {
@@ -110,7 +115,7 @@ namespace UI.Desktop.Alumnos
 
             if (txtNombre.Text != String.Empty && txtApellido.Text != String.Empty
                 && txtDireccion.Text != String.Empty && txtTelefono.Text != String.Empty
-                && txtEmail.Text != String.Empty && txtIDPlan.Text != String.Empty
+                && txtEmail.Text != String.Empty && this.cmbPlan.SelectedValue.ToString() != String.Empty
                 && txtLegajo.Text != String.Empty)
             {
                 rta = validarEmail(txtEmail.Text);

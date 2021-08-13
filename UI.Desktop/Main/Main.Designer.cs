@@ -70,7 +70,7 @@ namespace UI.Desktop
             this.mnuArchivo});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(847, 24);
+            this.mnsPrincipal.Size = new System.Drawing.Size(850, 24);
             this.mnsPrincipal.TabIndex = 2;
             this.mnsPrincipal.Text = "menuStrip1";
             // 
@@ -139,7 +139,7 @@ namespace UI.Desktop
             treeNode10,
             treeNode11,
             treeNode14});
-            this.trvABM.Size = new System.Drawing.Size(398, 288);
+            this.trvABM.Size = new System.Drawing.Size(398, 346);
             this.trvABM.TabIndex = 17;
             this.trvABM.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvABM_AfterSelect);
             // 
@@ -150,7 +150,7 @@ namespace UI.Desktop
             this.groupBox1.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(799, 385);
+            this.groupBox1.Size = new System.Drawing.Size(817, 428);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sistema de Gestión Académica";
@@ -159,7 +159,7 @@ namespace UI.Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 450);
+            this.ClientSize = new System.Drawing.Size(850, 483);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
