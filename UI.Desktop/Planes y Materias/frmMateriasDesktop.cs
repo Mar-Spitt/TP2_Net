@@ -20,9 +20,9 @@ namespace UI.Desktop.Planes_y_Materias
         {
             InitializeComponent();
 
-            MateriaLogic ml = new MateriaLogic();
+            PlanLogic ml = new PlanLogic();
             cmbPlan.DataSource = ml.GetAll();
-            cmbPlan.ValueMember = "IDPlan";
+            cmbPlan.ValueMember = "ID";
             cmbPlan.DisplayMember = "Descripcion";
         }
 

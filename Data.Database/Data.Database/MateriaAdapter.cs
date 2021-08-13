@@ -135,6 +135,7 @@ namespace Data.Database
                 cmdInsert.Parameters.Add("@hs_totales", SqlDbType.Int).Value = materia.HSTotales;
                 cmdInsert.Parameters.Add("@hs_semanales", SqlDbType.Int).Value = materia.HSSemanales;
                 cmdInsert.Parameters.Add("@id_plan", SqlDbType.Int).Value = materia.IDPlan;
+                materia.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
             catch (Exception Ex)
             {

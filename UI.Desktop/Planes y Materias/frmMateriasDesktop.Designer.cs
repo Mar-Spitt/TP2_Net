@@ -54,7 +54,7 @@ namespace UI.Desktop.Planes_y_Materias
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlMateriasDesktop.Controls.Add(this.lblHsSemanales, 1, 2);
             this.tlMateriasDesktop.Controls.Add(this.txtHsSemanales, 2, 2);
             this.tlMateriasDesktop.Controls.Add(this.lblHsTotales, 3, 2);
@@ -91,7 +91,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtHsSemanales
             // 
-            this.txtHsSemanales.Location = new System.Drawing.Point(120, 73);
+            this.txtHsSemanales.Location = new System.Drawing.Point(118, 73);
             this.txtHsSemanales.Name = "txtHsSemanales";
             this.txtHsSemanales.Size = new System.Drawing.Size(100, 20);
             this.txtHsSemanales.TabIndex = 5;
@@ -100,7 +100,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.lblHsTotales.AutoSize = true;
             this.lblHsTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblHsTotales.Location = new System.Drawing.Point(277, 70);
+            this.lblHsTotales.Location = new System.Drawing.Point(275, 70);
             this.lblHsTotales.Name = "lblHsTotales";
             this.lblHsTotales.Size = new System.Drawing.Size(86, 13);
             this.lblHsTotales.TabIndex = 8;
@@ -108,7 +108,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtHsTotales
             // 
-            this.txtHsTotales.Location = new System.Drawing.Point(372, 73);
+            this.txtHsTotales.Location = new System.Drawing.Point(370, 73);
             this.txtHsTotales.Name = "txtHsTotales";
             this.txtHsTotales.Size = new System.Drawing.Size(100, 20);
             this.txtHsTotales.TabIndex = 6;
@@ -126,7 +126,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(120, 27);
+            this.txtID.Location = new System.Drawing.Point(118, 27);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
@@ -136,7 +136,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcion.Location = new System.Drawing.Point(277, 24);
+            this.lblDescripcion.Location = new System.Drawing.Point(275, 24);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 1;
@@ -145,7 +145,7 @@ namespace UI.Desktop.Planes_y_Materias
             // txtDescripcion
             // 
             this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescripcion.Location = new System.Drawing.Point(372, 27);
+            this.txtDescripcion.Location = new System.Drawing.Point(370, 27);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(264, 20);
             this.txtDescripcion.TabIndex = 4;
@@ -162,7 +162,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(277, 172);
+            this.btnAceptar.Location = new System.Drawing.Point(275, 172);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 11;
@@ -172,7 +172,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(372, 172);
+            this.btnCancelar.Location = new System.Drawing.Point(370, 172);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
@@ -184,7 +184,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.cmbPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Location = new System.Drawing.Point(120, 117);
+            this.cmbPlan.Location = new System.Drawing.Point(118, 117);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(151, 21);
             this.cmbPlan.TabIndex = 13;

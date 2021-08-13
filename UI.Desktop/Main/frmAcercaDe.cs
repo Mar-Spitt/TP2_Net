@@ -29,7 +29,7 @@ namespace UI.Desktop
             lblVersion.Text = String.Format("Version {0}", Application.ProductVersion);
             lbEmpresaNombre.Text = "Año: 2021 " + Application.CompanyName;
             lblCopyright.Text = "Desarrollado por:\n Boixadera Loriana, Luna Paulina y Spitteler Marlene";
-            txtDescripcion.Text = String.Format("Este producto '{0}' fue desarrollado con fines academicos", Application.ProductName);
+            txtDescripcion.Text = String.Format("Este producto 'Academia' fue desarrollado con fines academicos");
                                                 
 
         }
