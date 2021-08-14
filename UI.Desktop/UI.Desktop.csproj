@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Profesores\frmProfesores.resx">
       <DependentUpon>frmProfesores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profesores\frmProfesoresDesktop.resx">
+      <DependentUpon>frmProfesoresDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </EmbeddedResource>

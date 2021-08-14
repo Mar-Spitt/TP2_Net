@@ -74,7 +74,15 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoProfesor": // Profesor (solo ver)
-
+                    if (usuario_act == 3)
+                    {
+                        frmProfesores frmProfesores = new frmProfesores();
+                        frmProfesores.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoPlan":
                     if (usuario_act == 3)
