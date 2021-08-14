@@ -64,6 +64,18 @@
     <Compile Include="AplicationForm.Designer.cs">
       <DependentUpon>AplicationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comisiones\frmComisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comisiones\frmComisiones.Designer.cs">
+      <DependentUpon>frmComisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comisiones\frmComisionesDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comisiones\frmComisionesDesktop.Designer.cs">
+      <DependentUpon>frmComisionesDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesores\frmProfesoresDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AplicationForm.resx">
       <DependentUpon>AplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comisiones\frmComisiones.resx">
+      <DependentUpon>frmComisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comisiones\frmComisionesDesktop.resx">
+      <DependentUpon>frmComisionesDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Especialidades\frmEspecialidades.resx">
       <DependentUpon>frmEspecialidades.cs</DependentUpon>

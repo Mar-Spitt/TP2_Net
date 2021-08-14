@@ -48,13 +48,14 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // tlMateriasDesktop
             // 
+            this.tlMateriasDesktop.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tlMateriasDesktop.ColumnCount = 6;
-            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.839779F));
-            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.16022F));
+            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.00885F));
+            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.99115F));
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlMateriasDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tlMateriasDesktop.Controls.Add(this.lblHsSemanales, 1, 2);
             this.tlMateriasDesktop.Controls.Add(this.txtHsSemanales, 2, 2);
             this.tlMateriasDesktop.Controls.Add(this.lblHsTotales, 3, 2);
@@ -67,13 +68,12 @@ namespace UI.Desktop.Planes_y_Materias
             this.tlMateriasDesktop.Controls.Add(this.btnAceptar, 3, 4);
             this.tlMateriasDesktop.Controls.Add(this.btnCancelar, 4, 4);
             this.tlMateriasDesktop.Controls.Add(this.cmbPlan, 2, 3);
-            this.tlMateriasDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlMateriasDesktop.Location = new System.Drawing.Point(0, 0);
             this.tlMateriasDesktop.Name = "tlMateriasDesktop";
             this.tlMateriasDesktop.RowCount = 5;
             this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.04255F));
             this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.95744F));
-            this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlMateriasDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tlMateriasDesktop.Size = new System.Drawing.Size(668, 212);
@@ -81,9 +81,10 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // lblHsSemanales
             // 
+            this.lblHsSemanales.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHsSemanales.AutoSize = true;
             this.lblHsSemanales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblHsSemanales.Location = new System.Drawing.Point(13, 70);
+            this.lblHsSemanales.Location = new System.Drawing.Point(35, 64);
             this.lblHsSemanales.Name = "lblHsSemanales";
             this.lblHsSemanales.Size = new System.Drawing.Size(68, 26);
             this.lblHsSemanales.TabIndex = 7;
@@ -91,7 +92,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtHsSemanales
             // 
-            this.txtHsSemanales.Location = new System.Drawing.Point(118, 73);
+            this.txtHsSemanales.Location = new System.Drawing.Point(115, 67);
             this.txtHsSemanales.Name = "txtHsSemanales";
             this.txtHsSemanales.Size = new System.Drawing.Size(100, 20);
             this.txtHsSemanales.TabIndex = 5;
@@ -99,8 +100,8 @@ namespace UI.Desktop.Planes_y_Materias
             // lblHsTotales
             // 
             this.lblHsTotales.AutoSize = true;
-            this.lblHsTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblHsTotales.Location = new System.Drawing.Point(275, 70);
+            this.lblHsTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHsTotales.Location = new System.Drawing.Point(272, 64);
             this.lblHsTotales.Name = "lblHsTotales";
             this.lblHsTotales.Size = new System.Drawing.Size(86, 13);
             this.lblHsTotales.TabIndex = 8;
@@ -108,16 +109,17 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtHsTotales
             // 
-            this.txtHsTotales.Location = new System.Drawing.Point(370, 73);
+            this.txtHsTotales.Location = new System.Drawing.Point(367, 67);
             this.txtHsTotales.Name = "txtHsTotales";
             this.txtHsTotales.Size = new System.Drawing.Size(100, 20);
             this.txtHsTotales.TabIndex = 6;
             // 
             // lblId
             // 
+            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblId.Location = new System.Drawing.Point(13, 24);
+            this.lblId.Location = new System.Drawing.Point(59, 22);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(20, 13);
             this.lblId.TabIndex = 0;
@@ -126,7 +128,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(118, 27);
+            this.txtID.Location = new System.Drawing.Point(115, 25);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
@@ -136,7 +138,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcion.Location = new System.Drawing.Point(275, 24);
+            this.lblDescripcion.Location = new System.Drawing.Point(272, 22);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 1;
@@ -145,24 +147,25 @@ namespace UI.Desktop.Planes_y_Materias
             // txtDescripcion
             // 
             this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescripcion.Location = new System.Drawing.Point(370, 27);
+            this.txtDescripcion.Location = new System.Drawing.Point(367, 25);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(264, 20);
             this.txtDescripcion.TabIndex = 4;
             // 
             // lblDescripcionPlan
             // 
+            this.lblDescripcionPlan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcionPlan.AutoSize = true;
             this.lblDescripcionPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcionPlan.Location = new System.Drawing.Point(13, 114);
+            this.lblDescripcionPlan.Location = new System.Drawing.Point(53, 114);
             this.lblDescripcionPlan.Name = "lblDescripcionPlan";
-            this.lblDescripcionPlan.Size = new System.Drawing.Size(78, 26);
+            this.lblDescripcionPlan.Size = new System.Drawing.Size(32, 13);
             this.lblDescripcionPlan.TabIndex = 9;
-            this.lblDescripcionPlan.Text = "Descripción Plan";
+            this.lblDescripcionPlan.Text = "Plan";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(275, 172);
+            this.btnAceptar.Location = new System.Drawing.Point(272, 172);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 11;
@@ -172,7 +175,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(370, 172);
+            this.btnCancelar.Location = new System.Drawing.Point(367, 172);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
@@ -184,7 +187,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.cmbPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Location = new System.Drawing.Point(118, 117);
+            this.cmbPlan.Location = new System.Drawing.Point(115, 117);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(151, 21);
             this.cmbPlan.TabIndex = 13;

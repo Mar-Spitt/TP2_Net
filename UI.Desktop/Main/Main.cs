@@ -107,7 +107,15 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoComision":
-
+                    if (usuario_act == 3)
+                    {
+                        frmComisiones formComision = new frmComisiones();
+                        formComision.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoCurso":
 

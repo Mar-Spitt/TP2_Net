@@ -171,9 +171,17 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE usuarios u inner join personas p on u.id_persona=p.id_persona" +
-                    "SET nombre_usuario=@nombre_usuario,clave=@clave,habilitado=@habilitado,p.nombre=@nombre,p.apellido=@apellido,p.email=@email" +
-                    "WHERE id_usuario=@id", sqlConn);
+                //TODO: arregle esta sentencia xq no estaba bien escrita, sin embargo la excepcion se
+                // produce xq te dice que el problema esta despues de lo que le sigue a "p."
+                //haciedo referencia a que la linea 182 estaría mal pero la cosa es que necesitamos
+                //actualizar esos campos en la tabla persona tambien asique no se si se pueden hacer dos 
+                //UPDATEs dentro de la misma llamada
+                SqlCommand cmdSave = new SqlCommand("UPDATE u " +
+                    "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave,u.habilitado=@habilitado," +
+                    "u.nombre=@nombre,u.apellido=@apellido,u.email=@email " +
+                    "p.nombre=@nombre,p.apellido=@apellido,p.email=@email " +
+                    "FROM usuarios u INNER JOIN personas p on u.id_persona=p.id_persona " +
+                    "WHERE u.id_usuario=@id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;

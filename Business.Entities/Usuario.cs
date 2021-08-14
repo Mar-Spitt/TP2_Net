@@ -19,6 +19,5 @@ namespace Business.Entities
         public bool Habilitado { get; set; }
         public int IdPersona { get; set; }
 
-
     }
 }
