@@ -49,7 +49,7 @@ namespace UI.Desktop
         public override void MapearDeDatos()
         {
             this.txtID.Text = this.ComisionActual.ID.ToString();
-            this.txtAnioEspecialidad.Text = this.ComisionActual.Descripcion;
+            this.txtAnioEspecialidad.Text = this.ComisionActual.AnioEspecialidad.ToString();
             this.cmbDescipcionPlan.SelectedValue = this.ComisionActual.IDPlan;
             this.txtDescipcion.Text = this.ComisionActual.Descripcion;
 
@@ -105,7 +105,7 @@ namespace UI.Desktop
             catch (Exception Ex)
             {
                 Notificar("Error",
-                          "Se producido un error al conectar con la base de datos",
+                          "Se producido un error al conectar con la base de datos: "+Ex,
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Error);
             }

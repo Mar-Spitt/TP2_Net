@@ -129,7 +129,7 @@ namespace Data.Database
 
                 cmdInsert.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
                 cmdInsert.Parameters.Add("@anio_esp", SqlDbType.Int).Value = comision.AnioEspecialidad;
-                cmdInsert.Parameters.Add("@id_esp", SqlDbType.Int).Value = comision.IDPlan;
+                cmdInsert.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;
                 comision.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
             catch (Exception Ex)

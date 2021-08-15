@@ -218,7 +218,7 @@ namespace UI.Desktop
             this.tscProfesores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tscProfesores.Name = "tscProfesores";
             this.tscProfesores.Size = new System.Drawing.Size(23, 22);
-            this.tscProfesores.Text = "toolStripButton1";
+            this.tscProfesores.Text = "Nuevo";
             this.tscProfesores.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
             // toolStripButton2
@@ -228,7 +228,7 @@ namespace UI.Desktop
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Editar";
             this.toolStripButton2.Click += new System.EventHandler(this.tsbEditar_Click_1);
             // 
             // toolStripButton3
@@ -238,7 +238,7 @@ namespace UI.Desktop
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.Click += new System.EventHandler(this.tsbEliminar_Click_1);
             // 
             // frmProfesores

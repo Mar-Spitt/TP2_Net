@@ -64,7 +64,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.lblID, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblEmail, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblLegajo, 1, 4);
@@ -133,7 +133,7 @@ namespace UI.Desktop
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblApellido.Location = new System.Drawing.Point(203, 42);
+            this.lblApellido.Location = new System.Drawing.Point(202, 42);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(52, 13);
             this.lblApellido.TabIndex = 4;
@@ -143,7 +143,7 @@ namespace UI.Desktop
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(203, 73);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(202, 73);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(70, 26);
             this.lblFechaNacimiento.TabIndex = 5;
@@ -153,7 +153,7 @@ namespace UI.Desktop
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblTelefono.Location = new System.Drawing.Point(203, 114);
+            this.lblTelefono.Location = new System.Drawing.Point(202, 114);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(57, 13);
             this.lblTelefono.TabIndex = 6;
@@ -162,7 +162,7 @@ namespace UI.Desktop
             // txtID
             // 
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtID.Location = new System.Drawing.Point(76, 15);
+            this.txtID.Location = new System.Drawing.Point(75, 15);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(121, 20);
@@ -171,7 +171,7 @@ namespace UI.Desktop
             // txtApellido
             // 
             this.txtApellido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtApellido.Location = new System.Drawing.Point(282, 45);
+            this.txtApellido.Location = new System.Drawing.Point(281, 45);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(148, 20);
             this.txtApellido.TabIndex = 10;
@@ -179,7 +179,7 @@ namespace UI.Desktop
             // txtNombre
             // 
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombre.Location = new System.Drawing.Point(76, 45);
+            this.txtNombre.Location = new System.Drawing.Point(75, 45);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 11;
@@ -187,7 +187,7 @@ namespace UI.Desktop
             // txtEmail
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmail.Location = new System.Drawing.Point(76, 76);
+            this.txtEmail.Location = new System.Drawing.Point(75, 76);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(121, 20);
             this.txtEmail.TabIndex = 12;
@@ -195,7 +195,7 @@ namespace UI.Desktop
             // txtLegajo
             // 
             this.txtLegajo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLegajo.Location = new System.Drawing.Point(76, 117);
+            this.txtLegajo.Location = new System.Drawing.Point(75, 117);
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(121, 20);
             this.txtLegajo.TabIndex = 13;
@@ -203,14 +203,14 @@ namespace UI.Desktop
             // txtTelefono
             // 
             this.txtTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTelefono.Location = new System.Drawing.Point(282, 117);
+            this.txtTelefono.Location = new System.Drawing.Point(281, 117);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(148, 20);
             this.txtTelefono.TabIndex = 15;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(436, 159);
+            this.btnCancelar.Location = new System.Drawing.Point(435, 159);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(72, 23);
             this.btnCancelar.TabIndex = 8;
@@ -221,7 +221,7 @@ namespace UI.Desktop
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(355, 159);
+            this.btnAceptar.Location = new System.Drawing.Point(354, 159);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 7;
@@ -234,7 +234,7 @@ namespace UI.Desktop
             this.dtpFechaNacimiento.CustomFormat = "dd/MM/yyyy";
             this.dtpFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(282, 76);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(281, 76);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(148, 20);
             this.dtpFechaNacimiento.TabIndex = 16;
@@ -253,7 +253,7 @@ namespace UI.Desktop
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDireccion.Location = new System.Drawing.Point(436, 42);
+            this.lblDireccion.Location = new System.Drawing.Point(435, 42);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(61, 13);
             this.lblDireccion.TabIndex = 18;
@@ -263,7 +263,7 @@ namespace UI.Desktop
             // 
             this.lblPlan.AutoSize = true;
             this.lblPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblPlan.Location = new System.Drawing.Point(436, 73);
+            this.lblPlan.Location = new System.Drawing.Point(435, 73);
             this.lblPlan.Name = "lblPlan";
             this.lblPlan.Size = new System.Drawing.Size(32, 13);
             this.lblPlan.TabIndex = 19;
@@ -273,7 +273,7 @@ namespace UI.Desktop
             // 
             this.cmbPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Location = new System.Drawing.Point(514, 76);
+            this.cmbPlan.Location = new System.Drawing.Point(513, 76);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(201, 21);
             this.cmbPlan.TabIndex = 20;
@@ -281,7 +281,7 @@ namespace UI.Desktop
             // txtDireccion
             // 
             this.txtDireccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDireccion.Location = new System.Drawing.Point(514, 45);
+            this.txtDireccion.Location = new System.Drawing.Point(513, 45);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(201, 20);
             this.txtDireccion.TabIndex = 21;

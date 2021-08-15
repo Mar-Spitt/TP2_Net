@@ -176,9 +176,10 @@ namespace Data.Database
                 //haciedo referencia a que la linea 182 estaría mal pero la cosa es que necesitamos
                 //actualizar esos campos en la tabla persona tambien asique no se si se pueden hacer dos 
                 //UPDATEs dentro de la misma llamada
+
                 SqlCommand cmdSave = new SqlCommand("UPDATE u " +
                     "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave,u.habilitado=@habilitado," +
-                    "u.nombre=@nombre,u.apellido=@apellido,u.email=@email " +
+                    //"u.nombre=@nombre,u.apellido=@apellido,u.email=@email " +
                     "p.nombre=@nombre,p.apellido=@apellido,p.email=@email " +
                     "FROM usuarios u INNER JOIN personas p on u.id_persona=p.id_persona " +
                     "WHERE u.id_usuario=@id", sqlConn);
