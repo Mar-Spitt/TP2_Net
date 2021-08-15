@@ -31,10 +31,17 @@ namespace UI.Desktop
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfesores));
             this.tcProfesores = new System.Windows.Forms.ToolStripContainer();
             this.tlProfesores = new System.Windows.Forms.TableLayoutPanel();
             this.dgvProfesores = new System.Windows.Forms.DataGridView();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tscProfesores = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.id_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +49,6 @@ namespace UI.Desktop
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tscProfesores = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tcProfesores.ContentPanel.SuspendLayout();
             this.tcProfesores.TopToolStripPanel.SuspendLayout();
             this.tcProfesores.SuspendLayout();
@@ -62,11 +63,11 @@ namespace UI.Desktop
             // tcProfesores.ContentPanel
             // 
             this.tcProfesores.ContentPanel.Controls.Add(this.tlProfesores);
-            this.tcProfesores.ContentPanel.Size = new System.Drawing.Size(1157, 327);
+            this.tcProfesores.ContentPanel.Size = new System.Drawing.Size(1059, 327);
             this.tcProfesores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcProfesores.Location = new System.Drawing.Point(0, 0);
             this.tcProfesores.Name = "tcProfesores";
-            this.tcProfesores.Size = new System.Drawing.Size(1157, 352);
+            this.tcProfesores.Size = new System.Drawing.Size(1059, 352);
             this.tcProfesores.TabIndex = 0;
             this.tcProfesores.Text = "toolStripContainer1";
             // 
@@ -88,7 +89,7 @@ namespace UI.Desktop
             this.tlProfesores.RowCount = 2;
             this.tlProfesores.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlProfesores.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlProfesores.Size = new System.Drawing.Size(1157, 327);
+            this.tlProfesores.Size = new System.Drawing.Size(1059, 327);
             this.tlProfesores.TabIndex = 0;
             // 
             // dgvProfesores
@@ -120,68 +121,22 @@ namespace UI.Desktop
             this.dgvProfesores.MultiSelect = false;
             this.dgvProfesores.Name = "dgvProfesores";
             this.dgvProfesores.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProfesores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProfesores.Size = new System.Drawing.Size(1151, 292);
+            this.dgvProfesores.Size = new System.Drawing.Size(1053, 292);
             this.dgvProfesores.TabIndex = 0;
-            // 
-            // id_persona
-            // 
-            this.id_persona.DataPropertyName = "ID";
-            this.id_persona.HeaderText = "ID";
-            this.id_persona.Name = "id_persona";
-            this.id_persona.ReadOnly = true;
-            this.id_persona.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Dirección
-            // 
-            this.Dirección.DataPropertyName = "Direccion";
-            this.Dirección.HeaderText = "Dirección";
-            this.Dirección.Name = "Dirección";
-            this.Dirección.ReadOnly = true;
-            this.Dirección.Width = 200;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 200;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 155;
             // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(967, 301);
+            this.btnActualizar.Location = new System.Drawing.Point(869, 301);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(92, 23);
             this.btnActualizar.TabIndex = 1;
@@ -191,7 +146,7 @@ namespace UI.Desktop
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1065, 301);
+            this.btnSalir.Location = new System.Drawing.Point(967, 301);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(89, 23);
             this.btnSalir.TabIndex = 2;
@@ -241,11 +196,66 @@ namespace UI.Desktop
             this.toolStripButton3.Text = "Eliminar";
             this.toolStripButton3.Click += new System.EventHandler(this.tsbEliminar_Click_1);
             // 
+            // id_persona
+            // 
+            this.id_persona.DataPropertyName = "ID";
+            this.id_persona.HeaderText = "ID";
+            this.id_persona.Name = "id_persona";
+            this.id_persona.ReadOnly = true;
+            this.id_persona.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 150;
+            // 
+            // Apellido
+            // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Dirección
+            // 
+            this.Dirección.DataPropertyName = "Direccion";
+            this.Dirección.HeaderText = "Dirección";
+            this.Dirección.Name = "Dirección";
+            this.Dirección.ReadOnly = true;
+            this.Dirección.Width = 200;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 200;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 155;
+            // 
             // frmProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 352);
+            this.ClientSize = new System.Drawing.Size(1059, 352);
             this.Controls.Add(this.tcProfesores);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProfesores";

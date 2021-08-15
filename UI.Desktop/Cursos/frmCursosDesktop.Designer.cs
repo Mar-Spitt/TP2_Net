@@ -51,14 +51,14 @@ namespace UI.Desktop
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.40816F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.59184F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.58064F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.41936F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.Controls.Add(this.ldlId, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtId, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblMateria, 3, 1);
@@ -79,10 +79,10 @@ namespace UI.Desktop
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.65934F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.34066F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(823, 204);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(803, 183);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // ldlId
@@ -91,7 +91,7 @@ namespace UI.Desktop
             this.ldlId.AutoSize = true;
             this.ldlId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldlId.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ldlId.Location = new System.Drawing.Point(74, 36);
+            this.ldlId.Location = new System.Drawing.Point(70, 35);
             this.ldlId.Name = "ldlId";
             this.ldlId.Size = new System.Drawing.Size(20, 13);
             this.ldlId.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace UI.Desktop
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(100, 39);
+            this.txtId.Location = new System.Drawing.Point(96, 38);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(57, 20);
@@ -111,7 +111,7 @@ namespace UI.Desktop
             this.lblMateria.AutoSize = true;
             this.lblMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMateria.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMateria.Location = new System.Drawing.Point(189, 36);
+            this.lblMateria.Location = new System.Drawing.Point(189, 35);
             this.lblMateria.Name = "lblMateria";
             this.lblMateria.Size = new System.Drawing.Size(49, 13);
             this.lblMateria.TabIndex = 5;
@@ -120,7 +120,7 @@ namespace UI.Desktop
             // cmbMateria
             // 
             this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(244, 39);
+            this.cmbMateria.Location = new System.Drawing.Point(244, 38);
             this.cmbMateria.Name = "cmbMateria";
             this.cmbMateria.Size = new System.Drawing.Size(179, 21);
             this.cmbMateria.TabIndex = 6;
@@ -131,7 +131,7 @@ namespace UI.Desktop
             this.lblComision.AutoSize = true;
             this.lblComision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComision.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblComision.Location = new System.Drawing.Point(456, 36);
+            this.lblComision.Location = new System.Drawing.Point(460, 35);
             this.lblComision.Name = "lblComision";
             this.lblComision.Size = new System.Drawing.Size(57, 13);
             this.lblComision.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace UI.Desktop
             // cmbComision
             // 
             this.cmbComision.FormattingEnabled = true;
-            this.cmbComision.Location = new System.Drawing.Point(519, 39);
+            this.cmbComision.Location = new System.Drawing.Point(523, 38);
             this.cmbComision.Name = "cmbComision";
             this.cmbComision.Size = new System.Drawing.Size(121, 21);
             this.cmbComision.TabIndex = 8;
@@ -151,7 +151,7 @@ namespace UI.Desktop
             this.lblAnio.AutoSize = true;
             this.lblAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAnio.Location = new System.Drawing.Point(28, 90);
+            this.lblAnio.Location = new System.Drawing.Point(24, 86);
             this.lblAnio.Name = "lblAnio";
             this.lblAnio.Size = new System.Drawing.Size(66, 26);
             this.lblAnio.TabIndex = 9;
@@ -159,7 +159,7 @@ namespace UI.Desktop
             // 
             // txtAnioCalendario
             // 
-            this.txtAnioCalendario.Location = new System.Drawing.Point(100, 93);
+            this.txtAnioCalendario.Location = new System.Drawing.Point(96, 89);
             this.txtAnioCalendario.Name = "txtAnioCalendario";
             this.txtAnioCalendario.Size = new System.Drawing.Size(70, 20);
             this.txtAnioCalendario.TabIndex = 10;
@@ -170,7 +170,7 @@ namespace UI.Desktop
             this.lclCupo.AutoSize = true;
             this.lclCupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lclCupo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lclCupo.Location = new System.Drawing.Point(202, 90);
+            this.lclCupo.Location = new System.Drawing.Point(202, 86);
             this.lclCupo.Name = "lclCupo";
             this.lclCupo.Size = new System.Drawing.Size(36, 13);
             this.lclCupo.TabIndex = 11;
@@ -178,7 +178,7 @@ namespace UI.Desktop
             // 
             // txtCupo
             // 
-            this.txtCupo.Location = new System.Drawing.Point(244, 93);
+            this.txtCupo.Location = new System.Drawing.Point(244, 89);
             this.txtCupo.Name = "txtCupo";
             this.txtCupo.Size = new System.Drawing.Size(87, 20);
             this.txtCupo.TabIndex = 12;
@@ -189,7 +189,7 @@ namespace UI.Desktop
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDescripcion.Location = new System.Drawing.Point(439, 90);
+            this.lblDescripcion.Location = new System.Drawing.Point(443, 86);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 13;
@@ -197,7 +197,7 @@ namespace UI.Desktop
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(519, 93);
+            this.txtDescripcion.Location = new System.Drawing.Point(523, 89);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(251, 20);
             this.txtDescripcion.TabIndex = 14;
@@ -205,7 +205,7 @@ namespace UI.Desktop
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(438, 160);
+            this.btnAceptar.Location = new System.Drawing.Point(442, 136);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 20);
             this.btnAceptar.TabIndex = 15;
@@ -215,7 +215,7 @@ namespace UI.Desktop
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(519, 160);
+            this.btnCancelar.Location = new System.Drawing.Point(523, 136);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 20);
             this.btnCancelar.TabIndex = 16;
@@ -227,7 +227,7 @@ namespace UI.Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 204);
+            this.ClientSize = new System.Drawing.Size(803, 183);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCursosDesktop";

@@ -29,7 +29,7 @@ namespace UI.Desktop
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Error", "Error al recuperar lista de cursos" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al recuperar lista de curso " + Ex, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

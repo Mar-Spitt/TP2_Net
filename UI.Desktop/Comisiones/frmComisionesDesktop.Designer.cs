@@ -49,12 +49,12 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnCount = 8;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.69811F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.30189F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.Controls.Add(this.txtID, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblIdComision, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAnioEspecialidad, 3, 1);
@@ -71,17 +71,17 @@ namespace UI.Desktop
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.16883F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.83117F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(698, 186);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 151);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(111, 25);
+            this.txtID.Location = new System.Drawing.Point(113, 23);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(53, 20);
@@ -92,7 +92,7 @@ namespace UI.Desktop
             this.lblIdComision.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblIdComision.AutoSize = true;
             this.lblIdComision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdComision.Location = new System.Drawing.Point(55, 22);
+            this.lblIdComision.Location = new System.Drawing.Point(57, 20);
             this.lblIdComision.Name = "lblIdComision";
             this.lblIdComision.Size = new System.Drawing.Size(20, 13);
             this.lblIdComision.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace UI.Desktop
             // 
             this.lblAnioEspecialidad.AutoSize = true;
             this.lblAnioEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnioEspecialidad.Location = new System.Drawing.Point(170, 22);
+            this.lblAnioEspecialidad.Location = new System.Drawing.Point(182, 20);
             this.lblAnioEspecialidad.Name = "lblAnioEspecialidad";
             this.lblAnioEspecialidad.Size = new System.Drawing.Size(105, 13);
             this.lblAnioEspecialidad.TabIndex = 2;
@@ -113,7 +113,7 @@ namespace UI.Desktop
             this.lblDescripcionPlan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcionPlan.AutoSize = true;
             this.lblDescripcionPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionPlan.Location = new System.Drawing.Point(434, 22);
+            this.lblDescripcionPlan.Location = new System.Drawing.Point(439, 20);
             this.lblDescripcionPlan.Name = "lblDescripcionPlan";
             this.lblDescripcionPlan.Size = new System.Drawing.Size(32, 13);
             this.lblDescripcionPlan.TabIndex = 3;
@@ -124,7 +124,7 @@ namespace UI.Desktop
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(28, 72);
+            this.lblDescripcion.Location = new System.Drawing.Point(30, 65);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 4;
@@ -132,7 +132,7 @@ namespace UI.Desktop
             // 
             // txtAnioEspecialidad
             // 
-            this.txtAnioEspecialidad.Location = new System.Drawing.Point(289, 25);
+            this.txtAnioEspecialidad.Location = new System.Drawing.Point(293, 23);
             this.txtAnioEspecialidad.Name = "txtAnioEspecialidad";
             this.txtAnioEspecialidad.Size = new System.Drawing.Size(100, 20);
             this.txtAnioEspecialidad.TabIndex = 5;
@@ -140,7 +140,7 @@ namespace UI.Desktop
             // txtDescipcion
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtDescipcion, 5);
-            this.txtDescipcion.Location = new System.Drawing.Point(111, 75);
+            this.txtDescipcion.Location = new System.Drawing.Point(113, 68);
             this.txtDescipcion.Name = "txtDescipcion";
             this.txtDescipcion.Size = new System.Drawing.Size(295, 20);
             this.txtDescipcion.TabIndex = 6;
@@ -148,14 +148,14 @@ namespace UI.Desktop
             // cmbDescipcionPlan
             // 
             this.cmbDescipcionPlan.FormattingEnabled = true;
-            this.cmbDescipcionPlan.Location = new System.Drawing.Point(500, 25);
+            this.cmbDescipcionPlan.Location = new System.Drawing.Point(504, 23);
             this.cmbDescipcionPlan.Name = "cmbDescipcionPlan";
             this.cmbDescipcionPlan.Size = new System.Drawing.Size(121, 21);
             this.cmbDescipcionPlan.TabIndex = 7;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(500, 125);
+            this.btnCancelar.Location = new System.Drawing.Point(504, 104);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -165,7 +165,7 @@ namespace UI.Desktop
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(406, 125);
+            this.btnAceptar.Location = new System.Drawing.Point(413, 104);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 9;
@@ -177,7 +177,7 @@ namespace UI.Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 186);
+            this.ClientSize = new System.Drawing.Size(652, 151);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmComisionesDesktop";
