@@ -118,7 +118,15 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoCurso":
-
+                    if (usuario_act == 3)
+                    {
+                        frmCursos formCurso = new frmCursos();
+                        formCurso.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoInscripcion":
 

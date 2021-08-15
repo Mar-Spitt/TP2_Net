@@ -24,6 +24,7 @@ namespace UI.Desktop
             cmbEspecialidad.ValueMember = "ID";
             cmbEspecialidad.DisplayMember = "Descripcion";
         }
+
         public frmPlanDesktop(ModoForm modo) : this()
         {
             Modo = modo;
@@ -129,6 +130,7 @@ namespace UI.Desktop
         {
             this.Close();
         }
+
         public override bool Validar()
         {
             bool rta = false;
