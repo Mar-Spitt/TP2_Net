@@ -178,10 +178,17 @@ namespace UI.Desktop
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
-            if (Validar())
+            if (this.txtClave.Text == this.txtConfirmarClave.Text)
+            { 
+                if (Validar())
+                {
+                    GuardarCambios();
+                    this.Close();
+                }
+            }
+            else
             {
-                GuardarCambios();
-                this.Close();
+                Notificar("Atención", "Por favor, intente nuevamente. Verifique que ambas claves coincidan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
