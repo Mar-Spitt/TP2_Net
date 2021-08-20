@@ -171,7 +171,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand("UPDATE u " +
-                    "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave, u.habilitado=@habilitado," +
+                    "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave, u.habilitado=@habilitado " +
                     "FROM usuarios u WHERE u.id_usuario=@id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
@@ -192,62 +192,56 @@ namespace Data.Database
         }
 
         protected void Insert(Usuario usuario)
-        {
-            try
+        {   
+            if (GetOnePerson(usuario.Legajo) != 0)
             {
-                this.OpenConnection();
-                SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,id_persona) " +
-                    "VALUES (@nombre_usuario,@clave,@habilitado, @id_per) SELECT @@identity", sqlConn);
-                // esta línea es para recuperar el ID que asignó el sql automáticamente
+                try
+                {
+                    this.OpenConnection();
+                    SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,id_persona) " +
+                        "VALUES (@nombre_usuario,@clave,@habilitado, @id_per) SELECT @@identity", sqlConn);
+                    // esta línea es para recuperar el ID que asignó el sql automáticamente
 
-                cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
-                cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
-                cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-                cmdInsert.Parameters.Add("id_per", SqlDbType.Int).Value= GetOnePerson(usuario.Legajo);
-                usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
-               
-                // así se obtiene el ID que asigno la BD automaticamente
-                // cmdInsert.ExecuteNonQuery(); (tendriá q estar?)
+                    cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
+                    cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
+                    cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
+                    cmdInsert.Parameters.Add("@id_per", SqlDbType.Int).Value = GetOnePerson(usuario.Legajo);
+                    usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
+
+                    // así se obtiene el ID que asigno la BD automaticamente
+                    // cmdInsert.ExecuteNonQuery(); (tendriá q estar?)
+                }
+                catch (Exception Ex)
+                {
+                    Exception ExceptionManejada = new Exception("Error al crear el usuario", Ex);
+                    throw ExceptionManejada;
+                }
+                finally
+                {
+                    this.CloseConnection();
+                }
             }
-            catch (Exception Ex)
+            else
             {
-                Exception ExceptionManejada = new Exception("Error al crear el usuario", Ex);
+                Exception ExceptionManejada = new Exception("Error al crear el usuario, no se encontró una persona con ese legajo");
                 throw ExceptionManejada;
-            }
-            finally
-            {
-                this.CloseConnection();
             }
         }
 
         public int GetOnePerson(int leg)
         {
-            int id_per;
-            try
-            {
-                this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select id_persona from personas where legajo=@leg", sqlConn);
-                cmdUsuarios.Parameters.Add("@leg", SqlDbType.Int).Value = leg;
-                SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
-                if (drUsuarios.Read())
+           int id_per=0;
+           
+           PersonaAdapter personalo = new PersonaAdapter();
+           List<Persona> personas = personalo.GetAll();
+
+           foreach (Persona per in personas)
+           {
+                if(per.Legajo==leg)
                 {
-                    id_per = (int)drUsuarios["id_persona"];
+                    id_per=per.ID;
                 }
-                else
-                {
-                    id_per = 0 ;
-                }
-                drUsuarios.Close();
-            }
-            catch (Exception Ex)
-            {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la persona", Ex);
-                throw ExcepcionManejada;
-            }
-            finally
-            {
-                this.CloseConnection();
-            }
+           }
             return id_per;
         }
 

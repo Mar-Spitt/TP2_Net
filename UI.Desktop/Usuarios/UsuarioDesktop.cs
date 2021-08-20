@@ -134,6 +134,10 @@ namespace UI.Desktop
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                         }
+                        else
+                        {
+                            rta = true;
+                        }
                        
                     }
                     else
