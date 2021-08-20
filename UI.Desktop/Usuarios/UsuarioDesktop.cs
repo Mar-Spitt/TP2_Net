@@ -82,8 +82,24 @@ namespace UI.Desktop
 
                 if (Modo == ModoForm.Alta)
                 {
-                    nuevoUsu.State = BusinessEntity.States.New;
-                    usr.Save(nuevoUsu);
+                    //TODO Error al ingresar legajo que no existe
+                    PersonaLogic perlo = new PersonaLogic();
+                    Persona per = new Persona();
+                    per = perlo.GetOne(nuevoUsu.Legajo);
+                    if (per != null)
+                    {
+                        nuevoUsu.State = BusinessEntity.States.New;
+                        nuevoUsu.IdPersona = per.ID;
+                        usr.Save(nuevoUsu);
+                    }
+                    else
+                    {
+                        Notificar("Error",
+                                        "La persona con ese legajo no se encuentra registrada.",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+                    
                 }
 
                 if (Modo == ModoForm.Modificacion)

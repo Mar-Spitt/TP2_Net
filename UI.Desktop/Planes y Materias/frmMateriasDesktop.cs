@@ -142,14 +142,5 @@ namespace UI.Desktop.Planes_y_Materias
                 this.Close();
             }
         }
-
-
-        //private void frmMateriasDesktop_Load(object sender, EventArgs e)
-        //{
-        //    // TODO: esta línea de código carga datos en la tabla 'tP2_AcademiaDataSet.especialidades' Puede moverla o quitarla según sea necesario.
-        //    this.planesTableAdapter.Fill(this.tP2_AcademiaDataSet.planes);
-
-        //}
-
     }
 }

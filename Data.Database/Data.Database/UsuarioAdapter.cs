@@ -192,57 +192,30 @@ namespace Data.Database
         }
 
         protected void Insert(Usuario usuario)
-        {   
-            if (GetOnePerson(usuario.Legajo) != 0)
+        {
+            try
             {
-                try
-                {
-                    this.OpenConnection();
-                    SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,id_persona) " +
-                        "VALUES (@nombre_usuario,@clave,@habilitado, @id_per) SELECT @@identity", sqlConn);
-                    // esta línea es para recuperar el ID que asignó el sql automáticamente
+            this.OpenConnection();
+            SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,id_persona) " +
+            "VALUES (@nombre_usuario,@clave,@habilitado, @id_per) SELECT @@identity", sqlConn);
+                // esta línea es para recuperar el ID que asignó el sql automáticamente
 
-                    cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
-                    cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
-                    cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-                    cmdInsert.Parameters.Add("@id_per", SqlDbType.Int).Value = GetOnePerson(usuario.Legajo);
-                    usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
-
-                    // así se obtiene el ID que asigno la BD automaticamente
-                    // cmdInsert.ExecuteNonQuery(); (tendriá q estar?)
-                }
-                catch (Exception Ex)
-                {
-                    Exception ExceptionManejada = new Exception("Error al crear el usuario", Ex);
-                    throw ExceptionManejada;
-                }
-                finally
-                {
-                    this.CloseConnection();
-                }
+            cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
+            cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
+            cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
+            cmdInsert.Parameters.Add("@id_per", SqlDbType.Int).Value = usuario.ID;
+            usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
-            else
+            catch (Exception Ex)
             {
-                Exception ExceptionManejada = new Exception("Error al crear el usuario, no se encontró una persona con ese legajo");
+                Exception ExceptionManejada = new Exception("Error al crear el usuario", Ex);
                 throw ExceptionManejada;
             }
-        }
-
-        public int GetOnePerson(int leg)
-        {
-           int id_per=0;
-           
-           PersonaAdapter personalo = new PersonaAdapter();
-           List<Persona> personas = personalo.GetAll();
-
-           foreach (Persona per in personas)
-           {
-                if(per.Legajo==leg)
-                {
-                    id_per=per.ID;
-                }
-           }
-            return id_per;
+            finally
+            {
+                this.CloseConnection();
+            }
+            
         }
 
         public void Save(Usuario usuario)

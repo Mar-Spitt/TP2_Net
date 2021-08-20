@@ -11,25 +11,21 @@ namespace Data.Database
 {
     public class PersonaAdapter: Adapter
     {
-        public List<Persona> GetAll()
+        public Persona GetOne(int legajo)
         {
-            List<Persona> personas = new List<Persona>();
+            Persona per = new Persona();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdPersona = new SqlCommand("select id_persona, legajo from personas", sqlConn);
-              
-                SqlDataReader drPersona = cmdPersona.ExecuteReader();
-                while (drPersona.Read())
+                SqlCommand cmdPer = new SqlCommand("select id_persona from personas where legajo=@legajo", sqlConn);
+                cmdPer.Parameters.Add("@legajo", SqlDbType.Int).Value = legajo;
+                SqlDataReader drPer = cmdPer.ExecuteReader();
+                if (drPer.Read())
                 {
-                    Persona per = new Persona();
-                    per.ID = (int)drPersona["id_persona"];
-                    per.Legajo = (int)drPersona["legajo"];
+                    per.ID = (int)drPer["id_persona"];
 
-                    personas.Add(per);
                 }
-
-                drPersona.Close();
+                drPer.Close();
             }
             catch (Exception Ex)
             {
@@ -40,7 +36,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return personas;
+            return per;
         }
     }
 }

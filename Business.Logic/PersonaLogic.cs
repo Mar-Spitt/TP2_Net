@@ -17,19 +17,20 @@ namespace Business.Logic
 
         public PersonaAdapter PersonaData {get; set;}
 
-        public List<Persona> GetAll()
+        public Persona GetOne(int legajo)
         {
-            List<Persona> personas;
+            Persona per;
             try
             {
-                personas = PersonaData.GetAll();
+                per = PersonaData.GetOne(legajo);
+
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de personas", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar al persona", Ex);
                 throw ExcepcionManejada;
             }
-            return personas;
+            return per;
         }
 
     }
