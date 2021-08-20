@@ -23,6 +23,10 @@ namespace UI.Desktop
         public UsuarioDesktop(ModoForm modo) : this()
         {
             Modo = modo;
+            if(Modo==ModoForm.Alta)
+            {
+                this.txtLegajo.ReadOnly = false;
+            }
         }
 
         public UsuarioDesktop(int ID, ModoForm modo) : this()
@@ -44,10 +48,8 @@ namespace UI.Desktop
         public override void MapearDeDatos()
         {
             this.txtID.Text = this.UsuarioActual.ID.ToString();
+            this.txtLegajo.Text = this.UsuarioActual.Legajo.ToString();
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
-            this.txtNombre.Text = this.UsuarioActual.Nombre;
-            this.txtApellido.Text = this.UsuarioActual.Apellido;
-            this.txtEmail.Text = this.UsuarioActual.Email;
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
             this.txtClave.Text = this.UsuarioActual.Clave;
             this.txtConfirmarClave.Text = this.UsuarioActual.Clave;
@@ -73,10 +75,8 @@ namespace UI.Desktop
 
             if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
             {
-                nuevoUsu.Nombre = this.txtNombre.Text;
-                nuevoUsu.Apellido = this.txtApellido.Text;
+                nuevoUsu.Legajo = int.Parse(this.txtLegajo.Text);
                 nuevoUsu.Clave = this.txtClave.Text;
-                nuevoUsu.Email = this.txtEmail.Text;
                 nuevoUsu.NombreUsuario = this.txtUsuario.Text;
                 nuevoUsu.Habilitado = this.chkHabilitado.Checked;
 
@@ -111,41 +111,30 @@ namespace UI.Desktop
         {
             bool rta = false;
 
-            if (txtUsuario.Text != String.Empty && txtNombre.Text != String.Empty
-                && txtApellido.Text != String.Empty && txtClave.Text != String.Empty
-                && txtConfirmarClave.Text != String.Empty && txtEmail.Text != String.Empty)
+            if (this.txtUsuario.Text != String.Empty && this.txtLegajo.Text != String.Empty
+                && this.txtClave.Text != String.Empty && this.txtConfirmarClave.Text != String.Empty)
             {
-                if (txtClave.Text == txtConfirmarClave.Text)
+                if (this.txtClave.Text == this.txtConfirmarClave.Text)
                 {
-                    int cantCarac = txtClave.Text.Length;
+                    int cantCarac = this.txtClave.Text.Length;
 
                     if (cantCarac >= 8)
                     {
-                        foreach (char item in txtClave.Text)
+                        foreach (char item in this.txtClave.Text)
                         {
                             rta = char.IsWhiteSpace(item);
                             if (rta)
                                 break;
                         }
 
-                        if (!rta)
-                        {
-                            rta = Validaciones.EsMailValido(txtEmail.Text.Trim()); //Saca espacios de la derecha e izquierda
-                            if (!rta)
-                            {
-                                Notificar("Email inválido",
-                                          "Revise su correo",
-                                          MessageBoxButtons.OK,
-                                          MessageBoxIcon.Error);
-                            }
-                        }
-                        else
+                        if (rta)
                         {
                             Notificar("Contraseña inválida",
-                                         "La contraseña no puede contener espacios en blanco",
-                                         MessageBoxButtons.OK,
-                                         MessageBoxIcon.Error);
+                                        "La contraseña no puede contener espacios en blanco",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
                         }
+                       
                     }
                     else
                     {
@@ -178,23 +167,22 @@ namespace UI.Desktop
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
-            if (this.txtClave.Text == this.txtConfirmarClave.Text)
-            { 
-                if (Validar())
-                {
-                    GuardarCambios();
-                    this.Close();
-                }
-            }
-            else
+             
+            if (Validar())
             {
-                Notificar("Atención", "Por favor, intente nuevamente. Verifique que ambas claves coincidan", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    GuardarCambios();
+                    this.txtLegajo.ReadOnly = true;
+                    this.Close();
             }
+            
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
+            this.txtLegajo.ReadOnly = true;
             this.Close();
         }
+
+        
     }
 }

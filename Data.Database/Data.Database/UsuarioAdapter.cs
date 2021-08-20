@@ -69,8 +69,8 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado, p.nombre, p.apellido, p.email" +
-                    " from usuarios u inner join personas p on p.id_persona=u.id_persona", sqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado, p.nombre, p.apellido, p.email, " +
+                    "p.legajo from usuarios u inner join personas p on p.id_persona=u.id_persona", sqlConn);
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 while (drUsuarios.Read())
                 {
@@ -83,6 +83,7 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
+                    usr.Legajo = (int)drUsuarios["legajo"];
 
                     usuarios.Add(usr);
                 }
@@ -109,7 +110,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario,u.nombre_usuario,u.clave,u.habilitado," +
-                    "p.nombre,p.apellido,p.email, p.tipo_persona from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
+                    "p.legajo, p.tipo_persona from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
@@ -118,11 +119,9 @@ namespace Data.Database
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
-                    usr.Nombre = (string)drUsuarios["nombre"];
-                    usr.Apellido = (string)drUsuarios["apellido"];
-                    usr.Email = (string)drUsuarios["email"];
+                    usr.Legajo = (int)drUsuarios["legajo"];
                     int nro = (int)drUsuarios["tipo_persona"];
-                    if (nro == 1)
+                    if (nro == (int)Persona.TiposPersonas.Alumno)
                     {
                         usr.TipoPersona = Persona.TiposPersonas.Alumno;
                     }
@@ -171,25 +170,14 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                //TODO: arregle esta sentencia xq no estaba bien escrita, sin embargo la excepcion se
-                // produce xq te dice que el problema esta despues de lo que le sigue a "p."
-                //haciedo referencia a que la linea 182 estaría mal pero la cosa es que necesitamos
-                //actualizar esos campos en la tabla persona tambien asique no se si se pueden hacer dos 
-                //UPDATEs dentro de la misma llamada
-
                 SqlCommand cmdSave = new SqlCommand("UPDATE u " +
-                    "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave,u.habilitado=@habilitado," +
-                    //"u.nombre=@nombre,u.apellido=@apellido,u.email=@email " +
-                    "p.nombre=@nombre,p.apellido=@apellido,p.email=@email " +
-                    "FROM usuarios u INNER JOIN personas p on u.id_persona=p.id_persona " +
-                    "WHERE u.id_usuario=@id", sqlConn);
+                    "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave, u.habilitado=@habilitado," +
+                    "FROM usuarios u WHERE u.id_usuario=@id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-                cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
-                cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
-                cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.Email;
+                
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -208,16 +196,16 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,nombre,apellido,email) VALUES (@nombre_usuario,@clave,@habilitado,@nombre,@apellido,@email) SELECT @@identity", sqlConn);
+                SqlCommand cmdInsert = new SqlCommand("INSERT INTO usuarios(nombre_usuario,clave,habilitado,id_persona) " +
+                    "VALUES (@nombre_usuario,@clave,@habilitado, @id_per) SELECT @@identity", sqlConn);
                 // esta línea es para recuperar el ID que asignó el sql automáticamente
 
                 cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-                cmdInsert.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
-                cmdInsert.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
-                cmdInsert.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.Email;
+                cmdInsert.Parameters.Add("id_per", SqlDbType.Int).Value= GetOnePerson(usuario.Legajo);
                 usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
+               
                 // así se obtiene el ID que asigno la BD automaticamente
                 // cmdInsert.ExecuteNonQuery(); (tendriá q estar?)
             }
@@ -232,8 +220,41 @@ namespace Data.Database
             }
         }
 
+        public int GetOnePerson(int leg)
+        {
+            int id_per;
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUsuarios = new SqlCommand("select id_persona from personas where legajo=@leg", sqlConn);
+                cmdUsuarios.Parameters.Add("@leg", SqlDbType.Int).Value = leg;
+                SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
+                if (drUsuarios.Read())
+                {
+                    id_per = (int)drUsuarios["id_persona"];
+                }
+                else
+                {
+                    id_per = 0 ;
+                }
+                drUsuarios.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la persona", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return id_per;
+        }
+
         public void Save(Usuario usuario)
         {
+            
+            #region CódigoViejo
             //if (usuario.State == BusinessEntity.States.New)
             //{
             //    int NextID = 0;
@@ -258,6 +279,8 @@ namespace Data.Database
             //usuario.State = BusinessEntity.States.Unmodified;
             //
 
+            #endregion
+
             if (usuario.State==BusinessEntity.States.Deleted)
             {
                 this.Delete(usuario.ID);
@@ -272,6 +295,9 @@ namespace Data.Database
             }
             usuario.State = BusinessEntity.States.Unmodified;
         }
+
+
+        //Esta búsqueda es para el login:
 
         private Business.Entities.Usuario GetOne(string nombreusu)
         {
