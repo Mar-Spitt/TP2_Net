@@ -21,6 +21,10 @@ namespace Data.Database
                     per.ID = (int)drPer["id_persona"];
 
                 }
+                else
+                {
+                    per = null;
+                }
                 drPer.Close();
             }
             catch (Exception Ex)

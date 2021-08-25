@@ -203,7 +203,7 @@ namespace Data.Database
             cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
             cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
             cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-            cmdInsert.Parameters.Add("@id_per", SqlDbType.Int).Value = usuario.ID;
+            cmdInsert.Parameters.Add("@id_per", SqlDbType.Int).Value = usuario.IdPersona;
             usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
             catch (Exception Ex)
