@@ -229,6 +229,7 @@ namespace UI.Desktop.Alumnos
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.Location = new System.Drawing.Point(384, 185);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 22);
@@ -239,6 +240,7 @@ namespace UI.Desktop.Alumnos
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(465, 185);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(62, 22);
@@ -249,6 +251,7 @@ namespace UI.Desktop.Alumnos
             // 
             // dtNacimiento
             // 
+            this.dtNacimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtNacimiento.CustomFormat = "dd/MM/yyyy";
             this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNacimiento.Location = new System.Drawing.Point(276, 95);
@@ -275,6 +278,7 @@ namespace UI.Desktop.Alumnos
             // 
             // cmbPlan
             // 
+            this.cmbPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPlan.FormattingEnabled = true;
             this.cmbPlan.Location = new System.Drawing.Point(533, 95);
             this.cmbPlan.Name = "cmbPlan";

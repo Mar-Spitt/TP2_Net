@@ -201,6 +201,7 @@ namespace UI.Desktop.Alumnos
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(1020, 400);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 22);
@@ -211,6 +212,7 @@ namespace UI.Desktop.Alumnos
             // 
             // btnSalir
             // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(1101, 400);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 22);

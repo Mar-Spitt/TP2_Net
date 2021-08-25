@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Business.Entities;
 using Data.Database;
 
@@ -15,10 +12,7 @@ namespace Business.Logic
             this.UsuarioData = new UsuarioAdapter();
         }
 
-        public UsuarioAdapter UsuarioData
-        {
-            get; set;
-        }
+        public UsuarioAdapter UsuarioData { get; set; }
 
         public Usuario GetOne(int id)
         {
@@ -73,7 +67,6 @@ namespace Business.Logic
         {
             return UsuarioData.ValidarUsuario(usuario);
         }
-
 
         public bool ValidarContraseña(string usuario, string pass, Usuario usu)
         {

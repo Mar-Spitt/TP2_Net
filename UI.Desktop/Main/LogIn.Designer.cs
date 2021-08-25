@@ -38,6 +38,7 @@ namespace UI.Desktop
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.ckbSeePass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblBienvenidos
@@ -77,9 +78,9 @@ namespace UI.Desktop
             // 
             this.txtPass.Location = new System.Drawing.Point(136, 130);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(151, 20);
             this.txtPass.TabIndex = 12;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -116,11 +117,24 @@ namespace UI.Desktop
             this.lblTitulo.Text = "Por favor digite su información de ingreso";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ckbSeePass
+            // 
+            this.ckbSeePass.AutoSize = true;
+            this.ckbSeePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ckbSeePass.Location = new System.Drawing.Point(170, 156);
+            this.ckbSeePass.Name = "ckbSeePass";
+            this.ckbSeePass.Size = new System.Drawing.Size(117, 17);
+            this.ckbSeePass.TabIndex = 16;
+            this.ckbSeePass.Text = "Mostrar contraseña";
+            this.ckbSeePass.UseVisualStyleBackColor = true;
+            this.ckbSeePass.CheckedChanged += new System.EventHandler(this.SeePass_CheckedChanged);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 240);
+            this.Controls.Add(this.ckbSeePass);
             this.Controls.Add(this.lblBienvenidos);
             this.Controls.Add(this.lnkOlvidaPass);
             this.Controls.Add(this.btnIngresar);
@@ -148,5 +162,6 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.CheckBox ckbSeePass;
     }
 }

@@ -54,7 +54,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel1.Controls.Add(this.txtID, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblIdComision, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAnioEspecialidad, 3, 1);
@@ -81,7 +81,7 @@ namespace UI.Desktop
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(113, 23);
+            this.txtID.Location = new System.Drawing.Point(111, 23);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(53, 20);
@@ -92,7 +92,7 @@ namespace UI.Desktop
             this.lblIdComision.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblIdComision.AutoSize = true;
             this.lblIdComision.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdComision.Location = new System.Drawing.Point(57, 20);
+            this.lblIdComision.Location = new System.Drawing.Point(55, 20);
             this.lblIdComision.Name = "lblIdComision";
             this.lblIdComision.Size = new System.Drawing.Size(20, 13);
             this.lblIdComision.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace UI.Desktop
             // 
             this.lblAnioEspecialidad.AutoSize = true;
             this.lblAnioEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnioEspecialidad.Location = new System.Drawing.Point(182, 20);
+            this.lblAnioEspecialidad.Location = new System.Drawing.Point(180, 20);
             this.lblAnioEspecialidad.Name = "lblAnioEspecialidad";
             this.lblAnioEspecialidad.Size = new System.Drawing.Size(105, 13);
             this.lblAnioEspecialidad.TabIndex = 2;
@@ -113,7 +113,7 @@ namespace UI.Desktop
             this.lblDescripcionPlan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcionPlan.AutoSize = true;
             this.lblDescripcionPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionPlan.Location = new System.Drawing.Point(439, 20);
+            this.lblDescripcionPlan.Location = new System.Drawing.Point(437, 20);
             this.lblDescripcionPlan.Name = "lblDescripcionPlan";
             this.lblDescripcionPlan.Size = new System.Drawing.Size(32, 13);
             this.lblDescripcionPlan.TabIndex = 3;
@@ -124,7 +124,7 @@ namespace UI.Desktop
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(30, 65);
+            this.lblDescripcion.Location = new System.Drawing.Point(28, 65);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(74, 13);
             this.lblDescripcion.TabIndex = 4;
@@ -132,7 +132,7 @@ namespace UI.Desktop
             // 
             // txtAnioEspecialidad
             // 
-            this.txtAnioEspecialidad.Location = new System.Drawing.Point(293, 23);
+            this.txtAnioEspecialidad.Location = new System.Drawing.Point(291, 23);
             this.txtAnioEspecialidad.Name = "txtAnioEspecialidad";
             this.txtAnioEspecialidad.Size = new System.Drawing.Size(100, 20);
             this.txtAnioEspecialidad.TabIndex = 5;
@@ -140,22 +140,24 @@ namespace UI.Desktop
             // txtDescipcion
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtDescipcion, 5);
-            this.txtDescipcion.Location = new System.Drawing.Point(113, 68);
+            this.txtDescipcion.Location = new System.Drawing.Point(111, 68);
             this.txtDescipcion.Name = "txtDescipcion";
             this.txtDescipcion.Size = new System.Drawing.Size(295, 20);
             this.txtDescipcion.TabIndex = 6;
             // 
             // cmbDescipcionPlan
             // 
+            this.cmbDescipcionPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDescipcionPlan.FormattingEnabled = true;
-            this.cmbDescipcionPlan.Location = new System.Drawing.Point(504, 23);
+            this.cmbDescipcionPlan.Location = new System.Drawing.Point(502, 23);
             this.cmbDescipcionPlan.Name = "cmbDescipcionPlan";
             this.cmbDescipcionPlan.Size = new System.Drawing.Size(121, 21);
             this.cmbDescipcionPlan.TabIndex = 7;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(504, 104);
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Location = new System.Drawing.Point(502, 104);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -165,7 +167,8 @@ namespace UI.Desktop
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(413, 104);
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptar.Location = new System.Drawing.Point(411, 104);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 9;

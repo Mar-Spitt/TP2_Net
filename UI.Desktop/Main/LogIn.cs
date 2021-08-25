@@ -55,5 +55,20 @@ namespace UI.Desktop
                 }
             }
         }
+
+        private void SeePass_CheckedChanged(object sender, EventArgs e)
+        {
+            string text = txtPass.Text;
+            if (ckbSeePass.Checked)
+            {
+                txtPass.UseSystemPasswordChar = false;
+                txtPass.Text = text;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
+                txtPass.Text = text;
+            }
+        }
     }
 }

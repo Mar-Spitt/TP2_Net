@@ -152,6 +152,7 @@ namespace UI.Desktop
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(575, 400);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
@@ -162,6 +163,7 @@ namespace UI.Desktop
             // 
             // btnSalir
             // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(656, 400);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -179,7 +181,7 @@ namespace UI.Desktop
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(112, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(81, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // toolStripButton1

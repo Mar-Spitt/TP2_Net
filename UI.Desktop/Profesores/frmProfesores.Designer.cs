@@ -36,12 +36,6 @@ namespace UI.Desktop
             this.tcProfesores = new System.Windows.Forms.ToolStripContainer();
             this.tlProfesores = new System.Windows.Forms.TableLayoutPanel();
             this.dgvProfesores = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tscProfesores = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.id_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +43,12 @@ namespace UI.Desktop
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tscProfesores = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tcProfesores.ContentPanel.SuspendLayout();
             this.tcProfesores.TopToolStripPanel.SuspendLayout();
             this.tcProfesores.SuspendLayout();
@@ -133,69 +133,6 @@ namespace UI.Desktop
             this.dgvProfesores.Size = new System.Drawing.Size(1053, 292);
             this.dgvProfesores.TabIndex = 0;
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(869, 301);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(92, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(967, 301);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 23);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tscProfesores,
-            this.toolStripButton2,
-            this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(81, 25);
-            this.toolStrip1.TabIndex = 0;
-            // 
-            // tscProfesores
-            // 
-            this.tscProfesores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tscProfesores.Image = global::UI.Desktop.Properties.Resources.nuevo;
-            this.tscProfesores.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tscProfesores.Name = "tscProfesores";
-            this.tscProfesores.Size = new System.Drawing.Size(23, 22);
-            this.tscProfesores.Text = "Nuevo";
-            this.tscProfesores.Click += new System.EventHandler(this.tsbNuevo_Click_1);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::UI.Desktop.Properties.Resources.editar;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "Editar";
-            this.toolStripButton2.Click += new System.EventHandler(this.tsbEditar_Click_1);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::UI.Desktop.Properties.Resources.eliminar;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Eliminar";
-            this.toolStripButton3.Click += new System.EventHandler(this.tsbEliminar_Click_1);
-            // 
             // id_persona
             // 
             this.id_persona.DataPropertyName = "ID";
@@ -250,6 +187,71 @@ namespace UI.Desktop
             this.FechaNacimiento.Name = "FechaNacimiento";
             this.FechaNacimiento.ReadOnly = true;
             this.FechaNacimiento.Width = 155;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Location = new System.Drawing.Point(869, 301);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(92, 23);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Location = new System.Drawing.Point(967, 301);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(89, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tscProfesores,
+            this.toolStripButton2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(81, 25);
+            this.toolStrip1.TabIndex = 0;
+            // 
+            // tscProfesores
+            // 
+            this.tscProfesores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tscProfesores.Image = global::UI.Desktop.Properties.Resources.nuevo;
+            this.tscProfesores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tscProfesores.Name = "tscProfesores";
+            this.tscProfesores.Size = new System.Drawing.Size(23, 22);
+            this.tscProfesores.Text = "Nuevo";
+            this.tscProfesores.Click += new System.EventHandler(this.tsbNuevo_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::UI.Desktop.Properties.Resources.editar;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Editar";
+            this.toolStripButton2.Click += new System.EventHandler(this.tsbEditar_Click_1);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::UI.Desktop.Properties.Resources.eliminar;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Eliminar";
+            this.toolStripButton3.Click += new System.EventHandler(this.tsbEliminar_Click_1);
             // 
             // frmProfesores
             // 

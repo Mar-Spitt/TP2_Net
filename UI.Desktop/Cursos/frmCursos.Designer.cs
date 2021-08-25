@@ -168,6 +168,7 @@ namespace UI.Desktop
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(676, 400);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 22);
@@ -179,6 +180,7 @@ namespace UI.Desktop
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(585, 400);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 22);
@@ -216,7 +218,7 @@ namespace UI.Desktop
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(23, 22);
-            this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Text = "Editar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar

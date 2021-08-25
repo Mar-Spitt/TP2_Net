@@ -203,6 +203,36 @@ namespace UI.Desktop
             this.Close();
         }
 
-        
+        // txtClave
+        private void ckbSeeClave1_CheckedChanged(object sender, EventArgs e)
+        {
+            string text = txtClave.Text;
+            if (ckbSeeClave1.Checked)
+            {
+                txtClave.UseSystemPasswordChar = false;
+                txtClave.Text = text;
+            }
+            else
+            {
+                txtClave.UseSystemPasswordChar = true;
+                txtClave.Text = text;
+            }
+        }
+
+        // txtConfirmarClave
+        private void ckbSeeClave2_CheckedChanged(object sender, EventArgs e)
+        {
+            string text = txtConfirmarClave.Text;
+            if (ckbSeeClave2.Checked)
+            {
+                txtConfirmarClave.UseSystemPasswordChar = false;
+                txtConfirmarClave.Text = text;
+            }
+            else
+            {
+                txtConfirmarClave.UseSystemPasswordChar = true;
+                txtConfirmarClave.Text = text;
+            }
+        }
     }
 }

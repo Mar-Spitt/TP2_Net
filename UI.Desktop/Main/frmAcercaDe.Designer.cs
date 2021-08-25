@@ -40,6 +40,7 @@ namespace UI.Desktop
             // 
             // btnAceptar
             // 
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.Location = new System.Drawing.Point(195, 245);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);

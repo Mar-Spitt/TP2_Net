@@ -72,7 +72,7 @@ namespace UI.Desktop
             this.mnsPrincipal.Name = "mnsPrincipal";
             this.mnsPrincipal.Size = new System.Drawing.Size(850, 24);
             this.mnsPrincipal.TabIndex = 2;
-            this.mnsPrincipal.Text = "menuStrip1";
+            this.mnsPrincipal.Text = "Menu";
             // 
             // mnuArchivo
             // 
