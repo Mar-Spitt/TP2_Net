@@ -174,5 +174,40 @@ namespace Data.Database
             }
         }
 
+        //GetAll para inscripciones
+        public List<Curso> GetAllWithCupos()
+        {
+            List<Curso> cursos = new List<Curso>();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdCursos = new SqlCommand("select * from cursos where cupo > 0", sqlConn);
+                SqlDataReader drCursos = cmdCursos.ExecuteReader();
+                while (drCursos.Read())
+                {
+                    Curso cur = new Curso();
+                    cur.ID = (int)drCursos["id_curso"];
+                    cur.IDMateria = (int)drCursos["id_materia"];
+                    cur.IDComision = (int)drCursos["id_comision"];
+                    cur.AnioCalendario = (int)drCursos["anio_calendario"];
+                    cur.Descripcion = (string)drCursos["descripcion"];
+
+                    cursos.Add(cur);
+                }
+
+                drCursos.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos con cupo > 0", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return cursos;
+        }
+
     }
 }

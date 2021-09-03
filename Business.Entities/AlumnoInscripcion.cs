@@ -12,36 +12,13 @@ namespace Business.Entities
         private int _IDCurso;
         private int _Nota;
 
-        public string Condicion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Condicion { get; set; }
+       
 
-        public int IDAlumno
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int IDAlumno { get; set; }
 
-        public int IDCurso
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int IDCurso { get; set; }
 
-        public int Nota
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Nota { get; set; }
     }
 }

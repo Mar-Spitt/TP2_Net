@@ -66,5 +66,21 @@ namespace Business.Logic
             CursoData.Delete(id);
         }
 
+        //GetAll para ver si tiene cupo ese curso
+        public List<Curso> GetAllWithCupos()
+        {
+            List<Curso> cursos;
+            try
+            {
+                cursos = CursoData.GetAllWithCupos();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos con cupo > 0 ", Ex);
+                throw ExcepcionManejada;
+            }
+            return cursos;
+        }
+
     }
 }

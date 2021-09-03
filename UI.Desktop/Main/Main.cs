@@ -129,8 +129,18 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoInscripcion":
-
+                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Alumno)
+                    {
+                        frmInscripciones formIns = new frmInscripciones();
+                        formIns.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
+
+                    
                 case "nodoRegistro":
 
                     break;
