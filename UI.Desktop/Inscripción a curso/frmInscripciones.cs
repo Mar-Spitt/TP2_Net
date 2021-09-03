@@ -17,8 +17,13 @@ namespace UI.Desktop
         public frmInscripciones()
         {
             InitializeComponent();
+        }
+        public int idAlumno;
 
-            
+        public frmInscripciones(int id)
+        {
+            InitializeComponent();
+            idAlumno = id;
         }
 
         public void Listar()
@@ -28,13 +33,17 @@ namespace UI.Desktop
             try
             {
                 this.dgvInscripciones.DataSource = ins.GetAllWithCupos();
-                ////this.colDescCurso.ValueMember = "ID";
-                //this.colDescCurso.DisplayMember = "Descripcion";
 
-                //MateriaLogic mat = new MateriaLogic();
-                //this.dgvInscripciones.DataSource = mat.GetAll();
-                ////this.colMateria.ValueMember = "ID";
-                //this.colMateria.DisplayMember = 
+
+                MateriaLogic mat = new MateriaLogic();
+                this.colMateria.DataSource = mat.GetAll();
+                this.colMateria.ValueMember = "ID";
+                this.colMateria.DisplayMember = "Descripcion";
+
+                ComisionLogic com = new ComisionLogic();
+                this.colDescripcionComisión.DataSource = com.GetAll();
+                this.colDescripcionComisión.ValueMember = "ID";
+                this.colDescripcionComisión.DisplayMember = "Descripcion";
 
             }
             catch (Exception Ex)
@@ -48,10 +57,6 @@ namespace UI.Desktop
             Listar();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            Listar();
-        }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             Listar();
@@ -62,5 +67,12 @@ namespace UI.Desktop
             this.Close();
         }
 
+        private void btnElegir_Click(object sender, EventArgs e)
+        {
+            var fila = this.dgvInscripciones.CurrentRow;
+            int idCurso = Convert.ToInt32(fila.Cells[0].Value);
+            frmInscripcionesDesktop frmInscrip = new frmInscripcionesDesktop(idAlumno, idCurso);
+            frmInscrip.ShowDialog();
+        }
     }
 }

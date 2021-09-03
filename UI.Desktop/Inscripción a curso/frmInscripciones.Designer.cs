@@ -34,14 +34,14 @@ namespace UI.Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInscripciones));
             this.tlInscripciones = new System.Windows.Forms.TableLayoutPanel();
             this.dgvInscripciones = new System.Windows.Forms.DataGridView();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.colDescCurso = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMateria = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colAnioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcionComisión = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAnioEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcionComisión = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btnElegir = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tlInscripciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInscripciones)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@ namespace UI.Desktop
             this.tlInscripciones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlInscripciones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlInscripciones.Controls.Add(this.dgvInscripciones, 0, 0);
-            this.tlInscripciones.Controls.Add(this.btnAceptar, 0, 1);
+            this.tlInscripciones.Controls.Add(this.btnElegir, 0, 1);
             this.tlInscripciones.Controls.Add(this.btnActualizar, 1, 1);
             this.tlInscripciones.Controls.Add(this.btnSalir, 2, 1);
             this.tlInscripciones.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,11 +81,11 @@ namespace UI.Desktop
             this.dgvInscripciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInscripciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInscripciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.colDescCurso,
             this.colMateria,
             this.colAnioCalendario,
-            this.colDescripcionComisión,
-            this.colAnioEspecialidad});
+            this.colDescripcionComisión});
             this.tlInscripciones.SetColumnSpan(this.dgvInscripciones, 3);
             this.dgvInscripciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInscripciones.Location = new System.Drawing.Point(3, 3);
@@ -96,46 +96,22 @@ namespace UI.Desktop
             this.dgvInscripciones.Size = new System.Drawing.Size(731, 415);
             this.dgvInscripciones.TabIndex = 0;
             // 
-            // btnAceptar
+            // id
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(497, 424);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 1;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(578, 424);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 2;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(659, 424);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
             // 
             // colDescCurso
             // 
-            this.colDescCurso.DataPropertyName = "ID";
+            this.colDescCurso.DataPropertyName = "Descripcion";
             this.colDescCurso.HeaderText = "Curso";
             this.colDescCurso.Name = "colDescCurso";
             this.colDescCurso.ReadOnly = true;
             this.colDescCurso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDescCurso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colDescCurso.Width = 150;
+            this.colDescCurso.Width = 120;
             // 
             // colMateria
             // 
@@ -161,13 +137,39 @@ namespace UI.Desktop
             this.colDescripcionComisión.HeaderText = "Comisión";
             this.colDescripcionComisión.Name = "colDescripcionComisión";
             this.colDescripcionComisión.ReadOnly = true;
+            this.colDescripcionComisión.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDescripcionComisión.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // colAnioEspecialidad
+            // btnElegir
             // 
-            this.colAnioEspecialidad.DataPropertyName = "AnioEspecialidad";
-            this.colAnioEspecialidad.HeaderText = "Año Especialidad";
-            this.colAnioEspecialidad.Name = "colAnioEspecialidad";
-            this.colAnioEspecialidad.ReadOnly = true;
+            this.btnElegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnElegir.Location = new System.Drawing.Point(497, 424);
+            this.btnElegir.Name = "btnElegir";
+            this.btnElegir.Size = new System.Drawing.Size(75, 23);
+            this.btnElegir.TabIndex = 1;
+            this.btnElegir.Text = "Elegir curso";
+            this.btnElegir.UseVisualStyleBackColor = true;
+            this.btnElegir.Click += new System.EventHandler(this.btnElegir_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(578, 424);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(659, 424);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmInscripciones
             // 
@@ -190,13 +192,13 @@ namespace UI.Desktop
 
         private System.Windows.Forms.TableLayoutPanel tlInscripciones;
         private System.Windows.Forms.DataGridView dgvInscripciones;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnElegir;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colDescCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescCurso;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMateria;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAnioCalendario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionComisión;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAnioEspecialidad;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colDescripcionComisión;
     }
 }

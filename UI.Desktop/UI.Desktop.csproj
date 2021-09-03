@@ -88,6 +88,12 @@
     <Compile Include="Cursos\frmCursosDesktop.Designer.cs">
       <DependentUpon>frmCursosDesktop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inscripción a curso\frmInscripcionesDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripción a curso\frmInscripcionesDesktop.Designer.cs">
+      <DependentUpon>frmInscripcionesDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inscripción a curso\frmInscripciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripción a curso\frmInscripciones.resx">
       <DependentUpon>frmInscripciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripción a curso\frmInscripcionesDesktop.resx">
+      <DependentUpon>frmInscripcionesDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.cs</DependentUpon>

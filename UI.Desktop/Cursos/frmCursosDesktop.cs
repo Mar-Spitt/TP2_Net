@@ -26,6 +26,7 @@ namespace UI.Desktop
             cmbComision.DataSource = com.GetAll();
             cmbComision.ValueMember = "ID";
             cmbComision.DisplayMember = "Descripcion";
+            
         }
 
         public frmCursosDesktop(ModoForm modo) : this()

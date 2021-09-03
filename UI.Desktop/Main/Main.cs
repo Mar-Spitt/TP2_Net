@@ -131,7 +131,7 @@ namespace UI.Desktop
                 case "nodoInscripcion":
                     if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Alumno)
                     {
-                        frmInscripciones formIns = new frmInscripciones();
+                        frmInscripciones formIns = new frmInscripciones(usuario_act);
                         formIns.ShowDialog();
                     }
                     else
