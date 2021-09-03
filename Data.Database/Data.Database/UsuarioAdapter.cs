@@ -110,7 +110,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario,u.nombre_usuario,u.clave,u.habilitado," +
-                    "p.legajo, p.tipo_persona from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
+                    "p.legajo, p.tipo_persona, u.id_persona from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
@@ -120,6 +120,7 @@ namespace Data.Database
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                     usr.Legajo = (int)drUsuarios["legajo"];
+                    usr.IdPersona = (int)drUsuarios["id_persona"];
                     int nro = (int)drUsuarios["tipo_persona"];
                     if (nro == (int)Persona.TiposPersonas.Alumno)
                     {

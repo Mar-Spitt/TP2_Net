@@ -49,7 +49,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.94736F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.Controls.Add(this.lbldInscripcion, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAlumno, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblIdCurso, 1, 3);
@@ -100,7 +100,7 @@ namespace UI.Desktop
             // 
             // txtIdInscripcion
             // 
-            this.txtIdInscripcion.Location = new System.Drawing.Point(119, 32);
+            this.txtIdInscripcion.Location = new System.Drawing.Point(118, 32);
             this.txtIdInscripcion.Name = "txtIdInscripcion";
             this.txtIdInscripcion.ReadOnly = true;
             this.txtIdInscripcion.Size = new System.Drawing.Size(78, 20);
@@ -108,7 +108,7 @@ namespace UI.Desktop
             // 
             // txtAlumno
             // 
-            this.txtAlumno.Location = new System.Drawing.Point(119, 70);
+            this.txtAlumno.Location = new System.Drawing.Point(118, 70);
             this.txtAlumno.Name = "txtAlumno";
             this.txtAlumno.ReadOnly = true;
             this.txtAlumno.Size = new System.Drawing.Size(164, 20);
@@ -116,7 +116,7 @@ namespace UI.Desktop
             // 
             // txtCurso
             // 
-            this.txtCurso.Location = new System.Drawing.Point(119, 107);
+            this.txtCurso.Location = new System.Drawing.Point(118, 107);
             this.txtCurso.Name = "txtCurso";
             this.txtCurso.ReadOnly = true;
             this.txtCurso.Size = new System.Drawing.Size(143, 20);
@@ -124,7 +124,7 @@ namespace UI.Desktop
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(329, 150);
+            this.btnConfirmar.Location = new System.Drawing.Point(328, 150);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 6;
@@ -134,7 +134,7 @@ namespace UI.Desktop
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(248, 150);
+            this.btnCancelar.Location = new System.Drawing.Point(247, 150);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -150,6 +150,7 @@ namespace UI.Desktop
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInscripcionesDesktop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InscripcionesDesktop";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -21,12 +21,17 @@ namespace UI.Desktop
 
         public AlumnoInscripcion InscripcionActual { get; set; }
 
-        public frmInscripcionesDesktop(int idA, int idC)
+        public frmInscripcionesDesktop(int idU, int idC) : this()
         {
-            //TODO: Seguir aca
-            InscripcionActual.IDAlumno = idA;
+            //TODO: Lo cambiado
+            UsuarioLogic usuLogic = new UsuarioLogic();
+            Usuario usu = usuLogic.GetOne(idU);
+
+            InscripcionActual = new AlumnoInscripcion();
+            InscripcionActual.IDAlumno = usu.IdPersona;
             InscripcionActual.IDCurso = idC;
             InscripcionActual.Condicion = " ";
+
             MapearDeDatos();
         }
 
