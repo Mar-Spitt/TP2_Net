@@ -39,6 +39,14 @@ namespace UI.Desktop
         {
             this.txtAlumno.Text = this.InscripcionActual.IDAlumno.ToString();
             this.txtCurso.Text = this.InscripcionActual.IDCurso.ToString();
+            
+            AlumnoLogic alu = new AlumnoLogic();
+            Persona nuevoAlu = alu.GetOne(InscripcionActual.IDAlumno);
+            this.txtAlumnoNombre.Text = nuevoAlu.Nombre +" " + nuevoAlu.Apellido;
+
+            CursoLogic cur = new CursoLogic();
+            Curso nuevoCur = cur.GetOne(InscripcionActual.IDCurso);
+            this.txtCursoNombre.Text = nuevoCur.Descripcion;
         }
 
 
