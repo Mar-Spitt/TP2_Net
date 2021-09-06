@@ -21,14 +21,10 @@ namespace UI.Desktop
 
         public AlumnoInscripcion InscripcionActual { get; set; }
 
-        public frmInscripcionesDesktop(int idU, int idC) : this()
+        public frmInscripcionesDesktop(int idP, int idC) : this()
         {
-          
-            UsuarioLogic usuLogic = new UsuarioLogic();
-            Usuario usu = usuLogic.GetOne(idU);
-
             InscripcionActual = new AlumnoInscripcion();
-            InscripcionActual.IDAlumno = usu.IdPersona;
+            InscripcionActual.IDAlumno = idP;
             InscripcionActual.IDCurso = idC;
             InscripcionActual.Condicion = " ";
 
@@ -42,6 +38,7 @@ namespace UI.Desktop
             
             AlumnoLogic alu = new AlumnoLogic();
             Persona nuevoAlu = alu.GetOne(InscripcionActual.IDAlumno);
+            this.txtAlumno.Text = nuevoAlu.ID.ToString();
             this.txtAlumnoNombre.Text = nuevoAlu.Nombre +" " + nuevoAlu.Apellido;
 
             CursoLogic cur = new CursoLogic();

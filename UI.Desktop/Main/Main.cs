@@ -14,7 +14,9 @@ namespace UI.Desktop
 {
     public partial class formMain : Form
     {
-        int usuario_act;
+        int usuario_act_tipo;
+        int id_persona_act;
+
         public formMain()
         {
             InitializeComponent();
@@ -32,7 +34,8 @@ namespace UI.Desktop
             {
                 this.Dispose();
             }
-            usuario_act = appLogin.usuario_actual;
+            usuario_act_tipo = appLogin.usuario_actual;
+            id_persona_act = appLogin.id_persona_act;
         }
 
         private void trvABM_AfterSelect(object sender, TreeViewEventArgs e)
@@ -41,7 +44,7 @@ namespace UI.Desktop
             switch (nodo)
             {
                 case "nodoUsuario":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         formUsuarios formUsuarios = new formUsuarios();
                         formUsuarios.ShowDialog();
@@ -52,7 +55,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoAlumno":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador) // Administrador y Profesor(solo ver)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador) // Administrador y Profesor(solo ver)
                     {
                         frmAlumnos formAlumnos = new frmAlumnos();
                         formAlumnos.ShowDialog();
@@ -63,7 +66,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoEspecialidad":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmEspecialidades formEspecialidades = new frmEspecialidades();
                         formEspecialidades.ShowDialog();
@@ -74,7 +77,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoProfesor": // Profesor (solo ver)
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmProfesores frmProfesores = new frmProfesores();
                         frmProfesores.ShowDialog();
@@ -85,7 +88,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoPlan":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmPlanes formplanes = new frmPlanes();
                         formplanes.ShowDialog();
@@ -96,7 +99,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoMateria":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmMaterias formmaterias = new frmMaterias();
                         formmaterias.ShowDialog();
@@ -107,7 +110,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoComision":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmComisiones formComision = new frmComisiones();
                         formComision.ShowDialog();
@@ -118,7 +121,7 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoCurso":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
                     {
                         frmCursos formCurso = new frmCursos();
                         formCurso.ShowDialog();
@@ -129,9 +132,9 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoInscripcion":
-                    if (usuario_act == (int)Business.Entities.Persona.TiposPersonas.Alumno)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Alumno)
                     {
-                        frmInscripciones formIns = new frmInscripciones(usuario_act);
+                        frmInscripciones formIns = new frmInscripciones(id_persona_act);
                         formIns.ShowDialog();
                     }
                     else
@@ -139,7 +142,6 @@ namespace UI.Desktop
                         MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
-
                     
                 case "nodoRegistro":
 

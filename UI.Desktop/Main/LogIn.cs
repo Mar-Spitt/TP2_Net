@@ -15,6 +15,7 @@ namespace UI.Desktop
     public partial class LogIn : Form
     {
         public int usuario_actual;
+        public int id_persona_act;
 
         public LogIn()
         {
@@ -45,6 +46,7 @@ namespace UI.Desktop
                 if (UsuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtPass.Text, usu))
                 {
                     usuario_actual = (int)usu.TipoPersona;
+                    id_persona_act = (int)usu.IdPersona;
                     MessageBox.Show("Usted ha ingresado al sistema correctamente.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
                 }

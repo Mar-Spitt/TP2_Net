@@ -274,7 +274,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select u.nombre_usuario, u.clave,p.tipo_persona from usuarios u " +
+                SqlCommand cmdUsuarios = new SqlCommand("select u.nombre_usuario, u.clave,p.tipo_persona, p.id_persona from usuarios u " +
                     "inner join personas p on u.id_persona=p.id_persona where u.nombre_usuario=@nombreusu", sqlConn);
                 cmdUsuarios.Parameters.Add("@nombreusu", SqlDbType.VarChar, 50).Value = nombreusu;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
@@ -282,6 +282,8 @@ namespace Data.Database
                 {
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
+                    usr.IdPersona = (int)drUsuarios["id_persona"];
+
                     switch ((int)drUsuarios["tipo_persona"])
                     {
                         case 1:

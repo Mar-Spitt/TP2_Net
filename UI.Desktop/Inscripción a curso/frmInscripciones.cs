@@ -19,12 +19,12 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
-        public int idUsuario;
+        public int idPersona;
 
         public frmInscripciones(int id)
         {
             InitializeComponent();
-            idUsuario = id;
+            idPersona = id;
         }
 
         public void Listar()
@@ -72,7 +72,7 @@ namespace UI.Desktop
         {
             var fila = this.dgvInscripciones.CurrentRow;
             int idCurso = Convert.ToInt32(fila.Cells[0].Value);
-            frmInscripcionesDesktop frmInscrip = new frmInscripcionesDesktop(idUsuario, idCurso);
+            frmInscripcionesDesktop frmInscrip = new frmInscripcionesDesktop(idPersona, idCurso);
             frmInscrip.ShowDialog();
         }
     }
