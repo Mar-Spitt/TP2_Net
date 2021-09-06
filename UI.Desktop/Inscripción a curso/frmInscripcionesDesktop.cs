@@ -23,7 +23,7 @@ namespace UI.Desktop
 
         public frmInscripcionesDesktop(int idU, int idC) : this()
         {
-            //TODO: Lo cambiado
+          
             UsuarioLogic usuLogic = new UsuarioLogic();
             Usuario usu = usuLogic.GetOne(idU);
 
@@ -46,6 +46,15 @@ namespace UI.Desktop
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            InscripcionLogic nuevaIns = new InscripcionLogic();
+            nuevaIns.Save(InscripcionActual);
+            Notificar("Inscripción registrada", "Su inscripción ha sido registrada con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
         }
     }
 }

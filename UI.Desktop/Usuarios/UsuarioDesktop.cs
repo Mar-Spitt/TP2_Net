@@ -82,7 +82,7 @@ namespace UI.Desktop
 
                 if (Modo == ModoForm.Alta)
                 {
-                    //TODO Error al ingresar legajo que no existe
+                   
                     PersonaLogic perlo = new PersonaLogic();
                     Persona per = new Persona();
                     per = perlo.GetOne(nuevoUsu.Legajo);
