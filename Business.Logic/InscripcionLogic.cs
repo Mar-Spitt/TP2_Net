@@ -29,5 +29,20 @@ namespace Business.Logic
             }
         }
 
+        public bool Existe(AlumnoInscripcion ins)
+        {
+            bool rta = false;
+            try
+            {
+                rta= InscripcionData.Existe(ins);
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al verificar inscripción", Ex);
+                throw ExcepcionManejada;
+            }
+            return rta;
+        }
+
     }
 }

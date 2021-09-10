@@ -33,7 +33,7 @@ namespace UI.Desktop
             this.dgvInscripciones.AutoGenerateColumns = false;
             try
             {
-                this.dgvInscripciones.DataSource = ins.GetAllWithCupos();
+                this.dgvInscripciones.DataSource = ins.GetAllAnioActual();
 
 
                 MateriaLogic mat = new MateriaLogic();

@@ -55,11 +55,32 @@ namespace UI.Desktop
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            InscripcionLogic nuevaIns = new InscripcionLogic();
-            nuevaIns.Save(InscripcionActual);
-            Notificar("Inscripción registrada", "Su inscripción ha sido registrada con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-
+            CursoLogic curLogic = new CursoLogic();
+            Curso nuevoCur = curLogic.GetOne(InscripcionActual.IDCurso);
+            InscripcionLogic insLogic = new InscripcionLogic();
+            if (insLogic.Existe(InscripcionActual) == true)
+            {
+                Notificar("Inscripción ya registrada", "Usted ya se encuentra registrado a ese curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                if (nuevoCur.Cupo > 0)
+                {
+                    InscripcionLogic nuevaIns = new InscripcionLogic();
+                    nuevaIns.Save(InscripcionActual);
+                    Notificar("Inscripción registrada", "Su inscripción ha sido registrada con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    nuevoCur.Cupo = nuevoCur.Cupo - 1;
+                    nuevoCur.State = BusinessEntity.States.Modified;
+                    curLogic.Save(nuevoCur);
+                    this.Close();
+                }
+                else
+                {
+                    Notificar("Inscripción no registrada", "No se ha podido registrar su inscripcion porque el curso no tiene cupos.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }
+            }
         }
     }
 }

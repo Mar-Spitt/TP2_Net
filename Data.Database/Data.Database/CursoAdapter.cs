@@ -173,15 +173,14 @@ namespace Data.Database
                 throw ExceptionManejada;
             }
         }
-
-        //GetAll para inscripciones
-        public List<Curso> GetAllWithCupos()
+        public List<Curso> GetAllAnioActual()
         {
             List<Curso> cursos = new List<Curso>();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdCursos = new SqlCommand("select * from cursos where cupo > 0", sqlConn);
+                SqlCommand cmdCursos = new SqlCommand("select * from cursos where anio_calendario=@year", sqlConn);
+                cmdCursos.Parameters.Add("@year", SqlDbType.Int).Value = 2019;
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
                 while (drCursos.Read())
                 {
@@ -190,6 +189,7 @@ namespace Data.Database
                     cur.IDMateria = (int)drCursos["id_materia"];
                     cur.IDComision = (int)drCursos["id_comision"];
                     cur.AnioCalendario = (int)drCursos["anio_calendario"];
+                    cur.Cupo = (int)drCursos["cupo"];
                     cur.Descripcion = (string)drCursos["descripcion"];
 
                     cursos.Add(cur);
@@ -199,7 +199,7 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos con cupo > 0", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos", Ex);
                 throw ExcepcionManejada;
             }
             finally

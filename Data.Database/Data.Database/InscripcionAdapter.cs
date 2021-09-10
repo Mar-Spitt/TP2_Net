@@ -36,5 +36,32 @@ namespace Data.Database
             }
         }
 
+        public bool Existe(AlumnoInscripcion ins)
+        {
+            bool rta = false;
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdFind = new SqlCommand("select * from alumnos_inscripciones where id_alumno=@alumno and id_curso=@curso", sqlConn);
+                cmdFind.Parameters.Add("@alumno", SqlDbType.Int).Value = ins.IDAlumno;
+                cmdFind.Parameters.Add("@curso", SqlDbType.Int).Value = ins.IDCurso;
+                SqlDataReader drInscripcion = cmdFind.ExecuteReader();
+                if (drInscripcion.Read())
+                {
+                    rta = true;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcpcionManejada = new Exception("Error al buscar inscripción", Ex);
+                throw ExcpcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return rta;
+        }
+
     }
 }
