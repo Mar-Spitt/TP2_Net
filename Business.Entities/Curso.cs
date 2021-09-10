@@ -13,44 +13,14 @@ namespace Business.Entities
         private int _IDComision;
         private int _IDMateria;
 
-        public int AnioCalendario
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int AnioCalendario { get; set; }
 
-        public int Cupo
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int Cupo { get; set; }
 
-        public string Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Descripcion { get; set; }
 
-        public int IDComision
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int IDComision { get; set; }
 
-        public int IDMateria
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int IDMateria { get; set; }
     }
 }

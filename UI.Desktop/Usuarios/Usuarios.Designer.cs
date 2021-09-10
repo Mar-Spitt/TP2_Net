@@ -37,6 +37,7 @@ namespace UI.Desktop
             this.tlUsuarios = new System.Windows.Forms.TableLayoutPanel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,11 +65,11 @@ namespace UI.Desktop
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tlUsuarios);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(800, 425);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(930, 425);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(800, 450);
+            this.toolStripContainer1.Size = new System.Drawing.Size(930, 450);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -91,7 +92,7 @@ namespace UI.Desktop
             this.tlUsuarios.RowCount = 2;
             this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlUsuarios.Size = new System.Drawing.Size(800, 425);
+            this.tlUsuarios.Size = new System.Drawing.Size(930, 425);
             this.tlUsuarios.TabIndex = 0;
             // 
             // dgvUsuarios
@@ -111,6 +112,7 @@ namespace UI.Desktop
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.Legajo,
             this.nombre,
             this.apellido,
             this.usuario,
@@ -118,12 +120,13 @@ namespace UI.Desktop
             this.habilitado});
             this.tlUsuarios.SetColumnSpan(this.dgvUsuarios, 2);
             this.dgvUsuarios.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(3, 3);
             this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(794, 390);
+            this.dgvUsuarios.Size = new System.Drawing.Size(924, 390);
             this.dgvUsuarios.TabIndex = 0;
             // 
             // id
@@ -132,6 +135,14 @@ namespace UI.Desktop
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // Legajo
+            // 
+            this.Legajo.DataPropertyName = "Legajo";
+            this.Legajo.HeaderText = "Legajo";
+            this.Legajo.Name = "Legajo";
+            this.Legajo.ReadOnly = true;
             // 
             // nombre
             // 
@@ -142,11 +153,11 @@ namespace UI.Desktop
             // 
             // apellido
             // 
+            this.apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.apellido.DataPropertyName = "Apellido";
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
-            this.apellido.Width = 150;
             // 
             // usuario
             // 
@@ -154,10 +165,11 @@ namespace UI.Desktop
             this.usuario.HeaderText = "Usuario";
             this.usuario.Name = "usuario";
             this.usuario.ReadOnly = true;
+            this.usuario.Width = 180;
             // 
             // email
             // 
-            this.email.DataPropertyName = "EMail";
+            this.email.DataPropertyName = "Email";
             this.email.HeaderText = "EMail";
             this.email.Name = "email";
             this.email.ReadOnly = true;
@@ -173,7 +185,7 @@ namespace UI.Desktop
             // btnSalir
             // 
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(722, 399);
+            this.btnSalir.Location = new System.Drawing.Point(852, 399);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 1;
@@ -185,7 +197,7 @@ namespace UI.Desktop
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.Location = new System.Drawing.Point(641, 399);
+            this.btnActualizar.Location = new System.Drawing.Point(771, 399);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 2;
@@ -202,7 +214,7 @@ namespace UI.Desktop
             this.tsbEliminar});
             this.tsUsuarios.Location = new System.Drawing.Point(9, 0);
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(81, 25);
+            this.tsUsuarios.Size = new System.Drawing.Size(112, 25);
             this.tsUsuarios.TabIndex = 0;
             // 
             // tsbNuevo
@@ -212,7 +224,7 @@ namespace UI.Desktop
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
-            this.tsbNuevo.Text = "toolStripButton1";
+            this.tsbNuevo.Text = "Agregar";
             this.tsbNuevo.ToolTipText = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
@@ -223,7 +235,7 @@ namespace UI.Desktop
             this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
-            this.tsbEditar.Text = "toolStripButton1";
+            this.tsbEditar.Text = "Editar";
             this.tsbEditar.ToolTipText = "Editar";
             this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click_1);
             // 
@@ -246,7 +258,7 @@ namespace UI.Desktop
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(930, 450);
             this.Controls.Add(this.toolStripContainer1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -281,6 +293,7 @@ namespace UI.Desktop
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.BindingSource usuarioLogicBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Legajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;

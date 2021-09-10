@@ -11,28 +11,8 @@ namespace Business.Entities
         private string _Descripcion;
         private int _IDPlan;
 
-        public int AnioEspecialidad
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int IDPlan
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int AnioEspecialidad { get; set; }
+        public string Descripcion { get; set; }
+        public int IDPlan { get; set; }
     }
 }

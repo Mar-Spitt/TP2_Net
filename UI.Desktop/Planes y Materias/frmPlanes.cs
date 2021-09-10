@@ -59,7 +59,7 @@ namespace UI.Desktop
         {
             if (this.dgvPlanes.SelectedRows.Count > 0)
             {
-                int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
                 frmPlanDesktop formPlan = new frmPlanDesktop(ID, AplicationForm.ModoForm.Modificacion);
                 formPlan.ShowDialog();
                 this.Listar();
@@ -70,7 +70,7 @@ namespace UI.Desktop
         {
             if (this.dgvPlanes.SelectedRows.Count > 0)
             {
-                int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
                 frmPlanDesktop formPlan = new frmPlanDesktop(ID, AplicationForm.ModoForm.Baja);
                 formPlan.ShowDialog();
                 this.Listar();

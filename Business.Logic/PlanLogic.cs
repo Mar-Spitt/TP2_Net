@@ -15,10 +15,7 @@ namespace Business.Logic
             this.PlanData = new PlanAdapter();
         }
 
-        public PlanAdapter PlanData
-        {
-            get; set;
-        }
+        public PlanAdapter PlanData { get; set; }
 
         public Plan GetOne(int id)
         {

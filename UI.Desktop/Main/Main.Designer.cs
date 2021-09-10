@@ -34,24 +34,26 @@ namespace UI.Desktop
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1.2 - Alumnos");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("1.3 - Especialidades");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("1.4 - Profesores");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("1.5 - Planes y Materias");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("1.5 - Planes");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1.6 - Comisiones");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("1.7 - Cursos");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("1 - Alta, Baja, Modificaciones y Consultas", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("1.8 - Materias");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("1 - Alta, Baja, Modificaciones y Consultas", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
             treeNode4,
             treeNode5,
             treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("2 - Inscripciones de Alumnos a Cursos");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("3 - Registro de notas");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("4.1 - Cursos");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("4.2 - Planes");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12});
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("2 - Inscripciones de Alumnos a Cursos");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("3 - Registro de notas");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("4.1 - Cursos");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("4.2 - Planes");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13});
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe_Click = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,9 +70,9 @@ namespace UI.Desktop
             this.mnuArchivo});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(847, 24);
+            this.mnsPrincipal.Size = new System.Drawing.Size(850, 24);
             this.mnsPrincipal.TabIndex = 2;
-            this.mnsPrincipal.Text = "menuStrip1";
+            this.mnsPrincipal.Text = "Menu";
             // 
             // mnuArchivo
             // 
@@ -112,30 +114,32 @@ namespace UI.Desktop
             treeNode3.Text = "1.3 - Especialidades";
             treeNode4.Name = "nodoProfesor";
             treeNode4.Text = "1.4 - Profesores";
-            treeNode5.Name = "nodoPlanMateria";
-            treeNode5.Text = "1.5 - Planes y Materias";
+            treeNode5.Name = "nodoPlan";
+            treeNode5.Text = "1.5 - Planes";
             treeNode6.Name = "nodoComision";
             treeNode6.Text = "1.6 - Comisiones";
             treeNode7.Name = "nodoCurso";
             treeNode7.Text = "1.7 - Cursos";
-            treeNode8.Name = "nodoABM";
-            treeNode8.Text = "1 - Alta, Baja, Modificaciones y Consultas";
-            treeNode9.Name = "nodoInscripcion";
-            treeNode9.Text = "2 - Inscripciones de Alumnos a Cursos";
-            treeNode10.Name = "nodoRegistro";
-            treeNode10.Text = "3 - Registro de notas";
-            treeNode11.Name = "nodoCursoR";
-            treeNode11.Text = "4.1 - Cursos";
-            treeNode12.Name = "nodoPlanR";
-            treeNode12.Text = "4.2 - Planes";
-            treeNode13.Name = "nodoReporte";
-            treeNode13.Text = "4 - Reportes";
+            treeNode8.Name = "nodoMateria";
+            treeNode8.Text = "1.8 - Materias";
+            treeNode9.Name = "nodoABM";
+            treeNode9.Text = "1 - Alta, Baja, Modificaciones y Consultas";
+            treeNode10.Name = "nodoInscripcion";
+            treeNode10.Text = "2 - Inscripciones de Alumnos a Cursos";
+            treeNode11.Name = "nodoRegistro";
+            treeNode11.Text = "3 - Registro de notas";
+            treeNode12.Name = "nodoCursoR";
+            treeNode12.Text = "4.1 - Cursos";
+            treeNode13.Name = "nodoPlanR";
+            treeNode13.Text = "4.2 - Planes";
+            treeNode14.Name = "nodoReporte";
+            treeNode14.Text = "4 - Reportes";
             this.trvABM.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
             treeNode9,
             treeNode10,
-            treeNode13});
-            this.trvABM.Size = new System.Drawing.Size(398, 288);
+            treeNode11,
+            treeNode14});
+            this.trvABM.Size = new System.Drawing.Size(398, 346);
             this.trvABM.TabIndex = 17;
             this.trvABM.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvABM_AfterSelect);
             // 
@@ -146,7 +150,7 @@ namespace UI.Desktop
             this.groupBox1.Font = new System.Drawing.Font("Britannic Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(799, 385);
+            this.groupBox1.Size = new System.Drawing.Size(817, 428);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sistema de Gestión Académica";
@@ -155,7 +159,7 @@ namespace UI.Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 450);
+            this.ClientSize = new System.Drawing.Size(850, 483);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mnsPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

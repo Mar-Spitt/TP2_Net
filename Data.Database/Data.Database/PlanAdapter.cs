@@ -43,7 +43,7 @@ namespace Data.Database
             return planes;
         }
 
-        public Business.Entities.Plan GetOne(int ID)
+        public Plan GetOne(int ID)
         {
             Plan pl = new Plan();
             try

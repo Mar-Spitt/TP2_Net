@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI.Desktop.Alumnos;
+using UI.Desktop.Planes_y_Materias;
 
 namespace UI.Desktop
 {
     public partial class formMain : Form
     {
+        int usuario_act_tipo;
+        int id_persona_act;
+
         public formMain()
         {
             InitializeComponent();
@@ -30,6 +34,8 @@ namespace UI.Desktop
             {
                 this.Dispose();
             }
+            usuario_act_tipo = appLogin.usuario_actual;
+            id_persona_act = appLogin.id_persona_act;
         }
 
         private void trvABM_AfterSelect(object sender, TreeViewEventArgs e)
@@ -38,33 +44,105 @@ namespace UI.Desktop
             switch (nodo)
             {
                 case "nodoUsuario":
-                    formUsuarios formUsuarios = new formUsuarios();
-                    formUsuarios.ShowDialog();
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        formUsuarios formUsuarios = new formUsuarios();
+                        formUsuarios.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoAlumno":
-                    frmAlumnos formAlumnos = new frmAlumnos();
-                    formAlumnos.ShowDialog();
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador) // Administrador y Profesor(solo ver)
+                    {
+                        frmAlumnos formAlumnos = new frmAlumnos();
+                        formAlumnos.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoEspecialidad":
-                    frmEspecialidades formEspecialidades = new frmEspecialidades();
-                    formEspecialidades.ShowDialog();
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmEspecialidades formEspecialidades = new frmEspecialidades();
+                        formEspecialidades.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
-                case "nodoProfesor":
-
+                case "nodoProfesor": // Profesor (solo ver)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmProfesores frmProfesores = new frmProfesores();
+                        frmProfesores.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
-                case "nodoPlanMateria":
-                    frmPlanes formplanes = new frmPlanes();
-                    formplanes.ShowDialog();
+                case "nodoPlan":
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmPlanes formplanes = new frmPlanes();
+                        formplanes.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
+                case "nodoMateria":
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmMaterias formmaterias = new frmMaterias();
+                        formmaterias.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoComision":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmComisiones formComision = new frmComisiones();
+                        formComision.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoCurso":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmCursos formCurso = new frmCursos();
+                        formCurso.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoInscripcion":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Alumno)
+                    {
+                        frmInscripciones formIns = new frmInscripciones(id_persona_act);
+                        formIns.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
+                    
                 case "nodoRegistro":
 
                     break;

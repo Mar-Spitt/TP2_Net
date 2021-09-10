@@ -30,6 +30,7 @@ namespace UI.Desktop.Planes_y_Materias
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaterias));
             this.tcMaterias = new System.Windows.Forms.ToolStripContainer();
             this.tlMaterias = new System.Windows.Forms.TableLayoutPanel();
@@ -92,14 +93,16 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             this.dgvMaterias.AllowUserToAddRows = false;
             this.dgvMaterias.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaterias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dgvMaterias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaterias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -110,6 +113,7 @@ namespace UI.Desktop.Planes_y_Materias
             this.tlMaterias.SetColumnSpan(this.dgvMaterias, 2);
             this.dgvMaterias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMaterias.Location = new System.Drawing.Point(3, 3);
+            this.dgvMaterias.MultiSelect = false;
             this.dgvMaterias.Name = "dgvMaterias";
             this.dgvMaterias.ReadOnly = true;
             this.dgvMaterias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -118,12 +122,14 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // Descripcion
             // 
+            this.Descripcion.DataPropertyName = "Descripcion";
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
@@ -131,6 +137,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // hs_semanales
             // 
+            this.hs_semanales.DataPropertyName = "HSSemanales";
             this.hs_semanales.HeaderText = "Horas Semanales";
             this.hs_semanales.Name = "hs_semanales";
             this.hs_semanales.ReadOnly = true;
@@ -138,6 +145,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // hs_totales
             // 
+            this.hs_totales.DataPropertyName = "HSTotales";
             this.hs_totales.HeaderText = "Horas Totales";
             this.hs_totales.Name = "hs_totales";
             this.hs_totales.ReadOnly = true;
@@ -146,6 +154,7 @@ namespace UI.Desktop.Planes_y_Materias
             // id_plan
             // 
             this.id_plan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_plan.DataPropertyName = "IDPlan";
             this.id_plan.HeaderText = "ID Plan";
             this.id_plan.Name = "id_plan";
             this.id_plan.ReadOnly = true;
@@ -153,6 +162,7 @@ namespace UI.Desktop.Planes_y_Materias
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(661, 399);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
@@ -163,6 +173,7 @@ namespace UI.Desktop.Planes_y_Materias
             // 
             // btnSalir
             // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(742, 399);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -186,7 +197,7 @@ namespace UI.Desktop.Planes_y_Materias
             // tsbNuevo
             // 
             this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.Image = global::UI.Desktop.Properties.Resources.agregar;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
@@ -196,7 +207,7 @@ namespace UI.Desktop.Planes_y_Materias
             // tsbModificar
             // 
             this.tsbModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
+            this.tsbModificar.Image = global::UI.Desktop.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(23, 22);
@@ -206,7 +217,7 @@ namespace UI.Desktop.Planes_y_Materias
             // tsbEliminar
             // 
             this.tsbEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.Image = global::UI.Desktop.Properties.Resources.eliminar_2;
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
@@ -219,8 +230,11 @@ namespace UI.Desktop.Planes_y_Materias
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 450);
             this.Controls.Add(this.tcMaterias);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMaterias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Materias";
+            this.Load += new System.EventHandler(this.Materias_Load);
             this.tcMaterias.ContentPanel.ResumeLayout(false);
             this.tcMaterias.TopToolStripPanel.ResumeLayout(false);
             this.tcMaterias.TopToolStripPanel.PerformLayout();

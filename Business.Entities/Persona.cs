@@ -19,7 +19,7 @@ namespace Business.Entities
 
         public Persona()
         {
-            this.TipoPersona = TiposPersonas.Alumno;
+            //this.TipoPersona = TiposPersonas.Alumno;
         }
 
         public string Apellido { get; set;  }
@@ -44,8 +44,9 @@ namespace Business.Entities
         }
         public enum TiposPersonas
         {
-            Alumno,
-            Docente
+            Alumno = 1,
+            Profesor,
+            Administrador
         }
 
     }

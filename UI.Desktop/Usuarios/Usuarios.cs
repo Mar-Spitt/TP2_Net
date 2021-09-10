@@ -28,7 +28,7 @@ namespace UI.Desktop
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Error", "Error al recuperar lista de usuarios" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al recuperar lista de usuarios" + Ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -59,7 +59,7 @@ namespace UI.Desktop
         {
             if (this.dgvUsuarios.SelectedRows.Count > 0)
             {
-                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop formUsuario = new UsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
                 formUsuario.ShowDialog();
                 this.Listar();
@@ -70,7 +70,7 @@ namespace UI.Desktop
         {
             if (this.dgvUsuarios.SelectedRows.Count > 0)
             {
-                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop formUsuario = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
                 formUsuario.ShowDialog();
                 this.Listar();
