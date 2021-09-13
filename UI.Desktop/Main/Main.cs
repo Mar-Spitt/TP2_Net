@@ -144,6 +144,15 @@ namespace UI.Desktop
                     break;
                     
                 case "nodoRegistro":
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Profesor)
+                    {
+                        frmRegistroNotas formIns = new frmRegistroNotas();
+                        formIns.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                     break;
                 case "nodoCursoR":

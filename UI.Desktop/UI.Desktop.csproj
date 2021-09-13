@@ -88,6 +88,18 @@
     <Compile Include="Cursos\frmCursosDesktop.Designer.cs">
       <DependentUpon>frmCursosDesktop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro notas\frmRegistroNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro notas\frmRegistroNotas.Designer.cs">
+      <DependentUpon>frmRegistroNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro notas\frmRegistroNotasDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro notas\frmRegistroNotasDesktop.Designer.cs">
+      <DependentUpon>frmRegistroNotasDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inscripción a curso\frmInscripcionesDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesores\frmProfesoresDesktop.resx">
       <DependentUpon>frmProfesoresDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro notas\frmRegistroNotas.resx">
+      <DependentUpon>frmRegistroNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>

@@ -90,7 +90,7 @@ namespace UI.Consola
             Console.WriteLine("\t\tApellido: {0}", usr.Apellido);
             Console.WriteLine("\t\tNombre de Usuario: {0}", usr.NombreUsuario);
             Console.WriteLine("\t\tClave: {0}", usr.Clave);
-            Console.WriteLine("\t\tEmail: {0}", usr.EMail);
+            //Console.WriteLine("\t\tEmail: {0}", usr.EMail);
             Console.WriteLine("\t\tHabilitado: {0}", usr.Habilitado);
             // \t dentro de un string representa un TAB
             Console.WriteLine();

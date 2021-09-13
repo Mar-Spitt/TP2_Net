@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Business.Entities;
 using Data.Database;
 
@@ -28,6 +29,5 @@ namespace Business.Logic
             }
             return per;
         }
-
     }
 }
