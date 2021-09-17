@@ -42,7 +42,6 @@ namespace Business.Logic
                 throw ExcepcionManejada;
             }
             return usuarios;
-
         }
 
         public void Save(Usuario usu)

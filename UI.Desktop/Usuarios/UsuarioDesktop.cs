@@ -90,6 +90,9 @@ namespace UI.Desktop
                     {
                         nuevoUsu.State = BusinessEntity.States.New;
                         nuevoUsu.IdPersona = per.ID;
+                        nuevoUsu.Nombre = per.Nombre;
+                        nuevoUsu.Apellido = per.Apellido;
+                        nuevoUsu.Email = per.Email;
                         usr.Save(nuevoUsu);
                     }
                     else
@@ -106,6 +109,13 @@ namespace UI.Desktop
                 {
                     nuevoUsu.ID = int.Parse(this.txtID.Text);
                     nuevoUsu.State = BusinessEntity.States.Modified;
+                    PersonaLogic perlo = new PersonaLogic();
+                    Persona per = new Persona();
+                    per = perlo.GetOne(nuevoUsu.Legajo);
+                    nuevoUsu.IdPersona = per.ID;
+                    nuevoUsu.Nombre = per.Nombre;
+                    nuevoUsu.Apellido = per.Apellido;
+                    nuevoUsu.Email = per.Email;
                     usr.Save(nuevoUsu);
                 }
             }

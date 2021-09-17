@@ -32,11 +32,11 @@ namespace UI.Desktop
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRegistroNotas = new System.Windows.Forms.DataGridView();
-            this.btnCargarNota = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCargarNota = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_alumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colAlumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_materia = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,7 +81,7 @@ namespace UI.Desktop
             this.dgvRegistroNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroNotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_inscripcion,
-            this.id_alumno,
+            this.colAlumno,
             this.id_curso,
             this.id_materia,
             this.anio_calendario,
@@ -98,6 +98,16 @@ namespace UI.Desktop
             this.dgvRegistroNotas.Size = new System.Drawing.Size(1087, 415);
             this.dgvRegistroNotas.TabIndex = 0;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(1015, 424);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // btnCargarNota
             // 
             this.btnCargarNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -108,16 +118,6 @@ namespace UI.Desktop
             this.btnCargarNota.Text = "Cargar Nota";
             this.btnCargarNota.UseVisualStyleBackColor = true;
             this.btnCargarNota.Click += new System.EventHandler(this.btnCargarNota_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(1015, 424);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnActualizar
             // 
@@ -138,14 +138,15 @@ namespace UI.Desktop
             this.id_inscripcion.ReadOnly = true;
             this.id_inscripcion.Width = 30;
             // 
-            // id_alumno
+            // colAlumno
             // 
-            this.id_alumno.DataPropertyName = "IDAlumno";
-            this.id_alumno.HeaderText = "Alumnos";
-            this.id_alumno.Name = "id_alumno";
-            this.id_alumno.ReadOnly = true;
-            this.id_alumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colAlumno.DataPropertyName = "IDAlumno";
+            this.colAlumno.HeaderText = "Alumnos";
+            this.colAlumno.Name = "colAlumno";
+            this.colAlumno.ReadOnly = true;
+            this.colAlumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colAlumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colAlumno.Width = 120;
             // 
             // id_curso
             // 
@@ -223,7 +224,7 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnCargarNota;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_inscripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_alumno;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_curso;
         private System.Windows.Forms.DataGridViewComboBoxColumn id_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn anio_calendario;

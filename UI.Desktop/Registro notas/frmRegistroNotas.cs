@@ -27,6 +27,11 @@ namespace UI.Desktop
             {
                 this.dgvRegistroNotas.DataSource = ins.GetAllAnioActual();
 
+                AlumnoLogic alu = new AlumnoLogic();
+                this.colAlumno.DataSource = alu.GetAll();
+                this.colAlumno.ValueMember = "ID";
+                this.colAlumno.DisplayMember = "Legajo";
+                // TODO: No muestra el Legajo de cada Alumno
 
                 MateriaLogic mat = new MateriaLogic();
                 this.id_materia.DataSource = mat.GetAll();
@@ -37,12 +42,6 @@ namespace UI.Desktop
                 this.id_comision.DataSource = com.GetAll();
                 this.id_comision.ValueMember = "ID";
                 this.id_comision.DisplayMember = "Descripcion";
-
-                AlumnoLogic alu = new AlumnoLogic();
-                this.id_alumno.DataSource = alu.GetAll();
-                this.id_alumno.ValueMember = "ID";
-                this.id_alumno.DisplayMember = "Legajo";
-                // TODO: No muestra el Legajo de cada Alumno
 
             }
             catch (Exception Ex)

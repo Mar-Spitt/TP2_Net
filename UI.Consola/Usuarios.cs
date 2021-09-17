@@ -140,7 +140,7 @@ namespace UI.Consola
                 Console.Write("Ingrese  Clave: ");
                 usuario.Clave = Console.ReadLine();
                 Console.Write("Ingrese  Email: ");
-                usuario.EMail = Console.ReadLine();
+                usuario.Email = Console.ReadLine();
                 Console.Write("Ingrese  Habilitación de Usuario(1 - Si / otro - No):  ");
                 usuario.Habilitado = (Console.ReadLine() == "1");
                 usuario.State = BusinessEntity.States.Modified;
@@ -178,7 +178,7 @@ namespace UI.Consola
             Console.Write("Ingrese Clave: ");
             usuario.Clave = Console.ReadLine();
             Console.Write("Ingrese Email: ");
-            usuario.EMail = Console.ReadLine();
+            usuario.Email = Console.ReadLine();
             Console.Write("Ingrese Habilitación de Usuario (1-Si/otro-No): ");
             usuario.Habilitado = (Console.ReadLine() == "1");
             usuario.State = BusinessEntity.States.New;

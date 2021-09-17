@@ -10,15 +10,14 @@ namespace Business.Entities
         private string _Condicion;
         private int _IDAlumno;
         private int _IDCurso;
-        private int _Nota;
+        private Nullable<int> _Nota;
 
         public string Condicion { get; set; }
-       
 
         public int IDAlumno { get; set; }
 
         public int IDCurso { get; set; }
 
-        public int Nota { get; set; }
+        public Nullable<int> Nota { get; set; }
     }
 }
