@@ -1,0 +1,21 @@
+﻿body {
+    background-image: url('../../Imagenes/fondo-textura.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.margenABM {
+    margin: 50px 40px 50px 50px;
+}
+.button {
+    border-radius: 5px;
+}
+.login {
+    margin: 70px auto;
+}
+.navigation {
+    width: 80px;
+
+}

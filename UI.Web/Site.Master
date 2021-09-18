@@ -5,16 +5,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Academia</title>
+    <link href="Styles/estilos.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form id="bodyForm" runat="server">
-        <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource">
-        </asp:Menu>
-        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server"/>
-        <div>
-            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        <table border="1" cellpadding="0" cellspacing="0" width="100%" height="100%">
+                <!-- site header --> 
+            <tr> 
+                <td colspan="2" align="center" class="wrapper" style="font-family: Cambria; font-size: xx-large">SISTEMA DE GESTIÓN LA ACADEMIA</td>
+            </tr> 
+            <tr> 
+                <!-- site navigation --> 
+                <td valign="top" class="navigation"> 
+                    <table border="0" width="100%" cellpadding="4" cellspacing="0">
+                            <tr> 
+                            <td align="center">Site Navigation</td> 
+                        </tr> 
+                        <tr> 
+                            <td><a href="Login.aspx">Login</a></td> 
+                        </tr>
+                        <tr> 
+                            <td><a href="Home.aspx">Home</a></td> 
+                        </tr>  
+                    </table> 
+                </td> 
+                    <td valign="top" align="center">
+                        <!-- this is the placeholder for the page content --> 
+                        <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+            </tr>
+                <!-- site footer --> 
+            <tr> 
+                <td colspan="2" align="center">Site Footer</td> 
+            </tr> 
+        </table>
     </form>
 </body>
 </html>

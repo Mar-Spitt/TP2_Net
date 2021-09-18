@@ -14,12 +14,18 @@ Default skin template. The following skins are provided as examples only.
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
 --%>
 <asp:Button runat="server"
-BackColor="lightblue"
-ForeColor="Black"
-Font-Name="Arial"
-Font-Size="9px" />
+BackColor="#e7e7e7"
+Font-Name="System"
+Font-Size="16px"/>
+
 <asp:Label Runat="server"
-Font-Bold="True"
-Font-Names="Garamond"
+Font-Names="Microsoft Sans Serif"
 Font-Overline="False"
-BackColor="LightGoldenrodYellow" />
+Font-Size="17px"/>
+
+<asp:Label Runat="server"
+SkinId="titulo"
+Font-Bold="True"
+Font-Names="Britannic Bold"
+Font-Overline="False"
+Font-Size="30px"/>
