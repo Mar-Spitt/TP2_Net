@@ -30,13 +30,15 @@ namespace UI.Desktop
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroNotas));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRegistroNotas = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCargarNota = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAlumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_materia = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,25 +65,27 @@ namespace UI.Desktop
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(960, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvRegistroNotas
             // 
             this.dgvRegistroNotas.AllowUserToAddRows = false;
             this.dgvRegistroNotas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRegistroNotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dgvRegistroNotas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRegistroNotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRegistroNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroNotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_inscripcion,
-            this.colAlumno,
+            this.id_alumno,
             this.id_curso,
             this.id_materia,
             this.anio_calendario,
@@ -95,12 +99,12 @@ namespace UI.Desktop
             this.dgvRegistroNotas.Name = "dgvRegistroNotas";
             this.dgvRegistroNotas.ReadOnly = true;
             this.dgvRegistroNotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistroNotas.Size = new System.Drawing.Size(1087, 415);
+            this.dgvRegistroNotas.Size = new System.Drawing.Size(954, 415);
             this.dgvRegistroNotas.TabIndex = 0;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(1015, 424);
+            this.btnCancelar.Location = new System.Drawing.Point(882, 424);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
@@ -111,7 +115,7 @@ namespace UI.Desktop
             // btnCargarNota
             // 
             this.btnCargarNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCargarNota.Location = new System.Drawing.Point(933, 424);
+            this.btnCargarNota.Location = new System.Drawing.Point(800, 424);
             this.btnCargarNota.Name = "btnCargarNota";
             this.btnCargarNota.Size = new System.Drawing.Size(76, 23);
             this.btnCargarNota.TabIndex = 1;
@@ -122,7 +126,7 @@ namespace UI.Desktop
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(852, 424);
+            this.btnActualizar.Location = new System.Drawing.Point(719, 424);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 3;
@@ -138,15 +142,15 @@ namespace UI.Desktop
             this.id_inscripcion.ReadOnly = true;
             this.id_inscripcion.Width = 30;
             // 
-            // colAlumno
+            // id_alumno
             // 
-            this.colAlumno.DataPropertyName = "IDAlumno";
-            this.colAlumno.HeaderText = "Alumnos";
-            this.colAlumno.Name = "colAlumno";
-            this.colAlumno.ReadOnly = true;
-            this.colAlumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colAlumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colAlumno.Width = 120;
+            this.id_alumno.DataPropertyName = "IDAlumno";
+            this.id_alumno.HeaderText = "Alumnos";
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.ReadOnly = true;
+            this.id_alumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.id_alumno.Width = 120;
             // 
             // id_curso
             // 
@@ -182,7 +186,7 @@ namespace UI.Desktop
             this.id_comision.ReadOnly = true;
             this.id_comision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.id_comision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_comision.Width = 188;
+            this.id_comision.Width = 80;
             // 
             // nota
             // 
@@ -190,7 +194,7 @@ namespace UI.Desktop
             this.nota.HeaderText = "Notas";
             this.nota.Name = "nota";
             this.nota.ReadOnly = true;
-            this.nota.Width = 50;
+            this.nota.Width = 80;
             // 
             // condicion
             // 
@@ -204,11 +208,12 @@ namespace UI.Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 450);
+            this.ClientSize = new System.Drawing.Size(960, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistroNotas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRegistroNotas";
+            this.Text = "Registro de Notas";
             this.Load += new System.EventHandler(this.frmRegistroNotas_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroNotas)).EndInit();
@@ -224,7 +229,7 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnCargarNota;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_inscripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colAlumno;
+        private System.Windows.Forms.DataGridViewComboBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_curso;
         private System.Windows.Forms.DataGridViewComboBoxColumn id_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn anio_calendario;

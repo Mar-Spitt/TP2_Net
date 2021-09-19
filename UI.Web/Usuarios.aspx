@@ -11,6 +11,9 @@
 					<asp:Label ID="lblApellido" runat="server" Text="Apellido: "/>
 					<asp:TextBox ID="txtApellido" runat="server"/>
 					<br />
+					<asp:Label ID="lblLegajo" runat="server" Text="Legajo: " />
+					<asp:TextBox ID="txtLegajo" runat="server" ></asp:TextBox>
+					<br />
 					<asp:Label ID="lblEmail" runat="server" Text="Email: "></asp:Label>
 					<asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
 					<br />
@@ -28,7 +31,7 @@
 					<br />
 						<asp:Panel ID="formActionsPanel" runat="server">
 						<asp:LinkButton ID="lnkbtnAceptar" runat="server" OnClick="lnkbtnAceptar_Click">Aceptar</asp:LinkButton>
-						<asp:LinkButton ID="lnkbtnCancelar" runat="server">Cancelar</asp:LinkButton>
+						<asp:LinkButton ID="lnkbtnCancelar" runat="server" OnClick="lnkbtnCancelar_Click">Cancelar</asp:LinkButton>
 						</asp:Panel>
 				</asp:Panel>
 			</td>

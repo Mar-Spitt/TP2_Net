@@ -260,6 +260,9 @@
     <EmbeddedResource Include="Registro notas\frmRegistroNotas.resx">
       <DependentUpon>frmRegistroNotas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registro notas\frmRegistroNotasDesktop.resx">
+      <DependentUpon>frmRegistroNotasDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </EmbeddedResource>

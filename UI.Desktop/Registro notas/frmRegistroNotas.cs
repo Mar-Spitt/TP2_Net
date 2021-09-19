@@ -28,9 +28,9 @@ namespace UI.Desktop
                 this.dgvRegistroNotas.DataSource = ins.GetAllAnioActual();
 
                 AlumnoLogic alu = new AlumnoLogic();
-                this.colAlumno.DataSource = alu.GetAll();
-                this.colAlumno.ValueMember = "ID";
-                this.colAlumno.DisplayMember = "Legajo";
+                this.id_alumno.DataSource = alu.GetAll();
+                this.id_alumno.ValueMember = "ID";
+                this.id_alumno.DisplayMember = "Nombre";
                 // TODO: No muestra el Legajo de cada Alumno
 
                 MateriaLogic mat = new MateriaLogic();
