@@ -119,9 +119,6 @@ namespace UI.Web
 
 		private void LoadEntity(Usuario usuario)
 		{
-			//usuario.Nombre = this.txtNombre.Text;
-			//usuario.Apellido = this.txtApellido.Text;
-			//usuario.Email = this.txtEmail.Text;
 			usuario.NombreUsuario = this.txtNombreUsuario.Text;
 			usuario.Clave = this.txtClave.Text;
 			usuario.Habilitado = this.chkHabilitado.Checked;

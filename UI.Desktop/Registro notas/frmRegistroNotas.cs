@@ -21,11 +21,11 @@ namespace UI.Desktop
 
         public void Listar()
         {
-            CursoLogic ins = new CursoLogic();
+            InscripcionLogic ins = new InscripcionLogic();
             this.dgvRegistroNotas.AutoGenerateColumns = false;
             try
             {
-                this.dgvRegistroNotas.DataSource = ins.GetAllAnioActual();
+                this.dgvRegistroNotas.DataSource = ins.GetAll();
 
                 AlumnoLogic alu = new AlumnoLogic();
                 this.id_alumno.DataSource = alu.GetAll();

@@ -44,5 +44,21 @@ namespace Business.Logic
             return rta;
         }
 
+        public List<AlumnoInscripcion> GetAll()
+        {
+            List<AlumnoInscripcion> inscripciones;
+            try
+            {
+                inscripciones = InscripcionData.GetAll();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar lista de inscripciones", Ex);
+                throw ExcepcionManejada;
+            }
+            return inscripciones;
+        }
+
+
     }
 }

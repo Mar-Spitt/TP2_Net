@@ -183,17 +183,6 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
                 
                 cmdSave.ExecuteNonQuery();
-
-                //SqlCommand cmdSavePersona = new SqlCommand("UPDATE p " +
-                //    "SET p.nombre=@nombre, p.apellido=@apellido, p.email=@email " +
-                //    "FROM personas p  WHERE p.id_persona=@id", sqlConn);
-                //cmdSavePersona.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
-                //cmdSavePersona.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
-                //cmdSavePersona.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.Email;
-                //cmdSavePersona.Parameters.Add("@id", SqlDbType.Int).Value = usuario.IdPersona;
-                
-                //cmdSavePersona.ExecuteNonQuery();
-
             }
             catch (Exception Ex)
             {

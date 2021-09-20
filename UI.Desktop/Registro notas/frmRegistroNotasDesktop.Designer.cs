@@ -62,7 +62,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel1.Controls.Add(this.lblInscripcionID, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAlumnoLegajo, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblCursoId, 3, 2);
@@ -120,7 +120,7 @@ namespace UI.Desktop
             // 
             this.lblCursoId.AutoSize = true;
             this.lblCursoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoId.Location = new System.Drawing.Point(299, 59);
+            this.lblCursoId.Location = new System.Drawing.Point(298, 59);
             this.lblCursoId.Name = "lblCursoId";
             this.lblCursoId.Size = new System.Drawing.Size(52, 15);
             this.lblCursoId.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace UI.Desktop
             // 
             this.lblComisionId.AutoSize = true;
             this.lblComisionId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComisionId.Location = new System.Drawing.Point(487, 59);
+            this.lblComisionId.Location = new System.Drawing.Point(486, 59);
             this.lblComisionId.Name = "lblComisionId";
             this.lblComisionId.Size = new System.Drawing.Size(75, 15);
             this.lblComisionId.TabIndex = 3;
@@ -160,7 +160,7 @@ namespace UI.Desktop
             // 
             this.lblCondicion.AutoSize = true;
             this.lblCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCondicion.Location = new System.Drawing.Point(299, 126);
+            this.lblCondicion.Location = new System.Drawing.Point(298, 126);
             this.lblCondicion.Name = "lblCondicion";
             this.lblCondicion.Size = new System.Drawing.Size(79, 15);
             this.lblCondicion.TabIndex = 6;
@@ -168,7 +168,7 @@ namespace UI.Desktop
             // 
             // txtAlumnoLegajo
             // 
-            this.txtAlumnoLegajo.Location = new System.Drawing.Point(143, 62);
+            this.txtAlumnoLegajo.Location = new System.Drawing.Point(142, 62);
             this.txtAlumnoLegajo.Name = "txtAlumnoLegajo";
             this.txtAlumnoLegajo.ReadOnly = true;
             this.txtAlumnoLegajo.Size = new System.Drawing.Size(100, 21);
@@ -176,7 +176,7 @@ namespace UI.Desktop
             // 
             // txtCursoId
             // 
-            this.txtCursoId.Location = new System.Drawing.Point(385, 62);
+            this.txtCursoId.Location = new System.Drawing.Point(384, 62);
             this.txtCursoId.Name = "txtCursoId";
             this.txtCursoId.ReadOnly = true;
             this.txtCursoId.Size = new System.Drawing.Size(95, 21);
@@ -184,7 +184,7 @@ namespace UI.Desktop
             // 
             // txtComisionId
             // 
-            this.txtComisionId.Location = new System.Drawing.Point(603, 62);
+            this.txtComisionId.Location = new System.Drawing.Point(602, 62);
             this.txtComisionId.Name = "txtComisionId";
             this.txtComisionId.ReadOnly = true;
             this.txtComisionId.Size = new System.Drawing.Size(99, 21);
@@ -193,7 +193,7 @@ namespace UI.Desktop
             // txtMateria
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtMateria, 3);
-            this.txtMateria.Location = new System.Drawing.Point(143, 93);
+            this.txtMateria.Location = new System.Drawing.Point(142, 93);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.ReadOnly = true;
             this.txtMateria.Size = new System.Drawing.Size(337, 21);
@@ -201,21 +201,22 @@ namespace UI.Desktop
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(143, 129);
+            this.txtNota.Location = new System.Drawing.Point(142, 129);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(100, 21);
             this.txtNota.TabIndex = 12;
             // 
             // txtCondicion
             // 
-            this.txtCondicion.Location = new System.Drawing.Point(385, 129);
+            this.tableLayoutPanel1.SetColumnSpan(this.txtCondicion, 2);
+            this.txtCondicion.Location = new System.Drawing.Point(384, 129);
             this.txtCondicion.Name = "txtCondicion";
-            this.txtCondicion.Size = new System.Drawing.Size(95, 21);
+            this.txtCondicion.Size = new System.Drawing.Size(209, 21);
             this.txtCondicion.TabIndex = 13;
             // 
             // txtIdInscripcion
             // 
-            this.txtIdInscripcion.Location = new System.Drawing.Point(143, 28);
+            this.txtIdInscripcion.Location = new System.Drawing.Point(142, 28);
             this.txtIdInscripcion.Name = "txtIdInscripcion";
             this.txtIdInscripcion.ReadOnly = true;
             this.txtIdInscripcion.Size = new System.Drawing.Size(100, 21);
@@ -225,7 +226,7 @@ namespace UI.Desktop
             // 
             this.lblAnioCalendario.AutoSize = true;
             this.lblAnioCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnioCalendario.Location = new System.Drawing.Point(487, 90);
+            this.lblAnioCalendario.Location = new System.Drawing.Point(486, 90);
             this.lblAnioCalendario.Name = "lblAnioCalendario";
             this.lblAnioCalendario.Size = new System.Drawing.Size(107, 15);
             this.lblAnioCalendario.TabIndex = 14;
@@ -233,7 +234,7 @@ namespace UI.Desktop
             // 
             // txtAnioCalendario
             // 
-            this.txtAnioCalendario.Location = new System.Drawing.Point(603, 93);
+            this.txtAnioCalendario.Location = new System.Drawing.Point(602, 93);
             this.txtAnioCalendario.Name = "txtAnioCalendario";
             this.txtAnioCalendario.ReadOnly = true;
             this.txtAnioCalendario.Size = new System.Drawing.Size(99, 21);
@@ -243,7 +244,7 @@ namespace UI.Desktop
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(522, 180);
+            this.btnAceptar.Location = new System.Drawing.Point(521, 180);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 16;
@@ -253,7 +254,7 @@ namespace UI.Desktop
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(603, 180);
+            this.btnCancelar.Location = new System.Drawing.Point(602, 180);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;

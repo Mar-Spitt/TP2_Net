@@ -7,7 +7,7 @@
     background-position: center;
 }
 .margenABM {
-    margin: 50px 40px 50px 50px;
+    margin: 50px 40px 50px 50px;  /*primero es el margen superior, derecho,abajo, izquierda*/
 }
 .button {
     border-radius: 5px;
