@@ -78,7 +78,13 @@ namespace Data.Database
                     ins.IDAlumno = (int)drInscripcion["id_alumno"];
                     ins.IDCurso = (int)drInscripcion["id_curso"];
                     ins.Condicion = (string)drInscripcion["condicion"];
-                    ins.Nota = (int?)drInscripcion["nota"];
+                    if(drInscripcion["nota"] is DBNull)
+                    { ins.Nota = null; }
+                    else
+                    {
+                        ins.Nota = (Nullable<int>)drInscripcion["nota"];
+                    }
+                    
 
                     inscripciones.Add(ins);
                 }

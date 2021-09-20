@@ -33,6 +33,11 @@ namespace UI.Desktop
                 this.id_alumno.DisplayMember = "Nombre";
                 // TODO: No muestra el Legajo de cada Alumno
 
+                CursoLogic cur = new CursoLogic();
+                this.id_curso.DataSource = cur.GetAll();
+                this.id_curso.ValueMember = "ID";
+                this.id_curso.DisplayMember = "Descripcion";
+
                 MateriaLogic mat = new MateriaLogic();
                 this.id_materia.DataSource = mat.GetAll();
                 this.id_materia.ValueMember = "ID";
