@@ -3,40 +3,64 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
 	<table class="margenABM">
 		<tr>
+			<td align="center" colspan="3">
+				<asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
+				<br/><br/>
+			</td>
+		</tr>
+		<tr>
 			<td>
 				<asp:Panel ID="formPanel" Visible="false" runat="server">
-					<asp:Label ID="lblNombre" runat="server" Text="Nombre: "/>
-					<asp:TextBox ID="txtNombre" runat="server" rows="5"/>
-					<br />
-					<asp:Label ID="lblApellido" runat="server" Text="Apellido: "/>
-					<asp:TextBox ID="txtApellido" runat="server"/>
-					<br />
-					<asp:Label ID="lblLegajo" runat="server" Text="Legajo: " />
-					<asp:TextBox ID="txtLegajo" runat="server" ></asp:TextBox>
-					<br />
-					<asp:Label ID="lblEmail" runat="server" Text="Email: "></asp:Label>
-					<asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-					<br />
-					<asp:Label ID="lblhabilitado" runat="server" Text="Habilitado: "></asp:Label>
-					<asp:CheckBox ID="chkHabilitado" runat="server"></asp:CheckBox>
-					<br />
-					<asp:Label ID="lblNombreUsuario" runat="server" Text="Usuario: "></asp:Label>
-					<asp:TextBox ID="txtNombreUsuario" runat="server"></asp:TextBox>
-					<br />
-					<asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label>
-					<asp:TextBox ID="txtClave" TextMode="Password" runat="server"></asp:TextBox>
-					<br />
-					<asp:Label ID="lblRepetirClave" runat="server" Text="Confirmar clave: "></asp:Label>
-					<asp:TextBox ID="txtRepetirClave" TextMode="Password" runat="server"></asp:TextBox>
-					<br />
-						<asp:Panel ID="formActionsPanel" runat="server">
-						<asp:LinkButton ID="lnkbtnAceptar" runat="server" OnClick="lnkbtnAceptar_Click">Aceptar</asp:LinkButton>
-						<asp:LinkButton ID="lnkbtnCancelar" runat="server" OnClick="lnkbtnCancelar_Click">Cancelar</asp:LinkButton>
-						</asp:Panel>
+					<table border="1">
+						<tr>
+							<td align="center" colspan="2">
+							<asp:Label ID="lblTitulo" runat="server" Text="DATOS"></asp:Label></td>
+						</tr>
+						<tr>
+							<td align="right"><asp:Label ID="lblNombre" runat="server" Text="Nombre: "/></td>
+							<td><asp:TextBox ID="txtNombre" runat="server" rows="5"/></td>
+						</tr>
+						<tr>
+							<td align="right"><asp:Label ID="lblApellido" runat="server" Text="Apellido: "/></td>
+							<td><asp:TextBox ID="txtApellido" runat="server"/></td>
+						</tr>
+						<tr>
+							<td align="right"><asp:Label ID="lblLegajo" runat="server" Text="Legajo: " /></td>
+							<td><asp:TextBox ID="txtLegajo" runat="server" ></asp:TextBox></td>
+						</tr>
+						<tr>
+							<td align="right"><asp:Label ID="lblEmail" runat="server" Text="Email: "></asp:Label></td>
+							<td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
+						</tr>
+                        <tr>
+                            <td align="right"><asp:Label ID="lblhabilitado" runat="server" Text="Habilitado: "></asp:Label></td>
+                            <td><asp:CheckBox ID="chkHabilitado" runat="server" /></td>
+                        </tr>
+						<tr>
+                            <td align="right"><asp:Label ID="lblNombreUsuario" runat="server" Text="Usuario: "></asp:Label></td>
+                            <td><asp:TextBox ID="txtNombreUsuario" runat="server"></asp:TextBox></td>
+                        </tr>
+						<tr>
+                            <td align="right"><asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label></td>
+                            <td><asp:TextBox ID="txtClave" runat="server" TextMode="Password"></asp:TextBox></td>
+                        </tr>
+						<tr>
+                            <td align="right"><asp:Label ID="lblRepetirClave" runat="server" Text="Confirmar clave: "></asp:Label></td>
+                            <td><asp:TextBox ID="txtRepetirClave" runat="server" TextMode="Password"></asp:TextBox></td>
+                        </tr>
+						<tr>
+							<td align="right" colspan="2">
+								<asp:Panel ID="formActionsPanel" runat="server">
+									<asp:LinkButton ID="lnkbtnCancelar" runat="server" OnClick="lnkbtnCancelar_Click">Cancelar </asp:LinkButton>
+									<asp:LinkButton ID="lnkbtnAceptar" runat="server" OnClick="lnkbtnAceptar_Click"> Aceptar</asp:LinkButton>
+								</asp:Panel>
+							</td>
+						</tr>
+					</table>
 				</asp:Panel>
 			</td>
 			<td> </td>
-			<td>
+			<td valign="top">
 				<asp:Panel ID="gridPanel" runat="server">
 					<asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
 						SelectedRowStyle-BackColor="Black"
