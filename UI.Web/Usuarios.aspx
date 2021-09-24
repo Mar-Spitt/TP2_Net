@@ -61,7 +61,7 @@
                             <td align="right"><asp:Label ID="lblRepetirClave" runat="server" Text="Confirmar clave: "></asp:Label></td>
                             <td><asp:TextBox ID="txtRepetirClave" runat="server" TextMode="Password"></asp:TextBox>
 								
-								<asp:CompareValidator ID="repetirClave" runat="server" ControlToValidate="txtRepetirClave" ControlToCompare="txtClave" Operator="Equal" Text="*" ErrorMessage="Las claves ingresadas no coinciden" Type="String" />
+								<asp:CompareValidator ID="repetirClave" runat="server" ControlToValidate="txtRepetirClave" ControlToCompare="txtClave" Operator="Equal" Text="*" ForeColor="Red" ErrorMessage="Las claves ingresadas no coinciden" Type="String" />
                             </td>
                         </tr>
 						<tr>

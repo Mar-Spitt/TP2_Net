@@ -31,7 +31,7 @@ namespace UI.Desktop
                 this.id_alumno.DataSource = alu.GetAll();
                 this.id_alumno.ValueMember = "ID";
                 this.id_alumno.DisplayMember = "Nombre";
-                // TODO: No muestra el Legajo de cada Alumno
+                // TODO: Cerrar ABM registro de Notas
 
                 CursoLogic cur = new CursoLogic();
                 this.id_curso.DataSource = cur.GetAll();

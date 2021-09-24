@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Business.Logic;
+using Business.Entities;
 
 namespace UI.Web
 {
@@ -17,22 +19,35 @@ namespace UI.Web
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             //Valido nombre de usuario y clave
-            if (this.txtUsuario.Text.ToLower() == "admin" && this.txtContraseña.Text == "admin")
+            UsuarioLogic usuarioNegocio = new UsuarioLogic();
+            Usuario usu = new Usuario();
+            usu = usuarioNegocio.ValidarUsuario(this.txtUsuario.Text); 
+            if (usu is null)
             {
-                Page.Response.Write("Ingreso OK!");
+                Page.Response.Write("Usuario incorrecto");
             }
             else
             {
-                Page.Response.Write("Usuario y/o contraseña incorrectos");
+                if (usuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtContraseña.Text, usu))
+                {
+                    //Page.Response.Write("Ingreso OK!");
+                    Response.Redirect("Home.aspx");
+                }
+                else
+                {
+                    Page.Response.Write("Contraseña incorrecta");
+                }
             }
+
+            
         }
         protected void lnkRecordarClave_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Default.aspx?msj=Es Ud.");
+            //Response.Redirect("~/Default.aspx?msj=Es Ud.");
         }
-        // TODO: validar que el usuario sea el correcto y agregar los massagebox+excepciones correspondientes
+        // TODO:  agregar los massagebox+excepciones correspondientes
 
 
-        //TODO: agregar la opción de cerrar sesión
+        //TODO: agregar la opción de cerrar sesión web (analizar si es posible)
     }
 }
