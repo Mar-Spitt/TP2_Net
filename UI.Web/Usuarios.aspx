@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="UI.Web.Usuarios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
-	<table class="margenABM">
+    <table class="margenABM">
 		<tr>
 			<td align="center" colspan="3">
 				<asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
@@ -18,41 +18,58 @@
 						</tr>
 						<tr>
 							<td align="right"><asp:Label ID="lblNombre" runat="server" Text="Nombre: "/></td>
-							<td><asp:TextBox ID="txtNombre" runat="server" rows="5"/></td>
+							<td><asp:TextBox ID="txtNombre" runat="server"  rows="5"/>
+								<asp:RequiredFieldValidator ID="nombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="El nombre no puede ser vacío" ForeColor="Red"  Text="*" />
+							</td>
 						</tr>
 						<tr>
 							<td align="right"><asp:Label ID="lblApellido" runat="server" Text="Apellido: "/></td>
-							<td><asp:TextBox ID="txtApellido" runat="server"/></td>
+							<td><asp:TextBox ID="txtApellido" runat="server"/>
+								<asp:RequiredFieldValidator ID="apellido" runat="server" ControlToValidate="txtApellido" ErrorMessage="El apellido no puede ser vacío" ForeColor="Red"  Text="*" />
+							</td>
 						</tr>
 						<tr>
 							<td align="right"><asp:Label ID="lblLegajo" runat="server" Text="Legajo: " /></td>
-							<td><asp:TextBox ID="txtLegajo" runat="server" ></asp:TextBox></td>
+							<td><asp:TextBox ID="txtLegajo" runat="server" ></asp:TextBox>
+								<asp:RequiredFieldValidator ID="legajo" runat="server" ControlToValidate="txtLegajo" ErrorMessage="El legajo no puede ser vacío" ForeColor="Red"  Text="*"   />
+							</td>
 						</tr>
 						<tr>
 							<td align="right"><asp:Label ID="lblEmail" runat="server" Text="Email: "></asp:Label></td>
-							<td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
+							<td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>	
+								<asp:RegularExpressionValidator ID="email" runat="server" ControlToValidate="txtEmail" Text="*" ForeColor="Red" ErrorMessage="Dirección de email invalida!!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+							</td>
 						</tr>
                         <tr>
                             <td align="right"><asp:Label ID="lblhabilitado" runat="server" Text="Habilitado: "></asp:Label></td>
-                            <td><asp:CheckBox ID="chkHabilitado" runat="server" /></td>
+                            <td><asp:CheckBox ID="chkHabilitado" runat="server" />
+                            </td>
                         </tr>
 						<tr>
                             <td align="right"><asp:Label ID="lblNombreUsuario" runat="server" Text="Usuario: "></asp:Label></td>
-                            <td><asp:TextBox ID="txtNombreUsuario" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox ID="txtNombreUsuario" runat="server"></asp:TextBox>
+								<asp:RequiredFieldValidator ID="nombreUsuario" runat="server" ControlToValidate="txtNombreUsuario" ErrorMessage="El nombre de usuario no puede ser vacío" ForeColor="Red"  Text="*" />
+                            </td>
                         </tr>
 						<tr>
                             <td align="right"><asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label></td>
-                            <td><asp:TextBox ID="txtClave" runat="server" TextMode="Password"></asp:TextBox></td>
+                            <td><asp:TextBox ID="txtClave" runat="server" TextMode="Password"></asp:TextBox>
+								<asp:RequiredFieldValidator ID="clave" runat="server" ControlToValidate="txtClave" ErrorMessage="La clave no puede ser vacía" ForeColor="Red"  Text="*" />
+                            </td>
                         </tr>
 						<tr>
                             <td align="right"><asp:Label ID="lblRepetirClave" runat="server" Text="Confirmar clave: "></asp:Label></td>
-                            <td><asp:TextBox ID="txtRepetirClave" runat="server" TextMode="Password"></asp:TextBox></td>
+                            <td><asp:TextBox ID="txtRepetirClave" runat="server" TextMode="Password"></asp:TextBox>
+								
+								<asp:CompareValidator ID="repetirClave" runat="server" ControlToValidate="txtRepetirClave" ControlToCompare="txtClave" Operator="Equal" Text="*" ErrorMessage="Las claves ingresadas no coinciden" Type="String" />
+                            </td>
                         </tr>
 						<tr>
 							<td align="right" colspan="2">
 								<asp:Panel ID="formActionsPanel" runat="server">
-									<asp:LinkButton ID="lnkbtnCancelar" runat="server" OnClick="lnkbtnCancelar_Click">Cancelar </asp:LinkButton>
-									<asp:LinkButton ID="lnkbtnAceptar" runat="server" OnClick="lnkbtnAceptar_Click"> Aceptar</asp:LinkButton>
+									<asp:LinkButton ID="lnkbtnCancelar" runat="server" OnClick="lnkbtnCancelar_Click" CausesValidation="false">Cancelar </asp:LinkButton>
+									<asp:LinkButton ID="lnkbtnAceptar" runat="server" OnClick="lnkbtnAceptar_Click" OnClientClick = "return confirm('¿Desea guardar los cambios ?');"> Aceptar</asp:LinkButton>
+									<asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red"/>
 								</asp:Panel>
 							</td>
 						</tr>
@@ -94,5 +111,6 @@
 				</asp:Panel>
 			</td>
 		</tr>
+	    
 	</table>
 </asp:Content>

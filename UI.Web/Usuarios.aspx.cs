@@ -134,43 +134,44 @@ namespace UI.Web
 
         protected void lnkbtnAceptar_Click(object sender, EventArgs e)
         {
-			switch (this.FormMode)
-			{
-				case FormModes.Baja:
-					this.DeleteEntity(this.SelectedID);
-					this.LoadGrid();
-					break;
-				case FormModes.Modificacion:
-					this.Entity = new Usuario();
-					this.Entity.ID = this.SelectedID;
-					this.Entity.State = BusinessEntity.States.Modified;
-					this.LoadEntity(this.Entity);
-					this.SaveEntity(this.Entity);
-					this.LoadGrid();
-                    break;
-                case FormModes.Alta: //TODO agregar messagebox para confimar que se registró, modificó o eliminó con exito
-					//agregar messagebox + excepción si no se encuentra la persona indicada para agregarle el usuario
-                    this.Entity = new Usuario();
-					Entity.Legajo = Convert.ToInt32(this.txtLegajo.Text);
-					PersonaLogic perLo = new PersonaLogic();
-					Persona per = new Persona();
-					per = perLo.GetOne(Entity.Legajo);
-					if(per!=null)
-                    {
-						Entity.IdPersona = per.ID;
-						Entity.State = BusinessEntity.States.New;
-						this.LoadEntity(this.Entity);
-						//this.SaveEntity(this.Entity);
-						UsuarioLogic usuLogic = new UsuarioLogic();
-						this.Logic.Save(Entity);
+				switch (this.FormMode)
+				{
+					case FormModes.Baja:
+						this.DeleteEntity(this.SelectedID);
 						this.LoadGrid();
-					}
+						break;
+					case FormModes.Modificacion:
+						this.Entity = new Usuario();
+						this.Entity.ID = this.SelectedID;
+						this.Entity.State = BusinessEntity.States.Modified;
+						this.LoadEntity(this.Entity);
+						this.SaveEntity(this.Entity);
+						this.LoadGrid();
+						break;
+					case FormModes.Alta: //TODO agregar messagebox para confimar que se registró, modificó o eliminó con exito
+						//agregar messagebox + excepción si no se encuentra la persona indicada para agregarle el usuario
+						this.Entity = new Usuario();
+						Entity.Legajo = Convert.ToInt32(this.txtLegajo.Text);
+						PersonaLogic perLo = new PersonaLogic();
+						Persona per = new Persona();
+						per = perLo.GetOne(Entity.Legajo);
+						if(per!=null)
+						{
+							Entity.IdPersona = per.ID;
+							Entity.State = BusinessEntity.States.New;
+							this.LoadEntity(this.Entity);
+							//this.SaveEntity(this.Entity);
+							UsuarioLogic usuLogic = new UsuarioLogic();
+							this.Logic.Save(Entity);
+							this.LoadGrid();
+						}
 					
-					break;
-				default:
-					break;
-			}
-			this.formPanel.Visible = false;
+						break;
+					default:
+						break;
+				}
+				this.formPanel.Visible = false;
+			
 		}
 
 		private void EnableForm(bool enable)

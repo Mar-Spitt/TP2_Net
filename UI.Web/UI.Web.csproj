@@ -72,7 +72,6 @@
     <Content Include="Styles\estilos.css" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Home2.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -94,26 +93,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Home2.aspx.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home2.aspx.designer.cs">
-      <DependentUpon>Home2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage.Master.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage.Master.designer.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -125,7 +110,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MasterPage.Master" />
     <Content Include="App_Themes\Azul\Button.skin" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />

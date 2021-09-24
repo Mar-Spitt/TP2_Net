@@ -31,5 +31,8 @@ namespace UI.Web
             Response.Redirect("~/Default.aspx?msj=Es Ud.");
         }
         // TODO: validar que el usuario sea el correcto y agregar los massagebox+excepciones correspondientes
+
+
+        //TODO: agregar la opción de cerrar sesión
     }
 }
