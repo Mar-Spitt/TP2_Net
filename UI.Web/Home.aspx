@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
 
     <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource"> </asp:Menu>
+    <asp:Button ID="btnCerrarSesion" runat="server" OnClick="btnCerrarSesion_Click" Text="Cerrar Sesión" />
     <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server"/>
 
 </asp:Content>

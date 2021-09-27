@@ -16,8 +16,8 @@
             </tr> 
             <tr> 
                 <!-- site navigation --> 
-                <td valign="top" class="navigation"> 
-                    <table border="0" width="100%" cellpadding="4" cellspacing="0">
+                <td valign="top" class="navigation" > 
+                    <table id="tablaNavigation" border="0" width="100%" cellpadding="4" cellspacing="0">
                             <tr> 
                             <td align="center">Site Navigation</td> 
                         </tr> 

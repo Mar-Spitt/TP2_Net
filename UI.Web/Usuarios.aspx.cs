@@ -134,10 +134,15 @@ namespace UI.Web
 
         protected void lnkbtnAceptar_Click(object sender, EventArgs e)
         {
+			string msg;
 				switch (this.FormMode)
 				{
 					case FormModes.Baja:
 						this.DeleteEntity(this.SelectedID);
+
+						msg = "Usuario eliminado correctamente.";
+						ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Usuarios.aspx';", true);
+						
 						this.LoadGrid();
 						break;
 					case FormModes.Modificacion:
@@ -146,10 +151,13 @@ namespace UI.Web
 						this.Entity.State = BusinessEntity.States.Modified;
 						this.LoadEntity(this.Entity);
 						this.SaveEntity(this.Entity);
+
+						msg = "Usuario modificado correctamente.";
+						ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Usuarios.aspx';", true);
+						
 						this.LoadGrid();
 						break;
-					case FormModes.Alta: //TODO agregar messagebox para confimar que se registró, modificó o eliminó con exito
-						//agregar messagebox + excepción si no se encuentra la persona indicada para agregarle el usuario
+					case FormModes.Alta: 
 						this.Entity = new Usuario();
 						Entity.Legajo = Convert.ToInt32(this.txtLegajo.Text);
 						PersonaLogic perLo = new PersonaLogic();
@@ -163,7 +171,16 @@ namespace UI.Web
 							//this.SaveEntity(this.Entity);
 							UsuarioLogic usuLogic = new UsuarioLogic();
 							this.Logic.Save(Entity);
+
+							msg = "Nuevo Usuario agregado con éxito.";
+							ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Usuarios.aspx';", true);
+							
 							this.LoadGrid();
+						}
+						else
+						{
+							msg = "La persona con ese legajo no se encuentra registrada.";
+							ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Usuarios.aspx';", true);
 						}
 					
 						break;

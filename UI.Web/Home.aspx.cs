@@ -11,7 +11,16 @@ namespace UI.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Remove("usuario");
+            Response.Redirect("Login.aspx");
+        }
+
+        
+
     }
 }

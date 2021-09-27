@@ -24,18 +24,25 @@ namespace UI.Web
             usu = usuarioNegocio.ValidarUsuario(this.txtUsuario.Text); 
             if (usu is null)
             {
-                Page.Response.Write("Usuario incorrecto");
+                //Page.Response.Write("Usuario incorrecto");
+                string msg = "Usuario incorrecto";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Login.aspx';", true);
             }
             else
             {
                 if (usuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtContraseña.Text, usu))
                 {
                     //Page.Response.Write("Ingreso OK!");
-                    Response.Redirect("Home.aspx");
+                    Session.Add("usuario", Session.SessionID);
+                    string msg = "Usted ha ingresado al sistema correctamente.";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('"+ msg + "');window.location='Home.aspx';", true);
+                    //Response.Redirect("Home.aspx");
                 }
                 else
                 {
-                    Page.Response.Write("Contraseña incorrecta");
+                    //Page.Response.Write("Contraseña incorrecta");
+                    string msg = "Contraseña incorrecta";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='Login.aspx';", true);
                 }
             }
 
@@ -45,9 +52,6 @@ namespace UI.Web
         {
             //Response.Redirect("~/Default.aspx?msj=Es Ud.");
         }
-        // TODO:  agregar los massagebox+excepciones correspondientes
-
-
-        //TODO: agregar la opción de cerrar sesión web (analizar si es posible)
+        
     }
 }
