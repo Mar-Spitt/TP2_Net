@@ -15,15 +15,6 @@ namespace UI.Web
     {
 
         /// <summary>
-        /// lblUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuario;
-
-        /// <summary>
         /// txtUsuario control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace UI.Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator nombreUsuario;
-
-        /// <summary>
-        /// lblContraseña control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContraseña;
 
         /// <summary>
         /// txtContraseña control.
@@ -69,13 +51,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.RequiredFieldValidator contraseña;
 
         /// <summary>
-        /// lnkRecordarClave control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkRecordarClave;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
         /// btnIngresar control.
@@ -87,12 +69,12 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Button btnIngresar;
 
         /// <summary>
-        /// ValidationSummary1 control.
+        /// lnkRecordarClave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.LinkButton lnkRecordarClave;
     }
 }

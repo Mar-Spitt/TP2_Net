@@ -71,6 +71,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
     <Content Include="Styles\estilos.css" />
+    <Content Include="Styles\login.css" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />

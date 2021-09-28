@@ -13,6 +13,7 @@ Default skin template. The following skins are provided as examples only.
 
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
 --%>
+<%--
 <asp:Button runat="server"
 BackColor="#e7e7e7"
 Font-Name="System"
@@ -29,3 +30,4 @@ Font-Bold="True"
 Font-Names="Britannic Bold"
 Font-Overline="False"
 Font-Size="30px"/>
+--%>
