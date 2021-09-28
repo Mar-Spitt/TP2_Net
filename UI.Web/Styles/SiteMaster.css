@@ -4,10 +4,10 @@
 
 body {
     background-image: url('../../Imagenes/fondo-textura.jpg');
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 .fa-2x {
@@ -129,8 +129,8 @@ nav {
 .area {
     float: left;
     background: #e2e2e2;
-    width: 100%;
     height: 100%;
+    margin-left: 140px;
 }
 
 @font-face {

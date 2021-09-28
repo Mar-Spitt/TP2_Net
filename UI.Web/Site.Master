@@ -7,12 +7,6 @@
     <meta charset="UTF-8">
     <title>Academia</title>
     <link href="Styles/SiteMaster.css" rel="stylesheet" media="screen" type="text/css"/>
-    <style type="text/css">
-        .auto-style2 {
-            left: 0px;
-            top: 0px;
-        }
-    </style>
 </head>
 <body runat="server">
     <h1 align="center">SISTEMA DE GESTIÓN LA ACADEMIA</h1>
