@@ -1,18 +1,51 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Alumnos.aspx.cs" Inherits="UI.Web.Alumnos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
+    <div id="container">
+        <asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
+    </div>
+    
+    <div id="margen"></div>
+	<section id="content">
+		<asp:Panel ID="Panel1" runat="server">
+                <asp:GridView ID="gvAlumnos" runat="server" Width="100%" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID" OnSelectedIndexChanged="gvAlumnos_SelectedIndexChanged">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <Columns>
+                        <asp:BoundField DataField="ID" HeaderText="ID"/>
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre"/>
+                        <asp:BoundField DataField="Apellido" HeaderText="Apellido"/>
+                        <asp:BoundField DataField="Direccion" HeaderText="Direccion"/>
+                        <asp:BoundField DataField="Email" HeaderText="Email"/>
+                        <asp:BoundField DataField="Telefono" HeaderText="Telefono"/>
+                        <asp:BoundField DataField="FechaNacimiento" HeaderText="FechaNacimiento"/>
+                        <asp:BoundField DataField="Legajo" HeaderText="Legajo"/>
+                        <asp:BoundField DataField="IDPlan" HeaderText="IDPlan"/>
+                        <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
+                    </Columns>
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" ForeColor="#333333" Font-Bold="True" />
 
-<table class="margenABM">
-		<tr>
-			<td align="center" colspan="3">
-				<asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
-				<br/><br/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-                <asp:Panel ID="formPanel" runat="server" Visible="False">
-                        <table border="1">
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+
+                </asp:GridView>
+            </asp:Panel>
+            <asp:Panel ID="Panel3" runat="server">
+                <asp:LinkButton ID="editarlinkButton" runat="server" OnClick="editarlinkButton_Click">Editar</asp:LinkButton>
+                <asp:LinkButton ID="eliminarLinkButton" runat="server" OnClick="eliminarLinkButton_Click">Eliminar</asp:LinkButton>
+                <asp:LinkButton ID="nuevoLinkButton" runat="server" OnClick="nuevoLinkButton_Click">Agregar</asp:LinkButton>
+            </asp:Panel>
+    </section>
+    
+    <div CssClass="aside">
+        <asp:Panel ID="formPanel" runat="server" Visible="False">
+                        <table border="1" align="right">
 						    <tr>
 							    <td align="center" colspan="2">
 							    <asp:Label ID="lblTitulo" runat="server" Text="DATOS"></asp:Label></td>
@@ -75,45 +108,5 @@
 						    </tr>
 					    </table>
             </asp:Panel>
-        </td>
-        <td> </td>
-        <td valign="top">
-            <asp:Panel ID="Panel1" runat="server">
-                <asp:GridView ID="gvAlumnos" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID" OnSelectedIndexChanged="gvAlumnos_SelectedIndexChanged">
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                    <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID"/>
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre"/>
-                        <asp:BoundField DataField="Apellido" HeaderText="Apellido"/>
-                        <asp:BoundField DataField="Direccion" HeaderText="Direccion"/>
-                        <asp:BoundField DataField="Email" HeaderText="Email"/>
-                        <asp:BoundField DataField="Telefono" HeaderText="Telefono"/>
-                        <asp:BoundField DataField="FechaNacimiento" HeaderText="FechaNacimiento"/>
-                        <asp:BoundField DataField="Legajo" HeaderText="Legajo"/>
-                        <asp:BoundField DataField="IDPlan" HeaderText="IDPlan"/>
-                        <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
-                    </Columns>
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" ForeColor="#333333" Font-Bold="True" />
-
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-
-                </asp:GridView>
-            </asp:Panel>
-            <asp:Panel ID="Panel3" runat="server">
-                <asp:LinkButton ID="editarlinkButton" runat="server" OnClick="editarlinkButton_Click">Editar</asp:LinkButton>
-                <asp:LinkButton ID="eliminarLinkButton" runat="server" OnClick="eliminarLinkButton_Click">Eliminar</asp:LinkButton>
-                <asp:LinkButton ID="nuevoLinkButton" runat="server" OnClick="nuevoLinkButton_Click">Agregar</asp:LinkButton>
-            </asp:Panel>
-        </td>
-		</tr>
-	    
-	</table>
+    </div>
 </asp:Content>

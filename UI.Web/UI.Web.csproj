@@ -70,7 +70,7 @@
     <Content Include="Alumnos.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
-    <Content Include="Styles\estilos.css" />
+    <Content Include="Styles\abmStyle.css" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\SiteMaster.css" />
     <Content Include="Usuarios.aspx" />

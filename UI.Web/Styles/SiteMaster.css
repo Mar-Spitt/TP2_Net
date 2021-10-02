@@ -8,6 +8,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:0;
+    width: calc(100%-10px);
 }
 
 .fa-2x {
@@ -111,7 +115,6 @@ nav {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -o-user-select: none;
     user-select: none;
 }
 
@@ -128,9 +131,21 @@ nav {
 
 .area {
     float: left;
+    margin: 10px;
     background: #e2e2e2;
-    height: 100%;
-    margin-left: 140px;
+    height: calc(100%- 40px);
+    width: calc(100% - 160px);
+    margin-left: 130px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-weight: 100;
+    text-align: center;
+    height: calc(100% - 140px);
+    position: absolute;
+}
+.menu {
+        position: center;
+        font-size:larger;
 }
 
 @font-face {
@@ -138,4 +153,15 @@ nav {
     font-style: normal;
     font-weight: 300;
     src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+.clearfix{
+    clear:both;
+}
+footer {
+    bottom: 0;
+    position: absolute;
+    width: calc(100% - 10px);
+    text-align:center;
+    background-color: black;
+    color: white;
 }

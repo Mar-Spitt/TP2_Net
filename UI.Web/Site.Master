@@ -7,13 +7,18 @@
     <meta charset="UTF-8">
     <title>Academia</title>
     <link href="Styles/SiteMaster.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="Styles/abmStyle.css" rel="stylesheet" />
 </head>
 <body runat="server">
     <h1 align="center">SISTEMA DE GESTIÓN LA ACADEMIA</h1>
-    <form id="bodyForm" runat="server">
+
+        <form runat="server">
+
         <div class="area" runat="server">
-            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server" ></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server" >
+            </asp:ContentPlaceHolder>
         </div>
+
         <nav class="main-menu">
             <ul>
                     <li>
@@ -40,7 +45,19 @@
                 </li>  
             </ul>
         </nav>
-    <%--<form id="bodyForm" runat="server">
+    
+            <div class="clearfix">
+            </div>
+        <footer>
+            <h3 align="center">
+                Práctico Integrador la Academia &copy 2021
+            </h3> 
+        </footer>
+    </form>
+</body>
+</html>
+
+<%--<form id="bodyForm" runat="server">
         <table border="1" cellpadding="0" cellspacing="0" width="100%" height="100%">
                 <!-- site header --> 
             <tr> 
@@ -72,7 +89,3 @@
                 <td colspan="2" align="center">Site Footer</td> 
             </tr> 
         </table>--%>
-    </form>
-
-</body>
-</html>

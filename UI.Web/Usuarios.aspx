@@ -1,17 +1,47 @@
 ﻿<%@ Page Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="UI.Web.Usuarios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
-    <table class="margenABM">
-		<tr>
-			<td align="center" colspan="3">
-				<asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
-				<br/><br/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<asp:Panel ID="formPanel" Visible="false" runat="server">
-					<table border="1">
+	<div id="container">
+		<asp:Label ID="Label1" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS"></asp:Label>
+	</div>
+	<div id="margen"></div>
+	<section id="content">
+		<asp:Panel ID="gridPanel" runat="server" Width="100%">
+					<asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
+						SelectedRowStyle-BackColor="Black"
+						SelectedRowStyle-ForeColor="White"
+						DataKeyNames="ID" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gridView_SelectedIndexChanged">
+						<AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+						<Columns>
+							<asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+							<asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+							<asp:BoundField HeaderText="Email" DataField="Email" />
+							<asp:BoundField HeaderText="Usuario" DataField="NombreUsuario" />
+							<asp:BoundField HeaderText="Habilitado" DataField="Habilitado" />
+							<asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
+						</Columns>
+						<EditRowStyle BackColor="#999999" />
+						<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+						<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+						<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+						<RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+						<SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+						<SortedAscendingCellStyle BackColor="#E9E7E2" />
+						<SortedAscendingHeaderStyle BackColor="#506C8C" />
+						<SortedDescendingCellStyle BackColor="#FFFDF8" />
+						<SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+					</asp:GridView>
+				</asp:Panel>
+				<asp:Panel ID="gridActionsPanel" runat="server">
+					<asp:LinkButton ID="lnkbtnEditar" runat="server" OnClick="lnkbtnEditar_Click" CausesValidation="false">Editar</asp:LinkButton>
+					<asp:LinkButton ID="lnkbtnEliminar" runat="server" OnClick="lnkbtnEliminar_Click" CausesValidation="false">Eliminar</asp:LinkButton>
+					<asp:LinkButton ID="lnkbtnNuevo" runat="server" OnClick="lnkbtnNuevo_Click" CausesValidation="false">Nuevo</asp:LinkButton>
+				</asp:Panel>
+	</section>
+
+	<div CssClass="aside">
+		<asp:Panel ID="formPanel" Visible="false" runat="server">
+					<table id="table" border="1">
 						<tr>
 							<td align="center" colspan="2">
 							<asp:Label ID="lblTitulo" runat="server" Text="DATOS"></asp:Label></td>
@@ -75,42 +105,5 @@
 						</tr>
 					</table>
 				</asp:Panel>
-			</td>
-			<td> </td>
-			<td valign="top">
-				<asp:Panel ID="gridPanel" runat="server">
-					<asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
-						SelectedRowStyle-BackColor="Black"
-						SelectedRowStyle-ForeColor="White"
-						DataKeyNames="ID" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gridView_SelectedIndexChanged">
-						<AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-						<Columns>
-							<asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-							<asp:BoundField HeaderText="Apellido" DataField="Apellido" />
-							<asp:BoundField HeaderText="Email" DataField="Email" />
-							<asp:BoundField HeaderText="Usuario" DataField="NombreUsuario" />
-							<asp:BoundField HeaderText="Habilitado" DataField="Habilitado" />
-							<asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
-						</Columns>
-						<EditRowStyle BackColor="#999999" />
-						<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-						<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-						<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-						<RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-						<SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-						<SortedAscendingCellStyle BackColor="#E9E7E2" />
-						<SortedAscendingHeaderStyle BackColor="#506C8C" />
-						<SortedDescendingCellStyle BackColor="#FFFDF8" />
-						<SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-					</asp:GridView>
-				</asp:Panel>
-				<asp:Panel ID="gridActionsPanel" runat="server">
-					<asp:LinkButton ID="lnkbtnEditar" runat="server" OnClick="lnkbtnEditar_Click" CausesValidation="false">Editar</asp:LinkButton>
-					<asp:LinkButton ID="lnkbtnEliminar" runat="server" OnClick="lnkbtnEliminar_Click" CausesValidation="false">Eliminar</asp:LinkButton>
-					<asp:LinkButton ID="lnkbtnNuevo" runat="server" OnClick="lnkbtnNuevo_Click" CausesValidation="false">Nuevo</asp:LinkButton>
-				</asp:Panel>
-			</td>
-		</tr>
-	    
-	</table>
+	</div>
 </asp:Content>
