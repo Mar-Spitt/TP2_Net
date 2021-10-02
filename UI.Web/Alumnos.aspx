@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
     <div id="container">
-        <asp:Label ID="Label2" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS" Font-Size="XX-Large"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS"></asp:Label>
     </div>
     
     <div id="margen"></div>
@@ -48,7 +48,9 @@
                         <table border="1" align="right">
 						    <tr>
 							    <td align="center" colspan="2">
-							    <asp:Label ID="lblTitulo" runat="server" Text="DATOS"></asp:Label></td>
+							        <strong>
+                                    <asp:Label ID="lblTitulo" runat="server" Text="DATOS"></asp:Label>
+                                    </strong></td>
 						    </tr>
 						    <tr>
 							    <td align="right"><asp:Label ID="lblNombre" runat="server" Text="Nombre: "/></td>

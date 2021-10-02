@@ -13,6 +13,9 @@ body {
     margin-bottom:0;
     width: calc(100%-10px);
 }
+    body h1 {
+        font-family: Cambia Research;
+    }   
 
 .fa-2x {
     font-size: 2em;
@@ -133,9 +136,9 @@ nav {
     float: left;
     margin: 10px;
     background: #e2e2e2;
-    height: calc(100%- 40px);
-    width: calc(100% - 160px);
-    margin-left: 130px;
+    height: 100%;
+    width: calc(100% - 120px);
+    margin-left: 90px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     font-weight: 100;
@@ -154,9 +157,11 @@ nav {
     font-weight: 300;
     src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
+
 .clearfix{
     clear:both;
 }
+
 footer {
     bottom: 0;
     position: absolute;

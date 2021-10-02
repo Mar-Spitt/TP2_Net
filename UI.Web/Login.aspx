@@ -18,7 +18,7 @@
         <asp:TextBox ID="txtUsuario" runat="server" placeholder="Nombre de Usuario" Width="100%" Height="25px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="nombreUsuario" runat="server" ControlToValidate="txtUsuario" ErrorMessage="El nombre de usuario no puede ser vacío" ForeColor="Red"  Text="*" />
     
-        <asp:TextBox ID="txtContraseña" placeholder="Contraseña" TextMode="Password" runat="server" Width="100%" Height="25px"></asp:TextBox>
+        <asp:TextBox ID="txtContraseña" SkinID="password" placeholder="Contraseña" TextMode="Password" runat="server" Width="100%" Height="25px"></asp:TextBox>
     
         <asp:RequiredFieldValidator ID="contraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="La clave no puede ser vacía" ForeColor="Red"  Text="*" />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red"/>
@@ -30,8 +30,6 @@
          </div>
       </form>
 </div>
-
-<!-- <div id="error"><img src="https://dl.dropboxusercontent.com/u/23299152/Delete-icon.png" /> Your caps-lock is on.</div> -->
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
 
