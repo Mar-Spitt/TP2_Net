@@ -3,6 +3,8 @@
   <siteMapNode url="~/Home.aspx" title="Home"  description="">
     <siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="ABM usuarios" />
 	<siteMapNode url="~/Alumnos.aspx" title="Alumnos"  description="ABM Alumnos" />
-    <siteMapNode url="" title=""  description="" />
+	<siteMapNode url="" title=""  description="" />
+    <siteMapNode url="~/Profesores.aspx" title="Profesores"  description="ABM Profesores" />
+	<siteMapNode url="~/Planes.aspx" title="Planes"  description="ABM Planes" />
   </siteMapNode>
 </siteMap>

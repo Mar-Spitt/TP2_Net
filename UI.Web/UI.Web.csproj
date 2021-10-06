@@ -71,6 +71,8 @@
     <Content Include="Documentation.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
+    <Content Include="Planes.aspx" />
+    <Content Include="Profesores.aspx" />
     <Content Include="Styles\abmStyle.css" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\SiteMaster.css" />
@@ -100,6 +102,20 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Planes.aspx.cs">
+      <DependentUpon>Planes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Planes.aspx.designer.cs">
+      <DependentUpon>Planes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesores.aspx.cs">
+      <DependentUpon>Profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesores.aspx.designer.cs">
+      <DependentUpon>Profesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

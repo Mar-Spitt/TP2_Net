@@ -32,7 +32,7 @@
                     <a href="Documentation.aspx">
                        <i class="fa fa-info fa-2x"></i>
                         <span class="nav-text">
-                            Documentation
+                            Documentación
                         </span>
                     </a>
                 </li>
@@ -41,7 +41,7 @@
                 <li>
                    <a href="Login.aspx" >
                          <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text">Logout </span>
+                        <span class="nav-text">Cerrar Sesión </span>
                     </a>
                 </li>  
             </ul>
