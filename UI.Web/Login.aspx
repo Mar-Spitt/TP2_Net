@@ -26,7 +26,7 @@
         <asp:Button ID="btnIngresar" class="login-submit" align="right" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" Height="25px"/>
   
          <div class="login-help" runat="server">
-            <asp:LinkButton ID="lnkRecordarClave" runat="server" OnClick="lnkRecordarClave_Click" class="login-help" CausesValidation="false" OnClientClick = "return alert('Ust es un usuario muy olvidadizo ');">Olvidé mi Constraseña</asp:LinkButton>
+            <asp:LinkButton ID="lnkRecordarClave" runat="server" OnClick="lnkRecordarClave_Click" class="login-help" CausesValidation="false" OnClientClick = "return alert('Ust es un usuario muy olvidadizo ');">Olvidé mi Contraseña</asp:LinkButton>
          </div>
       </form>
 </div>

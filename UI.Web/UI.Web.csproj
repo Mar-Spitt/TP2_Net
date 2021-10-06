@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alumnos.aspx" />
+    <Content Include="Comisiones.aspx" />
+    <Content Include="Cursos.aspx" />
     <Content Include="Documentation.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
@@ -88,6 +90,20 @@
     </Compile>
     <Compile Include="Alumnos.aspx.designer.cs">
       <DependentUpon>Alumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comisiones.aspx.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comisiones.aspx.designer.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos.aspx.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cursos.aspx.designer.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Documentation.aspx.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
