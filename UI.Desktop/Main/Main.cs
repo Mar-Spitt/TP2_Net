@@ -186,5 +186,13 @@ namespace UI.Desktop
             ofrmAcercaDe = null;
 
         }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usuario_act_tipo = 0;
+            id_persona_act = 0;
+
+            Main_Shown(sender, e);
+        }
     }
 }

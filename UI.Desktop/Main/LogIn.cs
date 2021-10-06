@@ -57,7 +57,7 @@ namespace UI.Desktop
                 }
             }
         }
-        //TODO: analizar si es posible cerrar sesión en escritorio
+       
         private void SeePass_CheckedChanged(object sender, EventArgs e)
         {
             string text = txtPass.Text;

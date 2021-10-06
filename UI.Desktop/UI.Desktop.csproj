@@ -330,6 +330,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\agregar.png" />
+    <None Include="Imagenes\cerrar_sesion.png" />
     <Content Include="Imagenes\editar.png" />
     <Content Include="Imagenes\eliminar.2.png" />
     <Content Include="Imagenes\eliminar.png" />
