@@ -71,6 +71,7 @@
     <Content Include="Comisiones.aspx" />
     <Content Include="Cursos.aspx" />
     <Content Include="Documentation.aspx" />
+    <Content Include="Especialidades.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
     <Content Include="Planes.aspx" />
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="Documentation.aspx.designer.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidades.aspx.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Especialidades.aspx.designer.cs">
+      <DependentUpon>Especialidades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

@@ -3,6 +3,7 @@
   <siteMapNode url="~/Home.aspx" title="Home"  description="">
 	  <!-- Ordenado por abecedario-->
 	  <siteMapNode url="~/Alumnos.aspx" title="Alumnos"  description="ABM Alumnos" />
+	  <siteMapNode url="~/Especialidades.aspx" title="Especialidades"  description="ABM Especialidades" />
 	  <siteMapNode url="~/Comisiones.aspx" title="Comisiones"  description="ABM Comisiones" />
 	  <siteMapNode url="~/Cursos.aspx" title="Cursos"  description="ABM Cursos" />
 	  <siteMapNode url="~/Planes.aspx" title="Planes"  description="ABM Planes" />

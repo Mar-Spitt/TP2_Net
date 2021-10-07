@@ -11,7 +11,7 @@ namespace UI.Web
 {
 
 
-    public partial class Planes
+    public partial class Especialidades
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Panel1 control.
+        /// gridPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel gridPanel;
 
         /// <summary>
         /// gridView control.
@@ -42,40 +42,40 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.GridView gridView;
 
         /// <summary>
-        /// Panel3 control.
+        /// gridActionsPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
+        protected global::System.Web.UI.WebControls.Panel gridActionsPanel;
 
         /// <summary>
-        /// editarlinkButton control.
+        /// lnkbtnEditar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton editarlinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnEditar;
 
         /// <summary>
-        /// eliminarLinkButton control.
+        /// lnkbtnEliminar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton eliminarLinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnEliminar;
 
         /// <summary>
-        /// nuevoLinkButton control.
+        /// lnkbtnNuevo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton nuevoLinkButton;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnNuevo;
 
         /// <summary>
         /// formPanel control.
@@ -121,24 +121,6 @@ namespace UI.Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator descripcion;
-
-        /// <summary>
-        /// lblIdEspecialidad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIdEspecialidad;
-
-        /// <summary>
-        /// ddlIdEspecialidad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlIdEspecialidad;
 
         /// <summary>
         /// formActionsPanel control.

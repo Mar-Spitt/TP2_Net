@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
 
     <div id="container">
-		<asp:Label ID="Label1" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE USUARIOS"></asp:Label>
+		<asp:Label ID="Label1" runat="server" Text="ALTAS, BAJAS Y MODIFICACIONES DE PROFESORES"></asp:Label>
 	</div>
 
 	<div id="margen"></div>
