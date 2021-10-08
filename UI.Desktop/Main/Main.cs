@@ -156,7 +156,15 @@ namespace UI.Desktop
 
                     break;
                 case "nodoCursoR":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmReporteCursos formRCurso = new frmReporteCursos();
+                        formRCurso.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoPlanR":
 
