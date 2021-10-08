@@ -57,7 +57,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="Cursos\frmCursosDesktop.Designer.cs">
       <DependentUpon>frmCursosDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReportePlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReportePlanes.Designer.cs">
+      <DependentUpon>frmReportePlanes.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro notas\frmRegistroNotas.cs">
       <SubType>Form</SubType>
@@ -296,6 +302,10 @@
     <EmbeddedResource Include="Registro notas\frmRegistroNotasDesktop.resx">
       <DependentUpon>frmRegistroNotasDesktop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReportePlanes.resx">
+      <DependentUpon>frmReportePlanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePlanes.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteCursos.rdlc" />
     <EmbeddedResource Include="Reportes\frmReporteCursos.resx">
       <DependentUpon>frmReporteCursos.cs</DependentUpon>

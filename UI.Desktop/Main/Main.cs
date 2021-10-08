@@ -167,7 +167,15 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoPlanR":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmReportePlanes formRPlan = new frmReportePlanes();
+                        formRPlan.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
 
             }
