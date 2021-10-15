@@ -11,10 +11,7 @@ namespace Data.Database
         //private SqlConnection sqlConnection = new SqlConnection("ConnectionString;");
         const string consKeyDefaultCnnString = "ConnStringExpress";
 
-        protected SqlConnection sqlConn
-        {
-            get; set;
-        }
+        protected SqlConnection sqlConn { get; set; }
 
         protected void OpenConnection()
         {   
@@ -30,11 +27,6 @@ namespace Data.Database
         {
             sqlConn.Close();
             sqlConn = null;
-        }
-
-        protected SqlDataReader ExecuteReader(String commandText)
-        {
-            throw new Exception("Metodo no implementado");
         }
     }
 }

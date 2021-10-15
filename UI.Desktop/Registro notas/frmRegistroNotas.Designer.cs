@@ -34,9 +34,6 @@ namespace UI.Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroNotas));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRegistroNotas = new System.Windows.Forms.DataGridView();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCargarNota = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_alumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.id_curso = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -45,6 +42,9 @@ namespace UI.Desktop
             this.id_comision = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCargarNota = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroNotas)).BeginInit();
             this.SuspendLayout();
@@ -101,38 +101,6 @@ namespace UI.Desktop
             this.dgvRegistroNotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRegistroNotas.Size = new System.Drawing.Size(954, 415);
             this.dgvRegistroNotas.TabIndex = 0;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(882, 424);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnCargarNota
-            // 
-            this.btnCargarNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCargarNota.Location = new System.Drawing.Point(800, 424);
-            this.btnCargarNota.Name = "btnCargarNota";
-            this.btnCargarNota.Size = new System.Drawing.Size(76, 23);
-            this.btnCargarNota.TabIndex = 1;
-            this.btnCargarNota.Text = "Cargar Nota";
-            this.btnCargarNota.UseVisualStyleBackColor = true;
-            this.btnCargarNota.Click += new System.EventHandler(this.btnCargarNota_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(719, 424);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 3;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // id_inscripcion
             // 
@@ -204,6 +172,40 @@ namespace UI.Desktop
             this.condicion.HeaderText = "Condición";
             this.condicion.Name = "condicion";
             this.condicion.ReadOnly = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(882, 424);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnCargarNota
+            // 
+            this.btnCargarNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCargarNota.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargarNota.Location = new System.Drawing.Point(800, 424);
+            this.btnCargarNota.Name = "btnCargarNota";
+            this.btnCargarNota.Size = new System.Drawing.Size(76, 23);
+            this.btnCargarNota.TabIndex = 1;
+            this.btnCargarNota.Text = "Cargar Nota";
+            this.btnCargarNota.UseVisualStyleBackColor = true;
+            this.btnCargarNota.Click += new System.EventHandler(this.btnCargarNota_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Location = new System.Drawing.Point(719, 424);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 3;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmRegistroNotas
             // 
