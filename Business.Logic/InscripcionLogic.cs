@@ -8,7 +8,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    public class InscripcionLogic : BusinessLogic
+    public class InscripcionLogic 
     { 
         public InscripcionLogic()
         {

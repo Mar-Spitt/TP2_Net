@@ -8,7 +8,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    public class MateriaLogic: BusinessLogic
+    public class MateriaLogic
     {
         public MateriaLogic()
         {

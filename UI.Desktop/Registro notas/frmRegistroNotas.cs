@@ -26,6 +26,7 @@ namespace UI.Desktop
             try
             {
                 this.dgvRegistroNotas.DataSource = ins.GetAll();
+                // IDALUMNO, IDCURSO, CONDICION, NOTA
 
                 AlumnoLogic alu = new AlumnoLogic();
                 this.id_alumno.DataSource = alu.GetAll();
@@ -36,7 +37,7 @@ namespace UI.Desktop
                 CursoLogic cur = new CursoLogic();
                 this.id_curso.DataSource = cur.GetAll();
                 this.id_curso.ValueMember = "ID";
-                this.id_curso.DisplayMember = "Descripcion";
+                this.id_curso.DisplayMember = "Descripcion"; //Anio Calendario, 
 
                 MateriaLogic mat = new MateriaLogic();
                 this.id_materia.DataSource = mat.GetAll();

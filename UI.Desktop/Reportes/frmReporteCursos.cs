@@ -41,6 +41,5 @@ namespace UI.Desktop
                 MessageBox.Show("Error al recuperar lista de curso " + Ex, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

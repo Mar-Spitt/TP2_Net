@@ -136,11 +136,10 @@ namespace UI.Desktop
         public override bool Validar()
         {
             bool rta = false;
-
             if (this.txtUsuario.Text != String.Empty && this.txtLegajo.Text != String.Empty
                 && this.txtClave.Text != String.Empty && this.txtConfirmarClave.Text != String.Empty)
             {
-                if (this.txtClave.Text == this.txtConfirmarClave.Text)
+                if (this.txtClave.Text == this.txtConfirmarClave.Text) //TODO: EsContraseñaValida() en Validaciones
                 {
                     int cantCarac = this.txtClave.Text.Length;
 

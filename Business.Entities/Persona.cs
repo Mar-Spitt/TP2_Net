@@ -19,7 +19,7 @@ namespace Business.Entities
 
         public Persona()
         {
-            //this.TipoPersona = TiposPersonas.Alumno;
+           
         }
 
         public string Apellido { get; set;  }

@@ -110,13 +110,13 @@ namespace UI.Desktop
         public override bool Validar()
         {
             bool rta = false;
-
+            Validaciones val = new Validaciones();
             if (txtNombre.Text != String.Empty && txtApellido.Text != String.Empty
                 && txtDireccion.Text != String.Empty && txtTelefono.Text != String.Empty
                 && txtEmail.Text != String.Empty && this.cmbPlan.SelectedValue.ToString() != String.Empty
                 && txtLegajo.Text != String.Empty)
             {
-                rta = validarEmail(txtEmail.Text);
+                rta = val.EsMailValido(txtEmail.Text);
                 if (!rta)
                 {
                     Notificar("Email inválido",
@@ -134,21 +134,7 @@ namespace UI.Desktop
             }
             return rta;
         }
-        public static bool validarEmail(string email)
-        {
-            String expresion;
-            bool rta2 = false;
-            expresion = @"\A(\w+.?\w*@\w+.)(com)\Z";
-
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    rta2 = true;
-                }
-            }
-            return rta2;
-        }
+        
         public override void GuardarCambios()
         {
             MapearADatos();

@@ -5,7 +5,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    public class UsuarioLogic : BusinessLogic
+    public class UsuarioLogic 
     {
         public UsuarioLogic()
         {

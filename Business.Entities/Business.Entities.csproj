@@ -48,8 +48,6 @@
     <Compile Include="DocenteCurso.cs" />
     <Compile Include="Especialidad.cs" />
     <Compile Include="Materia.cs" />
-    <Compile Include="Modulo.cs" />
-    <Compile Include="ModuloUsuario.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Plan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
