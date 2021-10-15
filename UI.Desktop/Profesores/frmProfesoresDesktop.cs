@@ -110,19 +110,19 @@ namespace UI.Desktop
         public override bool Validar()
         {
             bool rta = false;
-            Validaciones val = new Validaciones();
             if (txtNombre.Text != String.Empty && txtApellido.Text != String.Empty
                 && txtDireccion.Text != String.Empty && txtTelefono.Text != String.Empty
                 && txtEmail.Text != String.Empty && this.cmbPlan.SelectedValue.ToString() != String.Empty
                 && txtLegajo.Text != String.Empty)
             {
-                rta = val.EsMailValido(txtEmail.Text);
+                rta = Validaciones.EsMailValido(txtEmail.Text);
                 if (!rta)
                 {
                     Notificar("Email inválido",
                               "Revise su correo",
                               MessageBoxButtons.OK,
                               MessageBoxIcon.Error);
+
                 }
             }
             else

@@ -9,7 +9,7 @@ namespace Business.Logic
 {
     public class Validaciones
     {
-        public bool EsMailValido(string email)
+        public static bool EsMailValido(string email)
         {
             String expresion;
             bool rta = false;
