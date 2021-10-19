@@ -10,5 +10,6 @@
 	  <siteMapNode url="~/Planes.aspx" title="Planes"  description="ABM Planes" />
 	  <siteMapNode url="~/Profesores.aspx" title="Profesores"  description="ABM Profesores" />
 	  <siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="ABM usuarios" />
+	  <siteMapNode url="~/ReporteCursos.aspx" title="Reporte cursos"  description="Reporte Cursos" />
   </siteMapNode>
 </siteMap>
