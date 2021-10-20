@@ -6,7 +6,7 @@
     <asp:ScriptManager ID="ScriptManager" runat="server">
     </asp:ScriptManager> 
     <div class="reporte">
-        <rsweb:ReportViewer ID="rvwrCursos" runat="server" Height="500px" Width="1000px"></rsweb:ReportViewer>
+        <rsweb:ReportViewer ID="rvwrCursos" runat="server" Height="400px" Width="1000px"></rsweb:ReportViewer>
     </div>
     
 </asp:Content>
