@@ -285,7 +285,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InformeCursos.rdlc" />
     <EmbeddedResource Include="ReporteCursos.rdlc" />
     <EmbeddedResource Include="ReportePlanes.rdlc" />
   </ItemGroup>
