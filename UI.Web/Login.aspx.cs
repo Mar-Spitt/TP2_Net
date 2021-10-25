@@ -31,8 +31,8 @@ namespace UI.Web
             {
                 if (usuarioNegocio.ValidarContraseña(this.txtUsuario.Text, this.txtContraseña.Text, usu))
                 {
-                    Session.Add("usuario", Session.SessionID);
-                    //TODO: Session.Add("tipo", usu.TipoPersona);
+                    Session["usuario_actual"]= (int)usu.TipoPersona;
+                    Session["id_persona_act"]= (int)usu.IdPersona;
                     string msg = "Usted ha ingresado al sistema correctamente.";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('"+ msg + "');window.location='Home.aspx';", true);
                 }
