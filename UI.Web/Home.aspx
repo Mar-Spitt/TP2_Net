@@ -19,8 +19,8 @@
                     <asp:TreeNode Text="2- Inscripciones de Alumnos a Cursos" Value="nodoInscripciones"></asp:TreeNode>
                     <asp:TreeNode Text="3 - Registro de Notas" Value="nodoNotas"></asp:TreeNode>
                     <asp:TreeNode Text="4 - Reportes" Value="nodoReportes">
-                        <asp:TreeNode NavigateUrl="~/ReporteCursos.aspx" Text="4. 1 - Cursos" Value="nodoRCursos"></asp:TreeNode>
-                        <asp:TreeNode Text="4.2 - Planes" Value="nodoRPlanes"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/ReporteCursos.aspx" Text="4.1 - Cursos" Value="nodoRCursos"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/ReportePlanes.aspx" Text="4.2 - Planes" Value="nodoRPlanes"></asp:TreeNode>
                     </asp:TreeNode>
                 </Nodes>
             </asp:TreeView>
