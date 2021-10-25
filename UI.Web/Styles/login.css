@@ -1,0 +1,56 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
+body {
+    background-image: url('../../Imagenes/fondo-textura.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-card {
+    padding: 40px;
+    width: 274px;
+    background-color: #F7F7F7;
+    margin: 80px auto 10px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.login-card h1 {
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.3em;
+}
+
+.login {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+}
+
+.login-submit {
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    width: 100%;
+}
+
+.login-submit:hover {
+    border: 1px solid #2f5bb7;
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+}
+
+.login-help {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}

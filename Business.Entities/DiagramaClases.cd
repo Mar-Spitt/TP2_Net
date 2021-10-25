@@ -24,7 +24,7 @@
   <Class Name="Business.Entities.Usuario" Collapsed="true">
     <Position X="7.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAEAAAAgAAAICEAABEAAIAAAAAAFAA=</HashCode>
+      <HashCode>AAAAAAABQAAAAAAAAAAAAAAAIAAAABEAAIIAAAAAEAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,7 +59,7 @@
   <Class Name="Business.Entities.Persona" Collapsed="true">
     <Position X="3.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAEAACgAAACEACAAhEAAAAUAAAAAEAAAAgAABAA=</HashCode>
+      <HashCode>EAAAAAEAACgAAQCEACAAhEAEAAUAAAAAEAAAAgAABAA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -79,6 +79,13 @@
   </Class>
   <Class Name="Business.Entities.DocenteCurso">
     <Position X="11" Y="5.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Business.Entities.DocenteCurso.TiposCargos" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DocenteCurso.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAAQAAAIA=</HashCode>
       <FileName>DocenteCurso.cs</FileName>

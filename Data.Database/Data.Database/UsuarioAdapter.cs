@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Data.Database
 {
-    public class UsuarioAdapter:Adapter
+    public class UsuarioAdapter: Adapter
     {
         #region DatosEnMemoria
         // Esta región solo se usa en esta etapa donde los datos se mantienen en memoria.
@@ -110,12 +110,15 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario,u.nombre_usuario,u.clave,u.habilitado," +
-                    "p.legajo, p.tipo_persona, u.id_persona from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
+                    "p.legajo, p.tipo_persona, u.id_persona, p.nombre, p.apellido, p.email from usuarios u inner join personas p on u.id_persona=p.id_persona where id_usuario=@id", sqlConn);
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
                 {
                     usr.ID = (int)drUsuarios["id_usuario"];
+                    usr.Nombre = (string)drUsuarios["nombre"];
+                    usr.Apellido = (string)drUsuarios["apellido"];
+                    usr.Email = (string)drUsuarios["email"];
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
@@ -173,7 +176,7 @@ namespace Data.Database
                 this.OpenConnection();
                 SqlCommand cmdSave = new SqlCommand("UPDATE u " +
                     "SET u.nombre_usuario=@nombre_usuario,u.clave=@clave, u.habilitado=@habilitado " +
-                    "FROM usuarios u WHERE u.id_usuario=@id", sqlConn);
+                    "FROM usuarios u  WHERE u.id_usuario=@id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;

@@ -5,7 +5,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    public class UsuarioLogic : BusinessLogic
+    public class UsuarioLogic 
     {
         public UsuarioLogic()
         {
@@ -42,7 +42,6 @@ namespace Business.Logic
                 throw ExcepcionManejada;
             }
             return usuarios;
-
         }
 
         public void Save(Usuario usu)

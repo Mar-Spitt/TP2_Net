@@ -90,6 +90,9 @@ namespace UI.Desktop
                     {
                         nuevoUsu.State = BusinessEntity.States.New;
                         nuevoUsu.IdPersona = per.ID;
+                        nuevoUsu.Nombre = per.Nombre;
+                        nuevoUsu.Apellido = per.Apellido;
+                        nuevoUsu.Email = per.Email;
                         usr.Save(nuevoUsu);
                     }
                     else
@@ -106,6 +109,13 @@ namespace UI.Desktop
                 {
                     nuevoUsu.ID = int.Parse(this.txtID.Text);
                     nuevoUsu.State = BusinessEntity.States.Modified;
+                    PersonaLogic perlo = new PersonaLogic();
+                    Persona per = new Persona();
+                    per = perlo.GetOne(nuevoUsu.Legajo);
+                    nuevoUsu.IdPersona = per.ID;
+                    nuevoUsu.Nombre = per.Nombre;
+                    nuevoUsu.Apellido = per.Apellido;
+                    nuevoUsu.Email = per.Email;
                     usr.Save(nuevoUsu);
                 }
             }
@@ -126,11 +136,10 @@ namespace UI.Desktop
         public override bool Validar()
         {
             bool rta = false;
-
             if (this.txtUsuario.Text != String.Empty && this.txtLegajo.Text != String.Empty
                 && this.txtClave.Text != String.Empty && this.txtConfirmarClave.Text != String.Empty)
             {
-                if (this.txtClave.Text == this.txtConfirmarClave.Text)
+                if (this.txtClave.Text == this.txtConfirmarClave.Text) //TODO: EsContraseñaValida() en Validaciones
                 {
                     int cantCarac = this.txtClave.Text.Length;
 

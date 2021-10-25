@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using Business.Entities;
 using Data.Database;
 
 namespace Business.Logic
 {
-    public class PersonaLogic: BusinessLogic
+    public class PersonaLogic
     {
         public PersonaLogic()
         {
@@ -28,6 +29,5 @@ namespace Business.Logic
             }
             return per;
         }
-
     }
 }

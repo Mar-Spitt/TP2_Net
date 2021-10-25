@@ -13,13 +13,15 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdPer = new SqlCommand("select id_persona from personas where legajo=@legajo", sqlConn);
+                SqlCommand cmdPer = new SqlCommand("select id_persona, nombre, apellido, email from personas where legajo=@legajo", sqlConn);
                 cmdPer.Parameters.Add("@legajo", SqlDbType.Int).Value = legajo;
                 SqlDataReader drPer = cmdPer.ExecuteReader();
                 if (drPer.Read())
                 {
                     per.ID = (int)drPer["id_persona"];
-
+                    per.Nombre = (string)drPer["nombre"];
+                    per.Apellido = (string)drPer["apellido"];
+                    per.Email = (string)drPer["email"];
                 }
                 else
                 {
@@ -38,8 +40,5 @@ namespace Data.Database
             }
             return per;
         }
-
-       
-
     }
 }

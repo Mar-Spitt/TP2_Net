@@ -144,13 +144,38 @@ namespace UI.Desktop
                     break;
                     
                 case "nodoRegistro":
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Profesor)
+                    {
+                        frmRegistroNotas formIns = new frmRegistroNotas();
+                        formIns.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                     break;
                 case "nodoCursoR":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmReporteCursos formRCurso = new frmReporteCursos();
+                        formRCurso.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
                 case "nodoPlanR":
-
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    {
+                        frmReportePlanes formRPlan = new frmReportePlanes();
+                        formRPlan.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usted no tiene acceso", "Acceso Restringido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     break;
 
             }
@@ -176,6 +201,14 @@ namespace UI.Desktop
             // Elimino instancia del formulario
             ofrmAcercaDe = null;
 
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usuario_act_tipo = 0;
+            id_persona_act = 0;
+
+            Main_Shown(sender, e);
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Home.aspx" title="Home"  description="">
+	  <!-- Ordenado por abecedario-->
+	  <siteMapNode url="~/Alumnos.aspx" title="Alumnos"  description="ABM Alumnos" />
+	  <siteMapNode url="~/Comisiones.aspx" title="Comisiones"  description="ABM Comisiones" />
+	  <siteMapNode url="~/Cursos.aspx" title="Cursos"  description="ABM Cursos" />
+	  <siteMapNode url="~/Especialidades.aspx" title="Especialidades"  description="ABM Especialidades" />
+	  <siteMapNode url="~/Materias.aspx" title="Materias"  description="ABM Materias" />
+	  <siteMapNode url="~/Planes.aspx" title="Planes"  description="ABM Planes" />
+	  <siteMapNode url="~/Profesores.aspx" title="Profesores"  description="ABM Profesores" />
+	  <siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="ABM usuarios" />
+	  <siteMapNode url="~/ReporteCursos.aspx" title="Reporte cursos"  description="Reporte Cursos" />
+	  <siteMapNode url="~/ReportePlanes.aspx" title="Reporte planes"  description="Reporte Planes" />
+  </siteMapNode>
+</siteMap>

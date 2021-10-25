@@ -180,7 +180,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdCursos = new SqlCommand("select * from cursos where anio_calendario=@year", sqlConn);
-                cmdCursos.Parameters.Add("@year", SqlDbType.Int).Value = 2019;
+                cmdCursos.Parameters.Add("@year", SqlDbType.Int).Value = 2021;
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
                 while (drCursos.Read())
                 {

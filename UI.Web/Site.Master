@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UI.Web.Site" %>
+
+<!DOCTYPE html>
+
+<html >
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>Academia</title>
+    <link href="Styles/SiteMaster.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="Styles/abmStyle.css" rel="stylesheet" />
+</head>
+
+<body runat="server">
+    <h1 align="center">SISTEMA DE GESTIÓN LA ACADEMIA</h1>
+
+        <form runat="server">
+
+        <div class="area" runat="server">
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <nav class="main-menu">
+            <ul>
+                    <li>
+                        <a  href="Home.aspx">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text"> Home </span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="Documentation.aspx">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentación
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="logout">
+                <li>
+                   <a href="Login.aspx" >
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">Cerrar Sesión </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+    
+            <div class="clearfix">
+            </div>
+        <footer>
+            <h3 align="center">
+                Práctico Integrador la Academia &copy 2021
+            </h3> 
+        </footer>
+    </form>
+</body>
+</html>
