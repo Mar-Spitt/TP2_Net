@@ -125,6 +125,17 @@ namespace UI.Desktop.Alumnos
                               MessageBoxButtons.OK,
                               MessageBoxIcon.Error);
                 }
+                else
+                {
+                    rta = Validaciones.EsFechaNacimientoValida(dtNacimiento.Value);
+                    if (!rta)
+                    {
+                        Notificar("Fecha inválida",
+                              "Revise su fecha de nacimiento",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {

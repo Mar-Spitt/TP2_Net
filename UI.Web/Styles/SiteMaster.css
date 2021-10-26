@@ -135,8 +135,7 @@ nav {
 .area {
     float: left;
     background: #e2e2e2;
-    height: 100%;
-    width: calc(100% - 10px);
+    width: 94%;
     position: absolute;
     margin-left: 90px;
     margin-right: 10px;

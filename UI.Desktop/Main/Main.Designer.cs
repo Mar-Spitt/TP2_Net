@@ -29,6 +29,7 @@ namespace UI.Desktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("1.1 - Usuarios");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1.2 - Alumnos");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("1.3 - Especialidades");
@@ -53,14 +54,13 @@ namespace UI.Desktop
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("4 - Reportes", new System.Windows.Forms.TreeNode[] {
             treeNode12,
             treeNode13});
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
-            this.trvABM = new System.Windows.Forms.TreeView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.AcercaDe_Click = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trvABM = new System.Windows.Forms.TreeView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mnsPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,40 @@ namespace UI.Desktop
             this.mnsPrincipal.Size = new System.Drawing.Size(850, 24);
             this.mnsPrincipal.TabIndex = 2;
             this.mnsPrincipal.Text = "Menu";
+            // 
+            // mnuArchivo
+            // 
+            this.mnuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AcercaDe_Click,
+            this.cerrarSesiónToolStripMenuItem,
+            this.mnuSalir});
+            this.mnuArchivo.Name = "mnuArchivo";
+            this.mnuArchivo.Size = new System.Drawing.Size(60, 20);
+            this.mnuArchivo.Text = "Archivo";
+            // 
+            // AcercaDe_Click
+            // 
+            this.AcercaDe_Click.Image = global::UI.Desktop.Properties.Resources.university_cap_icon;
+            this.AcercaDe_Click.Name = "AcercaDe_Click";
+            this.AcercaDe_Click.Size = new System.Drawing.Size(182, 22);
+            this.AcercaDe_Click.Text = "Acerca de Academia";
+            this.AcercaDe_Click.Click += new System.EventHandler(this.AcercaDe_Click_Click);
+            // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Image = ((System.Drawing.Image)(resources.GetObject("mnuSalir.Image")));
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(182, 22);
+            this.mnuSalir.Text = "Salir de la App";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Image = global::UI.Desktop.Properties.Resources.cerrar_sesion;
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // trvABM
             // 
@@ -130,40 +164,6 @@ namespace UI.Desktop
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sistema de Gestión Académica";
-            // 
-            // mnuArchivo
-            // 
-            this.mnuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AcercaDe_Click,
-            this.mnuSalir,
-            this.cerrarSesiónToolStripMenuItem});
-            this.mnuArchivo.Name = "mnuArchivo";
-            this.mnuArchivo.Size = new System.Drawing.Size(60, 20);
-            this.mnuArchivo.Text = "Archivo";
-            // 
-            // AcercaDe_Click
-            // 
-            this.AcercaDe_Click.Image = global::UI.Desktop.Properties.Resources.university_cap_icon;
-            this.AcercaDe_Click.Name = "AcercaDe_Click";
-            this.AcercaDe_Click.Size = new System.Drawing.Size(182, 22);
-            this.AcercaDe_Click.Text = "Acerca de Academia";
-            this.AcercaDe_Click.Click += new System.EventHandler(this.AcercaDe_Click_Click);
-            // 
-            // mnuSalir
-            // 
-            this.mnuSalir.Image = ((System.Drawing.Image)(resources.GetObject("mnuSalir.Image")));
-            this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(182, 22);
-            this.mnuSalir.Text = "Salir de la App";
-            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            this.cerrarSesiónToolStripMenuItem.Image = global::UI.Desktop.Properties.Resources.cerrar_sesion;
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // formMain
             // 

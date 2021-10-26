@@ -25,5 +25,17 @@ namespace Business.Logic
             }
             return rta;
         }
+
+        public static bool EsFechaNacimientoValida(DateTime fecha)
+        {
+            bool rta = false;
+            int edad = DateTime.Today.AddTicks(-fecha.Ticks).Year - 1;
+            if (edad < 110 & edad > 0)
+            {
+                rta = true;
+            }
+
+            return rta;
+        }
     }
 }
