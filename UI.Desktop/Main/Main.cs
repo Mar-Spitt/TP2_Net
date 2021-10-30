@@ -146,7 +146,7 @@ namespace UI.Desktop
                 case "nodoRegistro":
                     if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
-                        frmRegistroNotas formIns = new frmRegistroNotas(id_persona_act);
+                        frmRegistroNotas formIns = new frmRegistroNotas();
                         formIns.ShowDialog();
                     }
                     else

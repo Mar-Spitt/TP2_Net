@@ -14,11 +14,10 @@ namespace UI.Desktop
 {
     public partial class frmRegistroNotas : Form
     {
-        public int idPersona;
-        public frmRegistroNotas(int id)
+        
+        public frmRegistroNotas()
         {
             InitializeComponent();
-            idPersona = id;
         }
 
         public void Listar()
@@ -63,6 +62,7 @@ namespace UI.Desktop
             var fila = this.dgvRegistroNotas.CurrentRow;
             int idCurso = Convert.ToInt32(fila.Cells[1].Value);
             int idInscripcion = Convert.ToInt32(fila.Cells[0].Value);
+            int idPersona = Convert.ToInt32(fila.Cells[1].Value);
             string materia = fila.Cells[3].Value.ToString();
             int anio = Convert.ToInt32(fila.Cells[4].Value);
             string comision = fila.Cells[5].Value.ToString();
