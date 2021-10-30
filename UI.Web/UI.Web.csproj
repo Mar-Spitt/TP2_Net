@@ -127,6 +127,7 @@
     <Content Include="Especialidades.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Imagenes\fondo-textura.jpg" />
+    <Content Include="InscripcionesCursos.aspx" />
     <Content Include="Materias.aspx" />
     <Content Include="Planes.aspx" />
     <Content Include="Profesores.aspx" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InscripcionesCursos.aspx.cs">
+      <DependentUpon>InscripcionesCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InscripcionesCursos.aspx.designer.cs">
+      <DependentUpon>InscripcionesCursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Materias.aspx.cs">
       <DependentUpon>Materias.aspx</DependentUpon>

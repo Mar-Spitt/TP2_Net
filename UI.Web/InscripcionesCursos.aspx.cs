@@ -86,7 +86,7 @@ namespace UI.Web
             CursoLogic cl = new CursoLogic();
             this.gvInscripcionesCursos.AutoGenerateColumns = false;
             this.gvInscripcionesCursos.DataSource = cl.GetAllAnioActual();
-            
+
 
             this.gvInscripcionesCursos.DataBind();
         }

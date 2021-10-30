@@ -111,7 +111,7 @@ namespace UI.Web
                 case "nodoInscripciones":
                     if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Alumno)
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/InscripcionesCursos.aspx");
                     }
                     else
                     {
