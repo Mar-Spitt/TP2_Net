@@ -94,7 +94,7 @@ namespace UI.Web
         private void LoadEntity(AlumnoInscripcion inscripcion)
         {
             inscripcion.IDCurso = Convert.ToInt32(this.txtIdCurso.Text);
-            inscripcion.IDAlumno = Convert.ToInt32(Session["usuario_actual"]);
+            inscripcion.IDAlumno = Convert.ToInt32(Session["id_persona_act"]);
             inscripcion.Condicion = " ";
         }
 

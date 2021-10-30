@@ -55,7 +55,7 @@ namespace UI.Desktop
             RegistroActual.Nota = Convert.ToInt32(this.txtNota.Text);
             InscripcionLogic updateIns = new InscripcionLogic();
             updateIns.GuardarNota(RegistroActual);
-            Notificar("Nota y condición registradas", "La nota y condicon del alumno han sido registradas con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Notificar("Nota y condición registradas", "La nota y condición del alumno han sido registradas con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Close();
         }
