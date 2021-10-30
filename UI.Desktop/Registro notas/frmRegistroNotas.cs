@@ -37,17 +37,7 @@ namespace UI.Desktop
                 CursoLogic cur = new CursoLogic();
                 this.id_curso.DataSource = cur.GetAll();
                 this.id_curso.ValueMember = "ID";
-                this.id_curso.DisplayMember = "Descripcion"; //Anio Calendario, 
-
-                MateriaLogic mat = new MateriaLogic();
-                this.id_materia.DataSource = mat.GetAll();
-                this.id_materia.ValueMember = "ID";
-                this.id_materia.DisplayMember = "Descripcion";
-
-                ComisionLogic com = new ComisionLogic();
-                this.id_comision.DataSource = com.GetAll();
-                this.id_comision.ValueMember = "ID";
-                this.id_comision.DisplayMember = "Descripcion";
+                this.id_curso.DisplayMember = "Descripcion"; 
 
             }
             catch (Exception Ex)

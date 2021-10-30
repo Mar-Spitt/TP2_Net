@@ -69,7 +69,12 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInscripcion = new SqlCommand("select * from alumnos_inscripciones", sqlConn);
+                SqlCommand cmdInscripcion = new SqlCommand("select id_inscripcion, id_alumno, ai.id_curso, ai.condicion, ai.nota," +
+                    " c.anio_calendario, m.desc_materia, com.desc_comision" +
+                    " from alumnos_inscripciones ai" +
+                    " inner join cursos c on c.id_curso = ai.id_curso" +
+                    " inner join materias m on c.id_materia = m.id_materia" +
+                    " inner join comisiones com on com.id_comision = c.id_comision", sqlConn);
                 SqlDataReader drInscripcion = cmdInscripcion.ExecuteReader();
                 while (drInscripcion.Read())
                 {
@@ -78,6 +83,9 @@ namespace Data.Database
                     ins.IDAlumno = (int)drInscripcion["id_alumno"];
                     ins.IDCurso = (int)drInscripcion["id_curso"];
                     ins.Condicion = (string)drInscripcion["condicion"];
+                    ins.AnioCalendario = (int)drInscripcion["anio_calendario"];
+                    ins.DescripcionMateria = (string)drInscripcion["desc_materia"];
+                    ins.DescripcionComision = (string)drInscripcion["desc_comision"];
                     if(drInscripcion["nota"] is DBNull)
                     { ins.Nota = null; }
                     else
