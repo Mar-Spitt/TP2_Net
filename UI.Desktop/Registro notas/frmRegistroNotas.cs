@@ -14,9 +14,11 @@ namespace UI.Desktop
 {
     public partial class frmRegistroNotas : Form
     {
-        public frmRegistroNotas()
+        public int idPersona;
+        public frmRegistroNotas(int id)
         {
             InitializeComponent();
+            idPersona = id;
         }
 
         public void Listar()
@@ -58,7 +60,14 @@ namespace UI.Desktop
 
         private void btnCargarNota_Click(object sender, EventArgs e)
         {
-
+            var fila = this.dgvRegistroNotas.CurrentRow;
+            int idCurso = Convert.ToInt32(fila.Cells[1].Value);
+            int idInscripcion = Convert.ToInt32(fila.Cells[0].Value);
+            string materia = fila.Cells[3].Value.ToString();
+            int anio = Convert.ToInt32(fila.Cells[4].Value);
+            string comision = fila.Cells[5].Value.ToString();
+            frmRegistroNotasDesktop frmReg = new frmRegistroNotasDesktop(idPersona, idCurso, idInscripcion, materia, anio, comision);
+            frmReg.ShowDialog();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

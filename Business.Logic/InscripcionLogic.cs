@@ -59,6 +59,17 @@ namespace Business.Logic
             return inscripciones;
         }
 
-
+        public void GuardarNota(AlumnoInscripcion updateIns)
+        {
+            try
+            {
+                InscripcionData.GuardarNota(updateIns);
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al registrar nota", Ex);
+                throw ExcepcionManejada;
+            }
+        }
     }
 }

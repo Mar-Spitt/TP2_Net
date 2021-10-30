@@ -72,6 +72,8 @@ namespace UI.Desktop
         {
             var fila = this.dgvInscripciones.CurrentRow;
             int idCurso = Convert.ToInt32(fila.Cells[0].Value);
+            //string CursoId = idCurso.ToString();
+            //MessageBox.Show(CursoId, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             frmInscripcionesDesktop frmInscrip = new frmInscripcionesDesktop(idPersona, idCurso);
             frmInscrip.ShowDialog();
         }

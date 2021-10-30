@@ -111,6 +111,29 @@ namespace Data.Database
             return inscripciones;
         }
 
+        public void GuardarNota(AlumnoInscripcion RegIns)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUpdate = new SqlCommand("update alumnos_inscripciones set condicion=@condicion, nota=@nota where id_inscripcion=@id", sqlConn);
+
+                cmdUpdate.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = RegIns.Condicion;
+                cmdUpdate.Parameters.Add("@nota", SqlDbType.Int).Value = RegIns.Nota;
+                cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = RegIns.ID;
+
+                cmdUpdate.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcpcionManejada = new Exception("Error al registrar nota", Ex);
+                throw ExcpcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
 
 
     }
