@@ -11,6 +11,57 @@ namespace Data.Database
 {
     public class InscripcionAdapter : Adapter
     {
+        public AlumnoInscripcion GetOne(int ID_persona)
+        {
+            AlumnoInscripcion ai = new AlumnoInscripcion();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdSearch = new SqlCommand("select ai.id_inscripcion, ai.id_alumno, ai.id_curso, ai.condicion, ai.nota," +
+                    " c.anio_calendario, m.desc_materia, com.desc_comision, c.descripcion, p.nombre, p.apellido" +
+                    " from alumnos_inscripciones ai" +
+                    " inner join cursos c on c.id_curso = ai.id_curso" +
+                    " inner join materias m on c.id_materia = m.id_materia" +
+                    " inner join comisiones com on com.id_comision = c.id_comision" +
+                    " inner join personas p on p.id_persona = ai.id_alumno" +
+                    " where ai.id_alumno = @ID_persona", sqlConn);
+
+                cmdSearch.Parameters.Add("@ID_persona", SqlDbType.Int).Value = ID_persona;
+
+                SqlDataReader drInscripcion = cmdSearch.ExecuteReader();
+                if (drInscripcion.Read())
+                {
+                    ai.ID = (int)drInscripcion["id_inscripcion"];
+                    ai.IDAlumno = (int)drInscripcion["id_alumno"];
+                    ai.IDCurso = (int)drInscripcion["id_curso"];
+                    ai.Condicion = (string)drInscripcion["condicion"];
+                    ai.AnioCalendario = (int)drInscripcion["anio_calendario"];
+                    ai.DescripcionMateria = (string)drInscripcion["desc_materia"];
+                    ai.DescripcionComision = (string)drInscripcion["desc_comision"];
+                    ai.DescripcionCurso = (string)drInscripcion["descripcion"];
+                    ai.NombreApellidoAlu = drInscripcion["nombre"] + " " + drInscripcion["apellido"];
+
+                    if (drInscripcion["nota"] is DBNull)
+                    { ai.Nota = null; }
+                    else
+                    {
+                        ai.Nota = (Nullable<int>)drInscripcion["nota"];
+                    }
+                }
+                drInscripcion.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcpcionManejada = new Exception("Error al recuperar la Inscripcion del Alumno", Ex);
+                throw ExcpcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return ai;
+        }
         public void Save(AlumnoInscripcion nuevaIns)
         {
             try
@@ -69,12 +120,13 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInscripcion = new SqlCommand("select id_inscripcion, id_alumno, ai.id_curso, ai.condicion, ai.nota," +
-                    " c.anio_calendario, m.desc_materia, com.desc_comision" +
+                SqlCommand cmdInscripcion = new SqlCommand("select ai.id_inscripcion, ai.id_alumno, ai.id_curso, ai.condicion, ai.nota," +
+                    " c.anio_calendario, m.desc_materia, com.desc_comision, c.descripcion, p.nombre, p.apellido" +
                     " from alumnos_inscripciones ai" +
                     " inner join cursos c on c.id_curso = ai.id_curso" +
                     " inner join materias m on c.id_materia = m.id_materia" +
-                    " inner join comisiones com on com.id_comision = c.id_comision", sqlConn);
+                    " inner join comisiones com on com.id_comision = c.id_comision" +
+                    " inner join personas p on p.id_persona = ai.id_alumno", sqlConn);
                 SqlDataReader drInscripcion = cmdInscripcion.ExecuteReader();
                 while (drInscripcion.Read())
                 {
@@ -86,7 +138,10 @@ namespace Data.Database
                     ins.AnioCalendario = (int)drInscripcion["anio_calendario"];
                     ins.DescripcionMateria = (string)drInscripcion["desc_materia"];
                     ins.DescripcionComision = (string)drInscripcion["desc_comision"];
-                    if(drInscripcion["nota"] is DBNull)
+                    ins.DescripcionCurso = (string)drInscripcion["descripcion"];
+                    ins.NombreApellidoAlu = drInscripcion["nombre"] + " " + drInscripcion["apellido"];
+
+                    if (drInscripcion["nota"] is DBNull)
                     { ins.Nota = null; }
                     else
                     {

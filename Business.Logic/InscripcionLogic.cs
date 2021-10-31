@@ -14,7 +14,22 @@ namespace Business.Logic
         {
             this.InscripcionData = new InscripcionAdapter();
         }
-         public InscripcionAdapter InscripcionData { get; set; }
+        public InscripcionAdapter InscripcionData { get; set; }
+
+        public AlumnoInscripcion GetOne(int id)
+        {
+            AlumnoInscripcion ai;
+            try
+            {
+                ai = InscripcionData.GetOne(id);
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la Inscripcio del Alumno", Ex);
+                throw ExcepcionManejada;
+            }
+            return ai;
+        }
 
         public void Save(AlumnoInscripcion nuevaI)
         {

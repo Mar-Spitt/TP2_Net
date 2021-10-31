@@ -18,36 +18,34 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
+
         public AlumnoInscripcion RegistroActual { get; set; }
 
-        public frmRegistroNotasDesktop(int idP, int idC, int idIn, string mat, int anio , string com) : this()
+        public frmRegistroNotasDesktop(AlumnoInscripcion inscripcion) : this()
         {
-            RegistroActual = new AlumnoInscripcion();
-            RegistroActual.ID = idIn;
-            RegistroActual.IDAlumno = idP;
-            RegistroActual.IDCurso = idC;
-            RegistroActual.DescripcionMateria = mat;
-            RegistroActual.AnioCalendario = anio;
-            RegistroActual.DescripcionComision = com;
-            RegistroActual.Condicion = " ";
-            RegistroActual.Nota = 0;
+            RegistroActual = inscripcion;
 
-            MapeardeDatos();
-        }
-
-        public void MapeardeDatos()
-        {
+            // TODO: msjLori = cambiar los nombres de los txts no los puedo ver xq me da error en la vista de diseño
             this.txtIdInscripcion.Text = this.RegistroActual.ID.ToString();
-            this.txtCursoId.Text = this.RegistroActual.IDCurso.ToString();
+            this.txtCursoId.Text = this.RegistroActual.DescripcionCurso;
             this.txtComision.Text = this.RegistroActual.DescripcionComision;
             this.txtMateria.Text = this.RegistroActual.DescripcionMateria;
             this.txtAnioCalendario.Text = this.RegistroActual.AnioCalendario.ToString();
-
-            AlumnoLogic alu = new AlumnoLogic();
-            Persona nuevoAlu = alu.GetOne(RegistroActual.IDAlumno);
-            this.txtAlumnoLegajo.Text = nuevoAlu.Legajo.ToString();
-
+            this.txtAlumnoLegajo.Text = this.RegistroActual.NombreApellidoAlu;
+            //MapeardeDatos();
         }
+
+        //public void MapeardeDatos()
+        //{
+        //    
+        //    this.txtIdInscripcion.Text = this.RegistroActual.ID.ToString();
+        //    this.txtCursoId.Text = this.RegistroActual.DescripcionCurso.ToString();
+        //    this.txtComision.Text = this.RegistroActual.DescripcionComision;
+        //    this.txtMateria.Text = this.RegistroActual.DescripcionMateria;
+        //    this.txtAnioCalendario.Text = this.RegistroActual.AnioCalendario.ToString();
+        //    this.txtAlumnoLegajo.Text = this.RegistroActual.NombreApellidoAlu;
+
+        //}
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {

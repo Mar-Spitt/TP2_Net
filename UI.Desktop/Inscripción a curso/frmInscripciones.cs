@@ -35,17 +35,6 @@ namespace UI.Desktop
             {
                 this.dgvInscripciones.DataSource = ins.GetAllAnioActual();
 
-
-                MateriaLogic mat = new MateriaLogic();
-                this.colMateria.DataSource = mat.GetAll();
-                this.colMateria.ValueMember = "ID";
-                this.colMateria.DisplayMember = "Descripcion";
-
-                ComisionLogic com = new ComisionLogic();
-                this.colDescripcionComisión.DataSource = com.GetAll();
-                this.colDescripcionComisión.ValueMember = "ID";
-                this.colDescripcionComisión.DisplayMember = "Descripcion";
-
             }
             catch (Exception Ex)
             {
@@ -72,8 +61,6 @@ namespace UI.Desktop
         {
             var fila = this.dgvInscripciones.CurrentRow;
             int idCurso = Convert.ToInt32(fila.Cells[0].Value);
-            //string CursoId = idCurso.ToString();
-            //MessageBox.Show(CursoId, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             frmInscripcionesDesktop frmInscrip = new frmInscripcionesDesktop(idPersona, idCurso);
             frmInscrip.ShowDialog();
         }

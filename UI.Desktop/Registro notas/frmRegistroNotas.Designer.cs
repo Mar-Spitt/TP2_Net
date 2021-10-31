@@ -38,8 +38,8 @@ namespace UI.Desktop
             this.btnCargarNota = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_alumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.id_curso = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,22 +146,20 @@ namespace UI.Desktop
             // 
             // id_alumno
             // 
-            this.id_alumno.DataPropertyName = "IDAlumno";
+            this.id_alumno.DataPropertyName = "NombreApellidoAlu";
             this.id_alumno.HeaderText = "Alumnos";
             this.id_alumno.Name = "id_alumno";
             this.id_alumno.ReadOnly = true;
             this.id_alumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.id_alumno.Width = 120;
             // 
             // id_curso
             // 
-            this.id_curso.DataPropertyName = "IDCurso";
+            this.id_curso.DataPropertyName = "DescripcionCurso";
             this.id_curso.HeaderText = "Cursos";
             this.id_curso.Name = "id_curso";
             this.id_curso.ReadOnly = true;
             this.id_curso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_curso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.id_curso.Width = 120;
             // 
             // id_materia
@@ -230,8 +228,8 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnCargarNota;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_inscripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_alumno;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn anio_calendario;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_comision;

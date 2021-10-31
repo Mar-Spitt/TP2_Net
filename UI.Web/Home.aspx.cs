@@ -122,7 +122,7 @@ namespace UI.Web
                 case "nodoNotas":
                     if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/RegistroNotas.aspx");
                     }
                     else
                     {

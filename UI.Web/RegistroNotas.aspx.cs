@@ -9,7 +9,7 @@ using Business.Logic;
 
 namespace UI.Web
 {
-    public partial class InscripcionesCursos : Page
+    public partial class RegistroNotas : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,10 +35,9 @@ namespace UI.Web
 
         private void LoadGrid()
         {
-            CursoLogic cl = new CursoLogic();
-            this.gvInscripcionesCursos.AutoGenerateColumns = false;
-            this.gvInscripcionesCursos.DataSource = cl.GetAllAnioActual();
-            this.gvInscripcionesCursos.DataBind();
+            this.gvRegistroNotas.AutoGenerateColumns = false;
+            this.gvRegistroNotas.DataSource = Logic.GetAll();
+            this.gvRegistroNotas.DataBind();
         }
 
         private AlumnoInscripcion Entity { get; set; }
@@ -62,41 +61,44 @@ namespace UI.Web
             }
         }
 
-        private bool IsEntitySelected
+        protected void gvRegistroNotas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            get
-            {
-                return (this.SelectedID != 0);
-            }
-        }
-
-        protected void gvInscripcionesCursos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.SelectedID = (int)this.gvInscripcionesCursos.SelectedValue;
+            this.SelectedID = (int)this.gvRegistroNotas.SelectedValue;
         }
 
         private void LoadForm(int id)
         {
-            this.txtIdAlumno.Text = Session["id_persona_act"].ToString();
-            this.txtIdCurso.Text = SelectedID.ToString();
+            InscripcionLogic inscl = new InscripcionLogic();
+            Entity = inscl.GetOne(id);
+            this.txtID.Text = Entity.ID.ToString();
+            this.txtNombreAlumno.Text = Entity.NombreApellidoAlu.ToString();
+            this.txtDescripcionComision.Text = Entity.DescripcionComision.ToString();
+            this.txtDescripcionMateria.Text = Entity.DescripcionMateria.ToString();
+            this.txtDescripcionCurso.Text = Entity.DescripcionCurso.ToString();
+            this.txtAnioCalendario.Text = Entity.AnioCalendario.ToString();
+            this.txtCondicion.Text = Entity.Condicion.ToString();
+            this.txtNota.Text = Entity.Nota.ToString();
 
-            CursoLogic cl = new CursoLogic();
-            Curso cur = cl.GetOne(SelectedID);
-            this.txtDescripcionCurso.Text = cur.Descripcion;
-            
-            AlumnoLogic al = new AlumnoLogic();
-            Persona per = al.GetOne(Convert.ToInt32(Session["id_persona_act"]));
-            this.txtNombreAlumno.Text = per.Nombre+" "+per.Apellido;
-
+            EnableForm(false);
         }
 
         private void LoadEntity(AlumnoInscripcion inscripcion)
         {
-            inscripcion.IDCurso = Convert.ToInt32(this.txtIdCurso.Text);
-            inscripcion.IDAlumno = Convert.ToInt32(Session["id_persona_act"]);
-            inscripcion.Condicion = " ";
+            int nota = Convert.ToInt32(this.gvRegistroNotas.SelectedRow.Cells[6].Text);
+            inscripcion.Nota = (int?)nota;
+            inscripcion.Condicion = this.gvRegistroNotas.SelectedRow.Cells[7].Text;
         }
 
+        private void EnableForm(bool enable)
+        {
+            this.txtID.Enabled = enable;
+            this.txtNombreAlumno.Enabled = enable;
+            this.txtDescripcionCurso.Enabled = enable;
+            this.txtDescripcionComision.Enabled = enable;
+            this.txtDescripcionMateria.Enabled = enable;
+            this.txtDescripcionCurso.Enabled = enable;
+            this.txtAnioCalendario.Enabled = enable;
+        }
 
         protected void lnkbtnCancelar_Click(object sender, EventArgs e)
         {
@@ -111,17 +113,16 @@ namespace UI.Web
             this.LoadEntity(this.Entity);
             this.SaveEntity(this.Entity);
 
-            msg = "Nueva inscripcion agregada con éxito.";
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='InscripcionesCursos.aspx';", true);
+            msg = "Se registró la Nota con éxito.";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='RegistroNotas.aspx';", true);
 
             this.formPanel.Visible = false;
         }
 
-        protected void inscribirlinkButton_Click(object sender, EventArgs e)
+        protected void lnkCargarNotaButton_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
             this.LoadForm(SelectedID);
-
         }
 
         private void SaveEntity(AlumnoInscripcion inscripcion)

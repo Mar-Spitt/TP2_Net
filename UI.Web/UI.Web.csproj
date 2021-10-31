@@ -131,6 +131,7 @@
     <Content Include="Materias.aspx" />
     <Content Include="Planes.aspx" />
     <Content Include="Profesores.aspx" />
+    <Content Include="RegistroNotas.aspx" />
     <Content Include="ReporteCursos.aspx" />
     <Content Include="ReportePlanes.aspx" />
     <Content Include="SqlServerTypes\readme.htm" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="Profesores.aspx.designer.cs">
       <DependentUpon>Profesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroNotas.aspx.cs">
+      <DependentUpon>RegistroNotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroNotas.aspx.designer.cs">
+      <DependentUpon>RegistroNotas.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReporteCursos.aspx.cs">
       <DependentUpon>ReporteCursos.aspx</DependentUpon>

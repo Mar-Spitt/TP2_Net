@@ -20,25 +20,27 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+        public AlumnoInscripcion AlumnoInsc { get; set; }
+        public InscripcionLogic Logic { get; set; }
+
         public void Listar()
         {
-            InscripcionLogic ins = new InscripcionLogic();
+            Logic = new InscripcionLogic();
             this.dgvRegistroNotas.AutoGenerateColumns = false;
             try
             {
-                this.dgvRegistroNotas.DataSource = ins.GetAll();
+                this.dgvRegistroNotas.DataSource = Logic.GetAll();
                 // IDALUMNO, IDCURSO, CONDICION, NOTA
 
-                AlumnoLogic alu = new AlumnoLogic();
-                this.id_alumno.DataSource = alu.GetAll();
-                this.id_alumno.ValueMember = "ID";
-                this.id_alumno.DisplayMember = "Nombre";
-                // TODO: Cerrar ABM registro de Notas
+                //AlumnoLogic alu = new AlumnoLogic();
+                //this.id_alumno.DataSource = alu.GetAll();
+                //this.id_alumno.ValueMember = "ID";
+                //this.id_alumno.DisplayMember = "Nombre";
 
-                CursoLogic cur = new CursoLogic();
-                this.id_curso.DataSource = cur.GetAll();
-                this.id_curso.ValueMember = "ID";
-                this.id_curso.DisplayMember = "Descripcion"; 
+                //CursoLogic cur = new CursoLogic();
+                //this.id_curso.DataSource = cur.GetAll();
+                //this.id_curso.ValueMember = "ID";
+                //this.id_curso.DisplayMember = "Descripcion"; 
 
             }
             catch (Exception Ex)
@@ -60,13 +62,9 @@ namespace UI.Desktop
         private void btnCargarNota_Click(object sender, EventArgs e)
         {
             var fila = this.dgvRegistroNotas.CurrentRow;
-            int idCurso = Convert.ToInt32(fila.Cells[1].Value);
-            int idInscripcion = Convert.ToInt32(fila.Cells[0].Value);
-            int idPersona = Convert.ToInt32(fila.Cells[1].Value);
-            string materia = fila.Cells[3].Value.ToString();
-            int anio = Convert.ToInt32(fila.Cells[4].Value);
-            string comision = fila.Cells[5].Value.ToString();
-            frmRegistroNotasDesktop frmReg = new frmRegistroNotasDesktop(idPersona, idCurso, idInscripcion, materia, anio, comision);
+            AlumnoInsc = Logic.GetOne(Convert.ToInt32(this.dgvRegistroNotas.CurrentRow.Cells[0].Value));
+
+            frmRegistroNotasDesktop frmReg = new frmRegistroNotasDesktop(AlumnoInsc);
             frmReg.ShowDialog();
         }
 

@@ -14,6 +14,8 @@ namespace Business.Entities
         public string DescripcionMateria { get; set; }
         public string DescripcionComision { get; set; }
         public int AnioCalendario { get; set; }
+        public string DescripcionCurso { get; set; }
+        public string NombreApellidoAlu { get; set; }
 
         public Nullable<int> Nota { get; set; }
     }
