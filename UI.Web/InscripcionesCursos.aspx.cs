@@ -86,7 +86,7 @@ namespace UI.Web
         {
             inscripcion.IDCurso = Convert.ToInt32(this.txtIdCurso.Text);
             inscripcion.IDAlumno = Convert.ToInt32(Session["id_persona_act"]);
-            inscripcion.Condicion = " ";
+            inscripcion.Condicion = "";
         }
 
 
@@ -111,14 +111,12 @@ namespace UI.Web
 
                 if (nuevoCur.Cupo > 0)
                 {
-                    Logic.Save(Entity); 
                     string msj = "Su inscripción ha sido registrada con éxito";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='InscripcionesCursos.aspx';", true);
                     nuevoCur.Cupo = nuevoCur.Cupo - 1;
                     nuevoCur.State = BusinessEntity.States.Modified;
                     cl.Save(nuevoCur); //Se actualiza cupo del curso
 
-                    this.Entity = new AlumnoInscripcion();
                     this.Entity.State = BusinessEntity.States.New;
                     
                     this.SaveEntity(this.Entity);

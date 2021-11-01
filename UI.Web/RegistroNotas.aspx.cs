@@ -112,7 +112,7 @@ namespace UI.Web
             this.LoadEntity(this.Entity);
             this.SaveEntity(this.Entity);
 
-            msg = "Se registró la Nota con éxito.";
+            msg = "Se registró la Nota y Condición con éxito.";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='RegistroNotas.aspx';", true);
 
             this.formPanel.Visible = false;

@@ -76,7 +76,7 @@
 						</tr>
                         <tr>
                             <td align="right"><asp:Label ID="lblhabilitado" runat="server" Text="Habilitado: "></asp:Label></td>
-                            <td><asp:CheckBox ID="chkHabilitado" runat="server" />
+                            <td align="left"><asp:CheckBox ID="chkHabilitado" runat="server"/>
                             </td>
                         </tr>
 						<tr>
