@@ -70,7 +70,7 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.txtIdAlumno.Text = Session["id_persona_act"].ToString();
-            this.txtIdCurso.Text = SelectedID.ToString();
+            this.txtIdCurso.Text = id.ToString();//SelectedID.ToString();
 
             CursoLogic cl = new CursoLogic();
             Curso cur = cl.GetOne(SelectedID);
@@ -97,12 +97,12 @@ namespace UI.Web
 
         protected void lnkbtnAceptar_Click(object sender, EventArgs e)
         {
-            Entity.IDAlumno = Convert.ToInt32(Session["id_persona_act"]);
-            // TODO: devuelve null
+            this.Entity = new AlumnoInscripcion();
+            LoadEntity(Entity);
             if (Logic.Existe(Entity) == true)
             {
                 string msj = "Usted ya se encuentra registrado";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='RegistroNotas.aspx';", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='InscripcionesCursos.aspx';", true);
             }
             else
             {
@@ -111,16 +111,16 @@ namespace UI.Web
 
                 if (nuevoCur.Cupo > 0)
                 {
-                    Logic.Save(Entity);
+                    Logic.Save(Entity); 
                     string msj = "Su inscripción ha sido registrada con éxito";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='RegistroNotas.aspx';", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='InscripcionesCursos.aspx';", true);
                     nuevoCur.Cupo = nuevoCur.Cupo - 1;
                     nuevoCur.State = BusinessEntity.States.Modified;
-                    cl.Save(nuevoCur);
+                    cl.Save(nuevoCur); //Se actualiza cupo del curso
 
                     this.Entity = new AlumnoInscripcion();
                     this.Entity.State = BusinessEntity.States.New;
-                    this.LoadEntity(this.Entity);
+                    
                     this.SaveEntity(this.Entity);
 
                     this.formPanel.Visible = false;
@@ -128,7 +128,7 @@ namespace UI.Web
                 else
                 {
                     string msj = "No se ha podido registrar su inscripcion porque el curso no tiene cupos.";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='RegistroNotas.aspx';", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='InscripcionesCursos.aspx';", true);
                 }
             }
         }

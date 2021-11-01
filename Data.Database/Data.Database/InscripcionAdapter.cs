@@ -72,7 +72,7 @@ namespace Data.Database
 
                 cmdInsert.Parameters.Add("@id_alu", SqlDbType.Int).Value = nuevaIns.IDAlumno;
                 cmdInsert.Parameters.Add("@id_curso", SqlDbType.Int).Value = nuevaIns.IDCurso;
-                cmdInsert.Parameters.Add("@condicion", SqlDbType.VarChar,50).Value = nuevaIns.Condicion;
+                cmdInsert.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = nuevaIns.Condicion;
 
                 nuevaIns.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
