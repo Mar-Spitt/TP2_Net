@@ -84,6 +84,7 @@ namespace UI.Web
 
         private void LoadEntity(AlumnoInscripcion inscripcion)
         {
+            inscripcion.ID = SelectedID;
             inscripcion.Nota = Convert.ToInt32(this.txtNota.Text);
             inscripcion.Condicion = this.txtCondicion.Text;
         }
@@ -108,7 +109,6 @@ namespace UI.Web
         {
             string msg;
             this.Entity = new AlumnoInscripcion();
-            this.Entity.State = BusinessEntity.States.New;
             this.LoadEntity(this.Entity);
             this.SaveEntity(this.Entity);
 
@@ -126,7 +126,7 @@ namespace UI.Web
 
         private void SaveEntity(AlumnoInscripcion inscripcion)
         {
-            this.Logic.Save(inscripcion);
+            this.Logic.GuardarNota(inscripcion);
         }
 
     }

@@ -32,20 +32,10 @@ namespace UI.Desktop
             this.txtMateria.Text = this.RegistroActual.DescripcionMateria;
             this.txtAnioCalendario.Text = this.RegistroActual.AnioCalendario.ToString();
             this.txtAlumnoLegajo.Text = this.RegistroActual.NombreApellidoAlu;
-            //MapeardeDatos();
+            this.txtNota.Text =this.RegistroActual.Nota.ToString();
+            this.txtCondicion.Text = this.RegistroActual.Condicion.ToString();
         }
 
-        //public void MapeardeDatos()
-        //{
-        //    
-        //    this.txtIdInscripcion.Text = this.RegistroActual.ID.ToString();
-        //    this.txtCursoId.Text = this.RegistroActual.DescripcionCurso.ToString();
-        //    this.txtComision.Text = this.RegistroActual.DescripcionComision;
-        //    this.txtMateria.Text = this.RegistroActual.DescripcionMateria;
-        //    this.txtAnioCalendario.Text = this.RegistroActual.AnioCalendario.ToString();
-        //    this.txtAlumnoLegajo.Text = this.RegistroActual.NombreApellidoAlu;
-
-        //}
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
