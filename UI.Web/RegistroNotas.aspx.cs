@@ -108,14 +108,34 @@ namespace UI.Web
         protected void lnkbtnAceptar_Click(object sender, EventArgs e)
         {
             string msg;
-            this.Entity = new AlumnoInscripcion();
-            this.LoadEntity(this.Entity);
-            this.SaveEntity(this.Entity);
+            int result;
+            bool esNumerico = Int32.TryParse(this.txtNota.Text, out result);
+            if (esNumerico)
+            {
+                if (result >= 0 && result <= 10)
+                {
+                    this.Entity = new AlumnoInscripcion();
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
 
-            msg = "Se registró la Nota y Condición con éxito.";
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='RegistroNotas.aspx';", true);
-
-            this.formPanel.Visible = false;
+                    msg = "Se registró la Nota y Condición con éxito.";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msg + "');window.location='RegistroNotas.aspx';", true);
+            
+                    this.formPanel.Visible = false;
+                }
+                else
+                {
+                    string msj;
+                    msj = "Ingrese una Nota enntre 0 y 10.";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='RegistroNotas.aspx';", true);
+                }
+            }
+            else
+            {
+                string msj;
+                msj = "Ingrese una Nota numérica.";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='RegistroNotas.aspx';", true);
+            }
         }
 
         protected void lnkCargarNotaButton_Click(object sender, EventArgs e)

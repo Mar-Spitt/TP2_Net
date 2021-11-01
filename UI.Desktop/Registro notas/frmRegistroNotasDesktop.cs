@@ -38,13 +38,30 @@ namespace UI.Desktop
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            RegistroActual.Condicion = this.txtCondicion.Text;
-            RegistroActual.Nota = Convert.ToInt32(this.txtNota.Text);
-            InscripcionLogic updateIns = new InscripcionLogic();
-            updateIns.GuardarNota(RegistroActual);
-            Notificar("Nota y condición registradas", "La nota y condición del alumno han sido registradas con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            int result;
+            bool esNumerico = Int32.TryParse(this.txtNota.Text, out result);
+            if (esNumerico)
+            {
+                if (result >= 0 && result <= 10)
+                {
+                    RegistroActual.Condicion = this.txtCondicion.Text;
+                    RegistroActual.Nota = result;
+                    InscripcionLogic updateIns = new InscripcionLogic();
+                    updateIns.GuardarNota(RegistroActual);
+                    Notificar("Nota y condición registradas", "La nota y condición del alumno han sido registradas con éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    Notificar("Error Nota Inválida", "Ingrese una Nota comprendida entre 0 y 10", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                Notificar("Error de tipo de dato", "Ingrese una Nota numérica", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
