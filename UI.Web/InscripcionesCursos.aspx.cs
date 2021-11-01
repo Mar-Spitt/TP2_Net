@@ -133,9 +133,16 @@ namespace UI.Web
 
         protected void inscribirlinkButton_Click(object sender, EventArgs e)
         {
-            this.formPanel.Visible = true;
-            this.LoadForm(SelectedID);
-
+            if (SelectedID == 0)
+            {
+                string msj = "Por favor seleccione un Curso.";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msj + "');window.location='InscripcionesCursos.aspx';", true);
+            }
+            else
+            {
+                this.formPanel.Visible = true;
+                this.LoadForm(SelectedID);
+            }
         }
 
         private void SaveEntity(AlumnoInscripcion inscripcion)
