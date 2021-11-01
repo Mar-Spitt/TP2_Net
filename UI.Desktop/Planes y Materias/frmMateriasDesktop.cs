@@ -33,9 +33,22 @@ namespace UI.Desktop.Planes_y_Materias
 
         public Materia MateriaActual { get; set; }
 
+        private void EnableForm(bool enable)
+        {
+            this.txtID.Enabled = enable;
+            this.txtHsTotales.Enabled = enable;
+            this.txtDescripcion.Enabled = enable;
+            this.txtHsSemanales.Enabled = enable;
+            this.cmbPlan.Enabled = enable;
+        }
+
         public frmMateriasDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if (modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             MateriaLogic ma = new MateriaLogic();
             try
             {

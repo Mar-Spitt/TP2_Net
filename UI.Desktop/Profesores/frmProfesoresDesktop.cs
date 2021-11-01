@@ -28,9 +28,25 @@ namespace UI.Desktop
             Modo = modo;
         }
         public Persona ProfesorActual { get; set; }
+        private void EnableForm(bool enable)
+        {
+            this.txtNombre.Enabled = enable;
+            this.txtApellido.Enabled = enable;
+            this.txtDireccion.Enabled = enable;
+            this.txtEmail.Enabled = enable;
+            this.txtLegajo.Enabled = enable;
+            this.txtTelefono.Enabled = enable;
+            this.dtpFechaNacimiento.Enabled = enable;
+            this.txtID.Enabled = enable;
+            this.cmbPlan.Enabled = enable;
+        }
         public frmProfesoresDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if (modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             ProfesorLogic profe = new ProfesorLogic();
             try
             {
@@ -124,6 +140,18 @@ namespace UI.Desktop
                               MessageBoxIcon.Error);
 
                 }
+                else
+                {
+                    rta = Validaciones.EsFechaNacimientoValida(dtpFechaNacimiento.Value);
+                    if (!rta)
+                    {
+                        Notificar("Fecha inválida",
+                                "Revise su fecha de nacimiento",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                    }
+                }
+                
             }
             else
             {

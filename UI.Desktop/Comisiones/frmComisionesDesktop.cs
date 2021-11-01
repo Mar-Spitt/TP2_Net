@@ -28,11 +28,23 @@ namespace UI.Desktop
             Modo = modo;
         }
 
+        private void EnableForm(bool enable)
+        {
+            this.txtID.Enabled = enable;
+            this.txtDescipcion.Enabled = enable;
+            this.txtAnioEspecialidad.Enabled = enable;
+            this.cmbDescipcionPlan.Enabled = enable;
+        }
+
         public Comision ComisionActual { get; set; }
 
         public frmComisionesDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if(modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             ComisionLogic co = new ComisionLogic();
             try
             {

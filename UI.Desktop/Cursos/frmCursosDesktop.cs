@@ -36,9 +36,23 @@ namespace UI.Desktop
 
         public Curso CursoActual { get; set; }
 
+        private void EnableForm(bool enable)
+        {
+            this.txtId.Enabled = enable;
+            this.txtDescripcion.Enabled = enable;
+            this.txtAnioCalendario.Enabled = enable;
+            this.txtCupo.Enabled = enable;
+            this.cmbMateria.Enabled = enable;
+            this.cmbComision.Enabled = enable;
+        }
+
         public frmCursosDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if(modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             CursoLogic cur = new CursoLogic();
             try
             {

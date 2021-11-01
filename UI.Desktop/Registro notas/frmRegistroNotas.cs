@@ -30,18 +30,6 @@ namespace UI.Desktop
             try
             {
                 this.dgvRegistroNotas.DataSource = Logic.GetAll();
-                // IDALUMNO, IDCURSO, CONDICION, NOTA
-
-                //AlumnoLogic alu = new AlumnoLogic();
-                //this.id_alumno.DataSource = alu.GetAll();
-                //this.id_alumno.ValueMember = "ID";
-                //this.id_alumno.DisplayMember = "Nombre";
-
-                //CursoLogic cur = new CursoLogic();
-                //this.id_curso.DataSource = cur.GetAll();
-                //this.id_curso.ValueMember = "ID";
-                //this.id_curso.DisplayMember = "Descripcion"; 
-
             }
             catch (Exception Ex)
             {

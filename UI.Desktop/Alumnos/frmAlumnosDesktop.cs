@@ -23,16 +23,31 @@ namespace UI.Desktop.Alumnos
             cmbPlan.DataSource = ml.GetAll();
             cmbPlan.ValueMember = "ID";
             cmbPlan.DisplayMember = "Descripcion";
-
         }
         public frmAlumnosDesktop(ModoForm modo) : this()
         {
             Modo = modo;
         }
         public Persona AlumnoActual { get; set; }
+        private void Enable(bool enable)
+        {
+            this.txtID.Enabled = enable;
+            this.txtNombre.Enabled = enable;
+            this.txtApellido.Enabled = enable;
+            this.txtTelefono.Enabled = enable;
+            this.txtEmail.Enabled = enable;
+            this.dtNacimiento.Enabled = enable;
+            this.txtLegajo.Enabled = enable;
+            this.txtDireccion.Enabled = enable;
+            this.cmbPlan.Enabled = enable;
+        }
         public frmAlumnosDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if(modo == ModoForm.Baja)
+            {
+                Enable(false);
+            }
             AlumnoLogic alu = new AlumnoLogic();
             try
             {
@@ -43,7 +58,6 @@ namespace UI.Desktop.Alumnos
             {
                 Notificar("Error", "Error al recuperar lista de alumnos" + Ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         public override void MapearDeDatos()
