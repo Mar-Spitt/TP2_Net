@@ -62,14 +62,6 @@ namespace UI.Web
             }
         }
 
-        private bool IsEntitySelected
-        {
-            get
-            {
-                return (this.SelectedID != 0);
-            }
-        }
-
         protected void gvInscripcionesCursos_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.SelectedID = (int)this.gvInscripcionesCursos.SelectedValue;

@@ -84,9 +84,8 @@ namespace UI.Web
 
         private void LoadEntity(AlumnoInscripcion inscripcion)
         {
-            int nota = Convert.ToInt32(this.gvRegistroNotas.SelectedRow.Cells[6].Text);
-            inscripcion.Nota = (int?)nota;
-            inscripcion.Condicion = this.gvRegistroNotas.SelectedRow.Cells[7].Text;
+            inscripcion.Nota = Convert.ToInt32(this.txtNota.Text);
+            inscripcion.Condicion = this.txtCondicion.Text;
         }
 
         private void EnableForm(bool enable)

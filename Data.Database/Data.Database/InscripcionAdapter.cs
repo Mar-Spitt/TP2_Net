@@ -11,7 +11,7 @@ namespace Data.Database
 {
     public class InscripcionAdapter : Adapter
     {
-        public AlumnoInscripcion GetOne(int ID_persona)
+        public AlumnoInscripcion GetOne(int ID_inscripcion)
         {
             AlumnoInscripcion ai = new AlumnoInscripcion();
             try
@@ -24,9 +24,9 @@ namespace Data.Database
                     " inner join materias m on c.id_materia = m.id_materia" +
                     " inner join comisiones com on com.id_comision = c.id_comision" +
                     " inner join personas p on p.id_persona = ai.id_alumno" +
-                    " where ai.id_alumno = @ID_persona", sqlConn);
+                    " where ai.id_inscripcion = @ID_inscripcion", sqlConn);
 
-                cmdSearch.Parameters.Add("@ID_persona", SqlDbType.Int).Value = ID_persona;
+                cmdSearch.Parameters.Add("@ID_inscripcion", SqlDbType.Int).Value = ID_inscripcion;
 
                 SqlDataReader drInscripcion = cmdSearch.ExecuteReader();
                 if (drInscripcion.Read())
