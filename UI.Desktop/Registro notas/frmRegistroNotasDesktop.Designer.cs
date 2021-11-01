@@ -38,10 +38,10 @@ namespace UI.Desktop
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblNota = new System.Windows.Forms.Label();
             this.lblCondicion = new System.Windows.Forms.Label();
-            this.txtAlumnoLegajo = new System.Windows.Forms.TextBox();
-            this.txtCursoId = new System.Windows.Forms.TextBox();
-            this.txtComision = new System.Windows.Forms.TextBox();
-            this.txtMateria = new System.Windows.Forms.TextBox();
+            this.txtAlumnoNombreApellido = new System.Windows.Forms.TextBox();
+            this.txtCursoDescripcion = new System.Windows.Forms.TextBox();
+            this.txtComisionDescripcion = new System.Windows.Forms.TextBox();
+            this.txtMateriaDescripcion = new System.Windows.Forms.TextBox();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.txtCondicion = new System.Windows.Forms.TextBox();
             this.txtIdInscripcion = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Controls.Add(this.lblInscripcionID, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAlumnoLegajo, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblCursoId, 3, 2);
@@ -70,10 +70,10 @@ namespace UI.Desktop
             this.tableLayoutPanel1.Controls.Add(this.lblMateria, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblNota, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblCondicion, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtAlumnoLegajo, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtCursoId, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtComision, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtMateria, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtAlumnoNombreApellido, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtCursoDescripcion, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtComisionDescripcion, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtMateriaDescripcion, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtNota, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtCondicion, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtIdInscripcion, 2, 1);
@@ -120,7 +120,7 @@ namespace UI.Desktop
             // 
             this.lblCursoId.AutoSize = true;
             this.lblCursoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoId.Location = new System.Drawing.Point(295, 59);
+            this.lblCursoId.Location = new System.Drawing.Point(294, 59);
             this.lblCursoId.Name = "lblCursoId";
             this.lblCursoId.Size = new System.Drawing.Size(52, 15);
             this.lblCursoId.TabIndex = 2;
@@ -130,7 +130,7 @@ namespace UI.Desktop
             // 
             this.lblComisionId.AutoSize = true;
             this.lblComisionId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComisionId.Location = new System.Drawing.Point(483, 59);
+            this.lblComisionId.Location = new System.Drawing.Point(482, 59);
             this.lblComisionId.Name = "lblComisionId";
             this.lblComisionId.Size = new System.Drawing.Size(75, 15);
             this.lblComisionId.TabIndex = 3;
@@ -160,53 +160,55 @@ namespace UI.Desktop
             // 
             this.lblCondicion.AutoSize = true;
             this.lblCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCondicion.Location = new System.Drawing.Point(295, 126);
+            this.lblCondicion.Location = new System.Drawing.Point(294, 126);
             this.lblCondicion.Name = "lblCondicion";
             this.lblCondicion.Size = new System.Drawing.Size(79, 15);
             this.lblCondicion.TabIndex = 6;
             this.lblCondicion.Text = "Condición: ";
             // 
-            // txtAlumnoLegajo
+            // txtAlumnoNombreApellido
             // 
-            this.txtAlumnoLegajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlumnoLegajo.Location = new System.Drawing.Point(139, 62);
-            this.txtAlumnoLegajo.Name = "txtAlumnoLegajo";
-            this.txtAlumnoLegajo.ReadOnly = true;
-            this.txtAlumnoLegajo.Size = new System.Drawing.Size(100, 21);
-            this.txtAlumnoLegajo.TabIndex = 8;
+            this.txtAlumnoNombreApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAlumnoNombreApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlumnoNombreApellido.Location = new System.Drawing.Point(138, 62);
+            this.txtAlumnoNombreApellido.Name = "txtAlumnoNombreApellido";
+            this.txtAlumnoNombreApellido.ReadOnly = true;
+            this.txtAlumnoNombreApellido.Size = new System.Drawing.Size(150, 21);
+            this.txtAlumnoNombreApellido.TabIndex = 8;
             // 
-            // txtCursoId
+            // txtCursoDescripcion
             // 
-            this.txtCursoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCursoId.Location = new System.Drawing.Point(381, 62);
-            this.txtCursoId.Name = "txtCursoId";
-            this.txtCursoId.ReadOnly = true;
-            this.txtCursoId.Size = new System.Drawing.Size(95, 21);
-            this.txtCursoId.TabIndex = 9;
+            this.txtCursoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCursoDescripcion.Location = new System.Drawing.Point(380, 62);
+            this.txtCursoDescripcion.Name = "txtCursoDescripcion";
+            this.txtCursoDescripcion.ReadOnly = true;
+            this.txtCursoDescripcion.Size = new System.Drawing.Size(95, 21);
+            this.txtCursoDescripcion.TabIndex = 9;
             // 
-            // txtComision
+            // txtComisionDescripcion
             // 
-            this.txtComision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComision.Location = new System.Drawing.Point(599, 62);
-            this.txtComision.Name = "txtComision";
-            this.txtComision.ReadOnly = true;
-            this.txtComision.Size = new System.Drawing.Size(99, 21);
-            this.txtComision.TabIndex = 10;
+            this.txtComisionDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComisionDescripcion.Location = new System.Drawing.Point(598, 62);
+            this.txtComisionDescripcion.Name = "txtComisionDescripcion";
+            this.txtComisionDescripcion.ReadOnly = true;
+            this.txtComisionDescripcion.Size = new System.Drawing.Size(99, 21);
+            this.txtComisionDescripcion.TabIndex = 10;
             // 
-            // txtMateria
+            // txtMateriaDescripcion
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.txtMateria, 3);
-            this.txtMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMateria.Location = new System.Drawing.Point(139, 93);
-            this.txtMateria.Name = "txtMateria";
-            this.txtMateria.ReadOnly = true;
-            this.txtMateria.Size = new System.Drawing.Size(337, 21);
-            this.txtMateria.TabIndex = 11;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtMateriaDescripcion, 3);
+            this.txtMateriaDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMateriaDescripcion.Location = new System.Drawing.Point(138, 93);
+            this.txtMateriaDescripcion.Name = "txtMateriaDescripcion";
+            this.txtMateriaDescripcion.ReadOnly = true;
+            this.txtMateriaDescripcion.Size = new System.Drawing.Size(337, 21);
+            this.txtMateriaDescripcion.TabIndex = 11;
             // 
             // txtNota
             // 
             this.txtNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota.Location = new System.Drawing.Point(139, 129);
+            this.txtNota.Location = new System.Drawing.Point(138, 129);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(100, 21);
             this.txtNota.TabIndex = 12;
@@ -215,7 +217,7 @@ namespace UI.Desktop
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtCondicion, 2);
             this.txtCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCondicion.Location = new System.Drawing.Point(381, 129);
+            this.txtCondicion.Location = new System.Drawing.Point(380, 129);
             this.txtCondicion.Name = "txtCondicion";
             this.txtCondicion.Size = new System.Drawing.Size(209, 21);
             this.txtCondicion.TabIndex = 13;
@@ -223,7 +225,7 @@ namespace UI.Desktop
             // txtIdInscripcion
             // 
             this.txtIdInscripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdInscripcion.Location = new System.Drawing.Point(139, 28);
+            this.txtIdInscripcion.Location = new System.Drawing.Point(138, 28);
             this.txtIdInscripcion.Name = "txtIdInscripcion";
             this.txtIdInscripcion.ReadOnly = true;
             this.txtIdInscripcion.Size = new System.Drawing.Size(100, 21);
@@ -233,7 +235,7 @@ namespace UI.Desktop
             // 
             this.lblAnioCalendario.AutoSize = true;
             this.lblAnioCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnioCalendario.Location = new System.Drawing.Point(483, 90);
+            this.lblAnioCalendario.Location = new System.Drawing.Point(482, 90);
             this.lblAnioCalendario.Name = "lblAnioCalendario";
             this.lblAnioCalendario.Size = new System.Drawing.Size(107, 15);
             this.lblAnioCalendario.TabIndex = 14;
@@ -242,7 +244,7 @@ namespace UI.Desktop
             // txtAnioCalendario
             // 
             this.txtAnioCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnioCalendario.Location = new System.Drawing.Point(599, 93);
+            this.txtAnioCalendario.Location = new System.Drawing.Point(598, 93);
             this.txtAnioCalendario.Name = "txtAnioCalendario";
             this.txtAnioCalendario.ReadOnly = true;
             this.txtAnioCalendario.Size = new System.Drawing.Size(99, 21);
@@ -253,7 +255,7 @@ namespace UI.Desktop
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(518, 180);
+            this.btnAceptar.Location = new System.Drawing.Point(517, 180);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 16;
@@ -265,7 +267,7 @@ namespace UI.Desktop
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(599, 180);
+            this.btnCancelar.Location = new System.Drawing.Point(598, 180);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;
@@ -299,10 +301,10 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Label lblCondicion;
-        private System.Windows.Forms.TextBox txtAlumnoLegajo;
-        private System.Windows.Forms.TextBox txtCursoId;
-        private System.Windows.Forms.TextBox txtComision;
-        private System.Windows.Forms.TextBox txtMateria;
+        private System.Windows.Forms.TextBox txtAlumnoNombreApellido;
+        private System.Windows.Forms.TextBox txtCursoDescripcion;
+        private System.Windows.Forms.TextBox txtComisionDescripcion;
+        private System.Windows.Forms.TextBox txtMateriaDescripcion;
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.TextBox txtCondicion;
         private System.Windows.Forms.TextBox txtIdInscripcion;

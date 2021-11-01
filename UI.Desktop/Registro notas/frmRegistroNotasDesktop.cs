@@ -25,13 +25,12 @@ namespace UI.Desktop
         {
             RegistroActual = inscripcion;
 
-            // TODO: msjLori = cambiar los nombres de los txts no los puedo ver xq me da error en la vista de diseño
             this.txtIdInscripcion.Text = this.RegistroActual.ID.ToString();
-            this.txtCursoId.Text = this.RegistroActual.DescripcionCurso;
-            this.txtComision.Text = this.RegistroActual.DescripcionComision;
-            this.txtMateria.Text = this.RegistroActual.DescripcionMateria;
+            this.txtCursoDescripcion.Text = this.RegistroActual.DescripcionCurso;
+            this.txtComisionDescripcion.Text = this.RegistroActual.DescripcionComision;
+            this.txtMateriaDescripcion.Text = this.RegistroActual.DescripcionMateria;
             this.txtAnioCalendario.Text = this.RegistroActual.AnioCalendario.ToString();
-            this.txtAlumnoLegajo.Text = this.RegistroActual.NombreApellidoAlu;
+            this.txtAlumnoNombreApellido.Text = this.RegistroActual.NombreApellidoAlu;
             this.txtNota.Text =this.RegistroActual.Nota.ToString();
             this.txtCondicion.Text = this.RegistroActual.Condicion.ToString();
         }
