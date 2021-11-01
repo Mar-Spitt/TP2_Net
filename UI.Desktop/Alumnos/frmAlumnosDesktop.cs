@@ -23,6 +23,8 @@ namespace UI.Desktop.Alumnos
             cmbPlan.DataSource = ml.GetAll();
             cmbPlan.ValueMember = "ID";
             cmbPlan.DisplayMember = "Descripcion";
+
+            this.dtNacimiento.Value = DateTime.Now;
         }
         public frmAlumnosDesktop(ModoForm modo) : this()
         {
@@ -141,7 +143,7 @@ namespace UI.Desktop.Alumnos
                 }
                 else
                 {
-                    rta = Validaciones.EsFechaNacimientoValida(dtNacimiento.Value);
+                    rta = Validaciones.EsFechaNacimientoValida(this.dtNacimiento.Value);
                     if (!rta)
                     {
                         Notificar("Fecha inválida",

@@ -22,6 +22,8 @@ namespace UI.Desktop
             cmbPlan.DataSource = pl.GetAll();
             cmbPlan.ValueMember = "ID";
             cmbPlan.DisplayMember = "Descripcion";
+
+            dtpFechaNacimiento.Value = DateTime.Now;
         }
         public frmProfesoresDesktop(ModoForm modo) : this()
         {

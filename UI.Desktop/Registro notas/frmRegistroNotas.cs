@@ -54,6 +54,7 @@ namespace UI.Desktop
 
             frmRegistroNotasDesktop frmReg = new frmRegistroNotasDesktop(AlumnoInsc);
             frmReg.ShowDialog();
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
