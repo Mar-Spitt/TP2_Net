@@ -16,7 +16,7 @@
                         <asp:TreeNode  Text="1.7 - Cursos" Value="nodoCursos"></asp:TreeNode>
                         <asp:TreeNode  Text="1.8 - Materias" Value="nodoMaterias"></asp:TreeNode>
                     </asp:TreeNode>
-                    <asp:TreeNode Text="2- Inscripciones de Alumnos a Cursos" Value="nodoInscripciones"></asp:TreeNode>
+                    <asp:TreeNode Text="2 - Inscripciones de Alumnos a Cursos" Value="nodoInscripciones"></asp:TreeNode>
                     <asp:TreeNode Text="3 - Registro de Notas" Value="nodoNotas"></asp:TreeNode>
                     <asp:TreeNode Text="4 - Reportes" Value="nodoReportes">
                         <asp:TreeNode  Text="4.1 - Cursos" Value="nodoRCursos"></asp:TreeNode>

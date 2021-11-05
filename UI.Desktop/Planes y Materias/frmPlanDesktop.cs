@@ -17,8 +17,6 @@ namespace UI.Desktop
         public frmPlanDesktop()
         {
             InitializeComponent();
-            //cmbEspecialidad.Items.Insert(0, "Seleccionar");
-            //cmbEspecialidad.SelectedIndex = 0;
             EspecialidadLogic el = new EspecialidadLogic();
             cmbEspecialidad.DataSource = el.GetAll();
             cmbEspecialidad.ValueMember = "ID";
@@ -31,10 +29,20 @@ namespace UI.Desktop
         }
 
         public Plan PlanActual { get; set; }
+        private void EnableForm(bool enable)
+        {
+            this.txtId.Enabled = enable;
+            this.txtPlan.Enabled = enable;
+            this.cmbEspecialidad.Enabled = enable;
+        }
 
         public frmPlanDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if (modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             PlanLogic pl = new PlanLogic();
             try
             {

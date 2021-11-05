@@ -34,14 +34,14 @@ namespace UI.Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInscripciones));
             this.tlInscripciones = new System.Windows.Forms.TableLayoutPanel();
             this.dgvInscripciones = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMateria = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colAnioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescripcionComisión = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnElegir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAnioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescripcionComisión = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlInscripciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInscripciones)).BeginInit();
             this.SuspendLayout();
@@ -96,50 +96,6 @@ namespace UI.Desktop
             this.dgvInscripciones.Size = new System.Drawing.Size(731, 415);
             this.dgvInscripciones.TabIndex = 0;
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // colDescCurso
-            // 
-            this.colDescCurso.DataPropertyName = "Descripcion";
-            this.colDescCurso.HeaderText = "Curso";
-            this.colDescCurso.Name = "colDescCurso";
-            this.colDescCurso.ReadOnly = true;
-            this.colDescCurso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDescCurso.Width = 120;
-            // 
-            // colMateria
-            // 
-            this.colMateria.DataPropertyName = "IDMateria";
-            this.colMateria.HeaderText = "Materia";
-            this.colMateria.Name = "colMateria";
-            this.colMateria.ReadOnly = true;
-            this.colMateria.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colMateria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colMateria.Width = 250;
-            // 
-            // colAnioCalendario
-            // 
-            this.colAnioCalendario.DataPropertyName = "AnioCalendario";
-            this.colAnioCalendario.HeaderText = "Año Calendario";
-            this.colAnioCalendario.Name = "colAnioCalendario";
-            this.colAnioCalendario.ReadOnly = true;
-            // 
-            // colDescripcionComisión
-            // 
-            this.colDescripcionComisión.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDescripcionComisión.DataPropertyName = "IDComision";
-            this.colDescripcionComisión.HeaderText = "Comisión";
-            this.colDescripcionComisión.Name = "colDescripcionComisión";
-            this.colDescripcionComisión.ReadOnly = true;
-            this.colDescripcionComisión.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDescripcionComisión.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // btnElegir
             // 
             this.btnElegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -171,6 +127,48 @@ namespace UI.Desktop
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // colDescCurso
+            // 
+            this.colDescCurso.DataPropertyName = "Descripcion";
+            this.colDescCurso.HeaderText = "Curso";
+            this.colDescCurso.Name = "colDescCurso";
+            this.colDescCurso.ReadOnly = true;
+            this.colDescCurso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDescCurso.Width = 120;
+            // 
+            // colMateria
+            // 
+            this.colMateria.DataPropertyName = "DescripcionMateria";
+            this.colMateria.HeaderText = "Materia";
+            this.colMateria.Name = "colMateria";
+            this.colMateria.ReadOnly = true;
+            this.colMateria.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colMateria.Width = 250;
+            // 
+            // colAnioCalendario
+            // 
+            this.colAnioCalendario.DataPropertyName = "AnioCalendario";
+            this.colAnioCalendario.HeaderText = "Año Calendario";
+            this.colAnioCalendario.Name = "colAnioCalendario";
+            this.colAnioCalendario.ReadOnly = true;
+            // 
+            // colDescripcionComisión
+            // 
+            this.colDescripcionComisión.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDescripcionComisión.DataPropertyName = "DescripcionComision";
+            this.colDescripcionComisión.HeaderText = "Comisión";
+            this.colDescripcionComisión.Name = "colDescripcionComisión";
+            this.colDescripcionComisión.ReadOnly = true;
+            this.colDescripcionComisión.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // frmInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,8 +195,8 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescCurso;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colMateria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMateria;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAnioCalendario;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colDescripcionComisión;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcionComisión;
     }
 }

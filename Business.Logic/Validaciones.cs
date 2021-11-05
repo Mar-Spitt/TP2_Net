@@ -9,20 +9,33 @@ namespace Business.Logic
 {
     public class Validaciones
     {
-        public static bool EsMailValido(string email)
+        public static bool EsMailValido(string mail)
         {
-            String expresion;
             bool rta = false;
-            expresion = @"\A(\w+.?\w*@\w+.)(com)\Z";
-
-
-            if (Regex.IsMatch(email, expresion))
+            string expression = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(mail, expression))
             {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                rta = true;
+            }
+            return rta;
+        }
+
+        public static bool EsFechaNacimientoValida(DateTime fecha)
+        {
+            bool rta = false;
+            try
+            {
+                int edad = DateTime.Today.AddTicks(-fecha.Ticks).Year - 1;
+                if (edad < 110 & edad > 0)
                 {
                     rta = true;
                 }
             }
+            catch (Exception)
+            {
+                
+            }
+            
             return rta;
         }
     }

@@ -35,17 +35,6 @@ namespace UI.Desktop
             {
                 this.dgvInscripciones.DataSource = ins.GetAllAnioActual();
 
-
-                MateriaLogic mat = new MateriaLogic();
-                this.colMateria.DataSource = mat.GetAll();
-                this.colMateria.ValueMember = "ID";
-                this.colMateria.DisplayMember = "Descripcion";
-
-                ComisionLogic com = new ComisionLogic();
-                this.colDescripcionComisión.DataSource = com.GetAll();
-                this.colDescripcionComisión.ValueMember = "ID";
-                this.colDescripcionComisión.DisplayMember = "Descripcion";
-
             }
             catch (Exception Ex)
             {

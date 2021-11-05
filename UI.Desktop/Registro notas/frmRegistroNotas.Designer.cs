@@ -34,17 +34,17 @@ namespace UI.Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroNotas));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRegistroNotas = new System.Windows.Forms.DataGridView();
-            this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_alumno = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.id_curso = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.id_materia = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_comision = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCargarNota = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroNotas)).BeginInit();
             this.SuspendLayout();
@@ -102,77 +102,6 @@ namespace UI.Desktop
             this.dgvRegistroNotas.Size = new System.Drawing.Size(954, 415);
             this.dgvRegistroNotas.TabIndex = 0;
             // 
-            // id_inscripcion
-            // 
-            this.id_inscripcion.DataPropertyName = "ID";
-            this.id_inscripcion.HeaderText = "ID";
-            this.id_inscripcion.Name = "id_inscripcion";
-            this.id_inscripcion.ReadOnly = true;
-            this.id_inscripcion.Width = 30;
-            // 
-            // id_alumno
-            // 
-            this.id_alumno.DataPropertyName = "IDAlumno";
-            this.id_alumno.HeaderText = "Alumnos";
-            this.id_alumno.Name = "id_alumno";
-            this.id_alumno.ReadOnly = true;
-            this.id_alumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_alumno.Width = 120;
-            // 
-            // id_curso
-            // 
-            this.id_curso.DataPropertyName = "IDCurso";
-            this.id_curso.HeaderText = "Cursos";
-            this.id_curso.Name = "id_curso";
-            this.id_curso.ReadOnly = true;
-            this.id_curso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_curso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_curso.Width = 120;
-            // 
-            // id_materia
-            // 
-            this.id_materia.DataPropertyName = "IDMateria";
-            this.id_materia.HeaderText = "Materia";
-            this.id_materia.Name = "id_materia";
-            this.id_materia.ReadOnly = true;
-            this.id_materia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_materia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_materia.Width = 250;
-            // 
-            // anio_calendario
-            // 
-            this.anio_calendario.DataPropertyName = "AnioCalendario";
-            this.anio_calendario.HeaderText = "Año Calendario";
-            this.anio_calendario.Name = "anio_calendario";
-            this.anio_calendario.ReadOnly = true;
-            // 
-            // id_comision
-            // 
-            this.id_comision.DataPropertyName = "IDComision";
-            this.id_comision.HeaderText = "Comisión";
-            this.id_comision.Name = "id_comision";
-            this.id_comision.ReadOnly = true;
-            this.id_comision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_comision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_comision.Width = 80;
-            // 
-            // nota
-            // 
-            this.nota.DataPropertyName = "Nota";
-            this.nota.HeaderText = "Notas";
-            this.nota.Name = "nota";
-            this.nota.ReadOnly = true;
-            this.nota.Width = 80;
-            // 
-            // condicion
-            // 
-            this.condicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.condicion.DataPropertyName = "Condicion";
-            this.condicion.HeaderText = "Condición";
-            this.condicion.Name = "condicion";
-            this.condicion.ReadOnly = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(882, 424);
@@ -207,6 +136,73 @@ namespace UI.Desktop
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // id_inscripcion
+            // 
+            this.id_inscripcion.DataPropertyName = "ID";
+            this.id_inscripcion.HeaderText = "ID";
+            this.id_inscripcion.Name = "id_inscripcion";
+            this.id_inscripcion.ReadOnly = true;
+            this.id_inscripcion.Width = 30;
+            // 
+            // id_alumno
+            // 
+            this.id_alumno.DataPropertyName = "NombreApellidoAlu";
+            this.id_alumno.HeaderText = "Alumnos";
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.ReadOnly = true;
+            this.id_alumno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_alumno.Width = 120;
+            // 
+            // id_curso
+            // 
+            this.id_curso.DataPropertyName = "DescripcionCurso";
+            this.id_curso.HeaderText = "Cursos";
+            this.id_curso.Name = "id_curso";
+            this.id_curso.ReadOnly = true;
+            this.id_curso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_curso.Width = 120;
+            // 
+            // id_materia
+            // 
+            this.id_materia.DataPropertyName = "DescripcionMateria";
+            this.id_materia.HeaderText = "Materia";
+            this.id_materia.Name = "id_materia";
+            this.id_materia.ReadOnly = true;
+            this.id_materia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_materia.Width = 250;
+            // 
+            // anio_calendario
+            // 
+            this.anio_calendario.DataPropertyName = "AnioCalendario";
+            this.anio_calendario.HeaderText = "Año Calendario";
+            this.anio_calendario.Name = "anio_calendario";
+            this.anio_calendario.ReadOnly = true;
+            // 
+            // id_comision
+            // 
+            this.id_comision.DataPropertyName = "DescripcionComision";
+            this.id_comision.HeaderText = "Comisión";
+            this.id_comision.Name = "id_comision";
+            this.id_comision.ReadOnly = true;
+            this.id_comision.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_comision.Width = 80;
+            // 
+            // nota
+            // 
+            this.nota.DataPropertyName = "Nota";
+            this.nota.HeaderText = "Notas";
+            this.nota.Name = "nota";
+            this.nota.ReadOnly = true;
+            this.nota.Width = 80;
+            // 
+            // condicion
+            // 
+            this.condicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.condicion.DataPropertyName = "Condicion";
+            this.condicion.HeaderText = "Condición";
+            this.condicion.Name = "condicion";
+            this.condicion.ReadOnly = true;
+            // 
             // frmRegistroNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,11 +228,11 @@ namespace UI.Desktop
         private System.Windows.Forms.Button btnCargarNota;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_inscripcion;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_alumno;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_curso;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_materia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn anio_calendario;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_comision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_comision;
         private System.Windows.Forms.DataGridViewTextBoxColumn nota;
         private System.Windows.Forms.DataGridViewTextBoxColumn condicion;
     }

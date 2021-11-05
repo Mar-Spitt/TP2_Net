@@ -21,6 +21,9 @@ namespace Business.Entities
 
         public int IDComision { get; set; }
 
+        public string DescripcionComision { get; set; }
+
         public int IDMateria { get; set; }
+        public string DescripcionMateria { get; set; }
     }
 }

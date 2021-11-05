@@ -28,9 +28,20 @@ namespace UI.Desktop
                 this.txtLegajo.ReadOnly = false;
             }
         }
-
+        private void EnableForm(bool enable)
+        {
+            this.txtID.Enabled = enable;
+            this.txtLegajo.Enabled = enable;
+            this.txtUsuario.Enabled = enable;
+            this.txtClave.Enabled = enable;
+            this.txtConfirmarClave.Enabled = enable;
+        }
         public UsuarioDesktop(int ID, ModoForm modo) : this()
         {
+            if (modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             Modo = modo;
             UsuarioLogic usr = new UsuarioLogic();
             try 
@@ -139,7 +150,7 @@ namespace UI.Desktop
             if (this.txtUsuario.Text != String.Empty && this.txtLegajo.Text != String.Empty
                 && this.txtClave.Text != String.Empty && this.txtConfirmarClave.Text != String.Empty)
             {
-                if (this.txtClave.Text == this.txtConfirmarClave.Text) //TODO: EsContraseñaValida() en Validaciones
+                if (this.txtClave.Text == this.txtConfirmarClave.Text)
                 {
                     int cantCarac = this.txtClave.Text.Length;
 
@@ -158,6 +169,7 @@ namespace UI.Desktop
                                         "La contraseña no puede contener espacios en blanco",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
+                            rta = false;
                         }
                         else
                         {

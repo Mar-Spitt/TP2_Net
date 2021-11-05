@@ -156,7 +156,8 @@ namespace UI.Desktop
 
                     break;
                 case "nodoCursoR":
-                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador || 
+                        usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
                         frmReporteCursos formRCurso = new frmReporteCursos();
                         formRCurso.ShowDialog();
@@ -167,7 +168,8 @@ namespace UI.Desktop
                     }
                     break;
                 case "nodoPlanR":
-                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Administrador ||
+                        usuario_act_tipo == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
                         frmReportePlanes formRPlan = new frmReportePlanes();
                         formRPlan.ShowDialog();

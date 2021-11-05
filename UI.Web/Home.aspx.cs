@@ -111,7 +111,7 @@ namespace UI.Web
                 case "nodoInscripciones":
                     if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Alumno)
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/InscripcionesCursos.aspx");
                     }
                     else
                     {
@@ -122,7 +122,7 @@ namespace UI.Web
                 case "nodoNotas":
                     if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/RegistroNotas.aspx");
                     }
                     else
                     {
@@ -131,7 +131,8 @@ namespace UI.Web
                     }
                     break;
                 case "nodoRCursos":
-                    if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Administrador ||
+                        Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
                         Response.Redirect("~/ReporteCursos.aspx");
                     }
@@ -142,7 +143,8 @@ namespace UI.Web
                     }
                     break;
                 case "nodoRPlanes":
-                    if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Administrador)
+                    if (Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Administrador ||
+                        Convert.ToInt32(Session["usuario_actual"]) == (int)Business.Entities.Persona.TiposPersonas.Profesor)
                     {
                         Response.Redirect("~/ReportePlanes.aspx");
                     }

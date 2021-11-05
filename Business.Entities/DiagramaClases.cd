@@ -1,84 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Business.Entities.BusinessEntity" Collapsed="true">
-    <Position X="6.5" Y="4" Width="1.5" />
+  <Class Name="Business.Entities.BusinessEntity">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Business.Entities.BusinessEntity.States" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BusinessEntity.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABCAEAAA=</HashCode>
       <FileName>BusinessEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Modulo" Collapsed="true">
-    <Position X="4" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAA=</HashCode>
-      <FileName>Modulo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Business.Entities.ModuloUsuario" Collapsed="true">
-    <Position X="5.75" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACAAAAQAwAACAAAACAAAAAAAAEAAAAAAAQABQAEAEAA=</HashCode>
-      <FileName>ModuloUsuario.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Business.Entities.Usuario" Collapsed="true">
-    <Position X="7.5" Y="5.5" Width="1.5" />
+  <Class Name="Business.Entities.Usuario">
+    <Position X="1.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABQAAAAAAAAAAAAAAAIAAAABEAAIIAAAAAEAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Plan" Collapsed="true">
-    <Position X="4" Y="4" Width="1.5" />
+  <Class Name="Business.Entities.Plan">
+    <Position X="3.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAABAAAAAAAEAAAAAEAAAAA=</HashCode>
       <FileName>Plan.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Comision" Collapsed="true">
-    <Position X="9.25" Y="4" Width="1.5" />
+  <Class Name="Business.Entities.Comision">
+    <Position X="9.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAgAAAAAAAIAAAAAABAAAAAAAEEAAAAAAAAAA=</HashCode>
       <FileName>Comision.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Business.Entities.Especialidad">
-    <Position X="2.25" Y="5.5" Width="1.5" />
+    <Position X="7.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Especialidad.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Materia" Collapsed="true">
-    <Position X="6.5" Y="2.25" Width="1.5" />
+  <Class Name="Business.Entities.Materia">
+    <Position X="3.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAgAAAAAAAABAAAAAAAEEAAAQAAAAwA=</HashCode>
       <FileName>Materia.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Persona" Collapsed="true">
-    <Position X="3.75" Y="2.25" Width="1.5" />
+  <Class Name="Business.Entities.Persona">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Business.Entities.Persona.TiposPersonas" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Persona.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>EAAAAAEAACgAAQCEACAAhEAEAAUAAAAAEAAAAgAABAA=</HashCode>
       <FileName>Persona.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.AlumnoInscripcion" Collapsed="true">
-    <Position X="9.25" Y="2.25" Width="1.5" />
+  <Class Name="Business.Entities.AlumnoInscripcion">
+    <Position X="9.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAACACAAAAAgAAAAAAAAAAAAAAAABERAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAACECAACAAgAAAAAAAEAAAAAAAAAEAAEAAA=</HashCode>
       <FileName>AlumnoInscripcion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Business.Entities.Curso" Collapsed="true">
-    <Position X="9.25" Y="5.5" Width="1.5" />
+  <Class Name="Business.Entities.Curso">
+    <Position X="5.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQIAAIAAIAAAACACAAAAAAABgAAAAAAEAAAAAAAABAA=</HashCode>
+      <HashCode>AQIAAIAAIAAAACACAAAAAAABgAEAAAAEAAAAAAAEBAA=</HashCode>
       <FileName>Curso.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Business.Entities.DocenteCurso">
-    <Position X="11" Y="5.5" Width="1.5" />
+    <Position X="7.25" Y="7.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <NestedTypes>
       <Enum Name="Business.Entities.DocenteCurso.TiposCargos" Collapsed="true">
         <TypeIdentifier>

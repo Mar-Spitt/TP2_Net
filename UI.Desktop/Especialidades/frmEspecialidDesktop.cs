@@ -25,10 +25,19 @@ namespace UI.Desktop
         }
 
         public Especialidad EspecialidadActual { get; set; }
+        private void EnableForm(bool enable)
+        {
+            this.txtId.Enabled = enable;
+            this.txtEspecialidad.Enabled = enable;
+        }
 
         public frmEspecialidDesktop(int ID, ModoForm modo) : this()
         {
             Modo = modo;
+            if (modo == ModoForm.Baja)
+            {
+                EnableForm(false);
+            }
             EspecialidadLogic esp = new EspecialidadLogic();
             try
             {

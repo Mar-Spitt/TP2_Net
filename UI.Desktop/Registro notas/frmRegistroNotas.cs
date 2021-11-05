@@ -14,41 +14,22 @@ namespace UI.Desktop
 {
     public partial class frmRegistroNotas : Form
     {
+        
         public frmRegistroNotas()
         {
             InitializeComponent();
         }
 
+        public AlumnoInscripcion AlumnoInsc { get; set; }
+        public InscripcionLogic Logic { get; set; }
+
         public void Listar()
         {
-            InscripcionLogic ins = new InscripcionLogic();
+            Logic = new InscripcionLogic();
             this.dgvRegistroNotas.AutoGenerateColumns = false;
             try
             {
-                this.dgvRegistroNotas.DataSource = ins.GetAll();
-                // IDALUMNO, IDCURSO, CONDICION, NOTA
-
-                AlumnoLogic alu = new AlumnoLogic();
-                this.id_alumno.DataSource = alu.GetAll();
-                this.id_alumno.ValueMember = "ID";
-                this.id_alumno.DisplayMember = "Nombre";
-                // TODO: Cerrar ABM registro de Notas
-
-                CursoLogic cur = new CursoLogic();
-                this.id_curso.DataSource = cur.GetAll();
-                this.id_curso.ValueMember = "ID";
-                this.id_curso.DisplayMember = "Descripcion"; //Anio Calendario, 
-
-                MateriaLogic mat = new MateriaLogic();
-                this.id_materia.DataSource = mat.GetAll();
-                this.id_materia.ValueMember = "ID";
-                this.id_materia.DisplayMember = "Descripcion";
-
-                ComisionLogic com = new ComisionLogic();
-                this.id_comision.DataSource = com.GetAll();
-                this.id_comision.ValueMember = "ID";
-                this.id_comision.DisplayMember = "Descripcion";
-
+                this.dgvRegistroNotas.DataSource = Logic.GetAll();
             }
             catch (Exception Ex)
             {
@@ -68,7 +49,12 @@ namespace UI.Desktop
 
         private void btnCargarNota_Click(object sender, EventArgs e)
         {
+            var fila = this.dgvRegistroNotas.CurrentRow;
+            AlumnoInsc = Logic.GetOne(Convert.ToInt32(this.dgvRegistroNotas.CurrentRow.Cells[0].Value));
 
+            frmRegistroNotasDesktop frmReg = new frmRegistroNotasDesktop(AlumnoInsc);
+            frmReg.ShowDialog();
+            Listar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

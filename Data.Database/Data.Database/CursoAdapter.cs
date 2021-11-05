@@ -179,7 +179,10 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdCursos = new SqlCommand("select * from cursos where anio_calendario=@year", sqlConn);
+                SqlCommand cmdCursos = new SqlCommand("select c.id_curso, c.id_materia, c.id_comision, c.anio_calendario, c.cupo, c.descripcion, m.desc_materia, com.desc_comision" +
+                    " from cursos c " +
+                    "inner join materias m on m.id_materia=c.id_materia " +
+                    "inner join comisiones com on com.id_comision=c.id_comision where c.anio_calendario=@year", sqlConn);
                 cmdCursos.Parameters.Add("@year", SqlDbType.Int).Value = 2021;
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
                 while (drCursos.Read())
@@ -191,6 +194,8 @@ namespace Data.Database
                     cur.AnioCalendario = (int)drCursos["anio_calendario"];
                     cur.Cupo = (int)drCursos["cupo"];
                     cur.Descripcion = (string)drCursos["descripcion"];
+                    cur.DescripcionComision = (string)drCursos["desc_comision"];
+                    cur.DescripcionMateria = (string)drCursos["desc_materia"];
 
                     cursos.Add(cur);
                 }

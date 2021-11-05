@@ -11,6 +11,57 @@ namespace Data.Database
 {
     public class InscripcionAdapter : Adapter
     {
+        public AlumnoInscripcion GetOne(int ID_inscripcion)
+        {
+            AlumnoInscripcion ai = new AlumnoInscripcion();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdSearch = new SqlCommand("select ai.id_inscripcion, ai.id_alumno, ai.id_curso, ai.condicion, ai.nota," +
+                    " c.anio_calendario, m.desc_materia, com.desc_comision, c.descripcion, p.nombre, p.apellido" +
+                    " from alumnos_inscripciones ai" +
+                    " inner join cursos c on c.id_curso = ai.id_curso" +
+                    " inner join materias m on c.id_materia = m.id_materia" +
+                    " inner join comisiones com on com.id_comision = c.id_comision" +
+                    " inner join personas p on p.id_persona = ai.id_alumno" +
+                    " where ai.id_inscripcion = @ID_inscripcion", sqlConn);
+
+                cmdSearch.Parameters.Add("@ID_inscripcion", SqlDbType.Int).Value = ID_inscripcion;
+
+                SqlDataReader drInscripcion = cmdSearch.ExecuteReader();
+                if (drInscripcion.Read())
+                {
+                    ai.ID = (int)drInscripcion["id_inscripcion"];
+                    ai.IDAlumno = (int)drInscripcion["id_alumno"];
+                    ai.IDCurso = (int)drInscripcion["id_curso"];
+                    ai.Condicion = (string)drInscripcion["condicion"];
+                    ai.AnioCalendario = (int)drInscripcion["anio_calendario"];
+                    ai.DescripcionMateria = (string)drInscripcion["desc_materia"];
+                    ai.DescripcionComision = (string)drInscripcion["desc_comision"];
+                    ai.DescripcionCurso = (string)drInscripcion["descripcion"];
+                    ai.NombreApellidoAlu = drInscripcion["nombre"] + " " + drInscripcion["apellido"];
+
+                    if (drInscripcion["nota"] is DBNull)
+                    { ai.Nota = null; }
+                    else
+                    {
+                        ai.Nota = (Nullable<int>)drInscripcion["nota"];
+                    }
+                }
+                drInscripcion.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcpcionManejada = new Exception("Error al recuperar la Inscripcion del Alumno", Ex);
+                throw ExcpcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+
+            return ai;
+        }
         public void Save(AlumnoInscripcion nuevaIns)
         {
             try
@@ -21,7 +72,7 @@ namespace Data.Database
 
                 cmdInsert.Parameters.Add("@id_alu", SqlDbType.Int).Value = nuevaIns.IDAlumno;
                 cmdInsert.Parameters.Add("@id_curso", SqlDbType.Int).Value = nuevaIns.IDCurso;
-                cmdInsert.Parameters.Add("@condicion", SqlDbType.VarChar,50).Value = nuevaIns.Condicion;
+                cmdInsert.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = nuevaIns.Condicion;
 
                 nuevaIns.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
@@ -69,7 +120,13 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInscripcion = new SqlCommand("select * from alumnos_inscripciones", sqlConn);
+                SqlCommand cmdInscripcion = new SqlCommand("select ai.id_inscripcion, ai.id_alumno, ai.id_curso, ai.condicion, ai.nota," +
+                    " c.anio_calendario, m.desc_materia, com.desc_comision, c.descripcion, p.nombre, p.apellido" +
+                    " from alumnos_inscripciones ai" +
+                    " inner join cursos c on c.id_curso = ai.id_curso" +
+                    " inner join materias m on c.id_materia = m.id_materia" +
+                    " inner join comisiones com on com.id_comision = c.id_comision" +
+                    " inner join personas p on p.id_persona = ai.id_alumno", sqlConn);
                 SqlDataReader drInscripcion = cmdInscripcion.ExecuteReader();
                 while (drInscripcion.Read())
                 {
@@ -78,7 +135,13 @@ namespace Data.Database
                     ins.IDAlumno = (int)drInscripcion["id_alumno"];
                     ins.IDCurso = (int)drInscripcion["id_curso"];
                     ins.Condicion = (string)drInscripcion["condicion"];
-                    if(drInscripcion["nota"] is DBNull)
+                    ins.AnioCalendario = (int)drInscripcion["anio_calendario"];
+                    ins.DescripcionMateria = (string)drInscripcion["desc_materia"];
+                    ins.DescripcionComision = (string)drInscripcion["desc_comision"];
+                    ins.DescripcionCurso = (string)drInscripcion["descripcion"];
+                    ins.NombreApellidoAlu = drInscripcion["nombre"] + " " + drInscripcion["apellido"];
+
+                    if (drInscripcion["nota"] is DBNull)
                     { ins.Nota = null; }
                     else
                     {
@@ -103,6 +166,29 @@ namespace Data.Database
             return inscripciones;
         }
 
+        public void GuardarNota(AlumnoInscripcion RegIns)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdUpdate = new SqlCommand("update alumnos_inscripciones set condicion=@condicion, nota=@nota where id_inscripcion=@id", sqlConn);
+
+                cmdUpdate.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = RegIns.Condicion;
+                cmdUpdate.Parameters.Add("@nota", SqlDbType.Int).Value = RegIns.Nota;
+                cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = RegIns.ID;
+
+                cmdUpdate.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcpcionManejada = new Exception("Error al registrar nota", Ex);
+                throw ExcpcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
 
 
     }
